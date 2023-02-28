@@ -19,6 +19,12 @@ class CreateAd extends Component
             'body' => $this->body,
             'price' => $this->price,
         ]);
+        $this->cleanForm();
+    }
+    public function cleanForm(){
+        $this->title = "";
+        $this->body = "";
+        $this->price = "";
     }
     public function render()
     {
