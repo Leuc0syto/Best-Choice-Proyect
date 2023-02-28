@@ -9,7 +9,7 @@
         @csrf
 
         <div class="mb-3">
-            <label for="title" class="form-label">Titulo: </label>
+            <label for="title" class="form-label">Título: </label>
             <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
                 @error('title')
                     {{$message}}
