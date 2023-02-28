@@ -3,8 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Models\Ad;
-use App\Models\Category;
 use Livewire\Component;
+use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 
 class CreateAd extends Component
