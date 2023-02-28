@@ -23,6 +23,7 @@ class CreateAd extends Component
         'category' => 'required',
         'price' =>'required|numeric',
     ];
+    
     protected $messages = [
         'required' =>'Field  :attribute is required, please fill it',
         'min'=> 'Field :attribute should be longer than  :min',

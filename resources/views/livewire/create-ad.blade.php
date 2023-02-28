@@ -15,6 +15,7 @@
                     {{$message}}
                 @enderror
         </div>
+        
         <div class="mb-3">
             <label for="price" class="form-label">Precio: </label>
             <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror">
@@ -22,6 +23,7 @@
                     {{$message}}
                 @enderror
         </div>
+
         <div class="mb-3">
             <label for="body" class="form-label">Descripción: </label>
             <textarea wire:model="body" cols="20" rows="5" class="form-control  @error('body') is-invalid @enderror"></textarea>
@@ -29,6 +31,7 @@
                     {{$message}}
                 @enderror
         </div>
+
         <div class="mb-3">
             <label for="category" class="form-label">Categoría: </label>
             <select wire:model.defer="category" class="form-control">
@@ -39,9 +42,8 @@
             </select>
         </div>
 
-
         <div class="my-3 d-flex justify-content-center">
-            <button type="submit" class="btn btn-info ">Crear</button>
+            <button type="submit" class="btn btn-info">Crear</button>
         </div>
 
     </form>
