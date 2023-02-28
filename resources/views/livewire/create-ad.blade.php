@@ -24,14 +24,14 @@
         </div>
         <div class="mb-3">
             <label for="body" class="form-label">Descripción: </label>
-            <textarea wire:model="body" cols="30" rows="15" class="form-control @error('body') is-invalid @enderror"></textarea>
+            <textarea wire:model="body" cols="20" rows="5" class="form-control  @error('body') is-invalid @enderror"></textarea>
                 @error('body')
                     {{$message}}
                 @enderror
         </div>
 
-        <div class="my-3">
-            <button type="submit" class="btn btn-info">Crear</button>
+        <div class="my-3 d-flex justify-content-center">
+            <button type="submit" class="btn btn-info ">Crear</button>
         </div>
 
     </form>

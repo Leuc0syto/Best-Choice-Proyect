@@ -14,12 +14,9 @@ use App\Http\Controllers\AdController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', function () {
-    return view('welcome');
-});
+
+Route::get('/', [AdController::class, 'home'])->name('welcome');
+
 
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');

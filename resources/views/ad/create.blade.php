@@ -8,7 +8,7 @@
                     <div class="card-header">
                         Nuevo anuncio
                     </div>
-                    <div class="card-body">
+                    <div class="card-body shadow">
                         <livewire:create-ad/>
                     </div>
                 </div>
