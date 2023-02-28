@@ -29,6 +29,16 @@
                     {{$message}}
                 @enderror
         </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Categoría: </label>
+            <select wire:model.defer="category" class="form-control">
+                <option value="">Selecciona la categoría</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
 
         <div class="my-3 d-flex justify-content-center">
             <button type="submit" class="btn btn-info ">Crear</button>
