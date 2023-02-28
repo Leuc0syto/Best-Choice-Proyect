@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title ?? 'bestchoice.com'}}</title>
 
+    @livewireStyles
     @vite(['resources/css/app.css'])
-
     {{ $style ?? '' }}
 
 </head>
@@ -15,6 +15,8 @@
     <x-navbar />
     {{ $slot }}
     <x-footer />
+
+    @livewireScripts
     @vite(['resources/js/app.js'])
     {{ $script ?? '' }}
 </body>

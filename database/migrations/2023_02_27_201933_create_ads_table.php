@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('ads', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('body');
-            $table->integer('price');
+            $table->string('body');
+            $table->decimal('price', 8,2);
             $table->timestamps();
         });
     }

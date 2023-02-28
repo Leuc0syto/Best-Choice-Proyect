@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('welcome');
 });
+
+Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
