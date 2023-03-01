@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
+use App\Http\Controllers\PublicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use App\Http\Controllers\AdController;
 
 
 
-Route::get('/', [AdController::class, 'home'])->name('welcome');
+Route::get('/', [PublicController::class, 'home'])->name('welcome');
 
 
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');

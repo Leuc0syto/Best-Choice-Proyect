@@ -8,9 +8,7 @@ class AdController extends Controller
 {
     //
 
-    public function home(){
-        return view ('welcome');
-    }
+   
     public function __construct(){
         $this->middleware('auth');
     }
