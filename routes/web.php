@@ -17,7 +17,7 @@ use App\Http\Controllers\PublicController;
 
 
 
-Route::get('/', [PublicController::class, 'home'])->name('welcome');
+Route::get('/', [PublicController::class, 'home'])->name('home');
 
 
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
