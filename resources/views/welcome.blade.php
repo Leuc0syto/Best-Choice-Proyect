@@ -1,11 +1,11 @@
 <x-layout>
-    <x-slot name='title'>BestChoice - {{$category->name}} ads</x-slot>
+    <x-slot name='title'>BestChoice -  ads</x-slot>
         <h1>Bienvenido a BestChoice.com</h1>
 
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>Anuncios por categoría: {{$category->name}}</h1> {{-- despues borrar si da error --}}
+                    <h1>Anuncios por categoría: </h1> {{-- despues borrar si da error --}}
                 </div>
             </div>
             <div class="row">
