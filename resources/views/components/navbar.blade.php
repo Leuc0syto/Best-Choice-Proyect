@@ -10,8 +10,15 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorías
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDorpdown">
+                        @foreach ($categories as $category)
+                        <li><a class="dropdown-item" href="{{ 'category.ads', $category }}">{{ category->name }}</a></li>
+                        @endforeach
+                    </ul>
                 </li>
                 <div class="d-flex justify-content-center">
                     <a href="{{route('ads.create')}}"><button class="btn-create  py-1  mx-5 shadow" type="submit">Crear Anuncio</button></a>
