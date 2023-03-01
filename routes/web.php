@@ -20,3 +20,5 @@ Route::get('/', [AdController::class, 'home'])->name('welcome');
 
 
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
+
+Route::get('category/{categpry}/ads', [PublicController::class, 'adsByCategory'])->name('category.ads');
