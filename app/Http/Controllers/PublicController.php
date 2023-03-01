@@ -18,7 +18,7 @@ class PublicController extends Controller
     }
 
     public function adsByCategory(Category $category) {
-        $ads = $category->ads()->get();
+        $ads = $category->ads()->latest()->get();
         return view('ad.by-category', compact('category', 'ads'));
     }
 }
