@@ -1,10 +1,18 @@
 @import '~bootstrap/dist/css/bootstrap';
 
+/* TIPO MAIN */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
+/* TIPO CUOTIDIANO */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+
 
 body
 {
     margin:0px;
     padding: 0px;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 .btn-create{
@@ -15,3 +23,6 @@ body
 }
 
 
+nav, .main-font, footer {
+    font-family: 'Comfortaa', cursive;
+}
