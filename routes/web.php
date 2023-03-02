@@ -19,8 +19,6 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, 'index'])->name('home');
 
-
-Route::get('category/{category:name}/ads', [PublicController::class, 'adsByCategory'])->name('category.ads');
 Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCategory'])->name('category.ads');
 
 
