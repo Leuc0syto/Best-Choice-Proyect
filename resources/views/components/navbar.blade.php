@@ -1,11 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-body-primary ">
-    <div class="container-fluid my-nav">
+<nav class="navbar navbar-expand-lg bg-body-primary my-nav">
+    <div class="container-fluid">
         <a class="navbar-brand text-white"  aria-current="page" href="{{ route('home') }}"><img src="{{-- {{asset('assets/img/logo.jpg')}} --}}" style="width: 120px">BestChoice</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            
 
             <ul class="navbar-nav">
                 @auth
@@ -39,7 +34,8 @@
                             <hr class="dropdown-divider">
                         </li>
                         @endif
-                        <li><a href="#" class="dropdown-item"
+
+                        <li><a href="#" class="dropdown-items"
                                 onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Salir</a>
                         </li>
                         <form action="{{ route('logout') }}" method="post" id="form-logout" class="d-none">
