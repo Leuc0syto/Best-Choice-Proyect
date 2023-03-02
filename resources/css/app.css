@@ -1,4 +1,6 @@
 @import '~bootstrap/dist/css/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Varela+Round&display=swap');
+
 
 
 body
@@ -14,6 +16,24 @@ body
     color: white;
     border-radius: 15px;
 }
+.my-nav{
+    font-family: 'Rock Salt', cursive;
+    font-family: 'Varela Round', sans-serif;
+    background: #768a96
+}
+
+.my-hero{
+    background-image: url(/public/images/photo-hero.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
 
 .product-grid{
     font-family: 'Montserrat', sans-serif;

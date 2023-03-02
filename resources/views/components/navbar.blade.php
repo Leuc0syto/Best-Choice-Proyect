@@ -1,13 +1,11 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-primary ">
     <div class="container-fluid my-nav">
-        <a class="navbar-brand"  aria-current="page" href="{{ route('home') }}"><img src="{{asset('assets/img/logo.jpg')}}" style="width: 120px"></a>
+        <a class="navbar-brand text-white"  aria-current="page" href="{{ route('home') }}"><img src="{{-- {{asset('assets/img/logo.jpg')}} --}}" style="width: 120px">BestChoice</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="d-flex justify-content-end">
-                <a href="{{route('ads.create')}}"><button class="btn-create  py-1  mx-5 shadow" type="submit">Crear Anuncio</button></a>
-            </div>
+            
 
             <ul class="navbar-nav">
                 @auth
@@ -41,9 +39,6 @@
                             <hr class="dropdown-divider">
                         </li>
                         @endif
-
-
-
                         <li><a href="#" class="dropdown-item"
                                 onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Salir</a>
                         </li>
@@ -56,7 +51,7 @@
                 @guest
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">Bienvenido Invitado</a>
+                        data-bs-toggle="dropdown" aria-expanded="false">Bienvenido</a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a href="{{ route('register') }}" class="dropdown-item">Registrarse</a></li>
