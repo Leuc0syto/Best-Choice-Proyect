@@ -1,11 +1,10 @@
 <x-layout>
     <x-slot name='title'>BestChoice -  ads</x-slot>
-        <h1>Bienvenido a BestChoice.com</h1>
-
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>Anuncios por categoría: </h1> {{-- despues borrar si da error --}}
+                    <h1>Bienvenido a BestChoice</h1>
+                    <h3>Anuncios por categoría: </h3> {{-- despues borrar si da error --}}
                 </div>
             </div>
             <div class="row">
@@ -18,7 +17,6 @@
                             <h6 class="card-subtitle mb-2 text-muted">{{$ad->price}}</h6>
                             <p class="card-text">{{$ad->body}}</p>
                             <div class="card-subtitle mb-2">
-                                <strong><a href="{{route('category.ads', $ad->category)}}">#{{$category->name}}</a></strong>
                                 <i>{{$ad->created_at->format('d/m/Y')}}</i>
                             </div>
                             <div class="card-subtitle mb-2">

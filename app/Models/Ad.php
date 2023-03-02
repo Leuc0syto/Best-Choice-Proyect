@@ -8,7 +8,7 @@ use App\Models\User;
 
 class Ad extends Model
 {
-    protected $fillable = ['title', 'body', 'price'];
+    protected $fillable = ['title', 'body', 'price', 'category'];
     use HasFactory;
 
     public function user()
