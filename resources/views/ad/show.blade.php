@@ -12,13 +12,13 @@
                             aria-current="true" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carouse-item active">
+                        <div class="carousel-item active">
                             <img src="https://picsum.photos/700/600?a" class="d-block w-100" alt="...">
                         </div>
-                        <div class="carouse-item">
+                        <div class="carousel-item">
                             <img src="https://picsum.photos/700/600?b" class="d-block w-100" alt="...">
                         </div>
-                        <div class="carouse-item">
+                        <div class="carousel-item">
                             <img src="https://picsum.photos/700/600?c" class="d-block w-100" alt="...">
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#adImages"
