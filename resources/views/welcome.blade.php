@@ -4,7 +4,6 @@
             <div class="row">
                 <div class="col-12">
                     <h1>Bienvenido a BestChoice</h1>
-                    <h3>Anuncios por categoría: </h3> {{-- despues borrar si da error --}}
                 </div>
             </div>
             <div class="row">
@@ -19,6 +18,7 @@
                             <div class="card-subtitle mb-2">
                                 <i>{{$ad->created_at->format('d/m/Y')}}</i>
                             </div>
+                            
                             <div class="card-subtitle mb-2">
                                 <small>{{$ad->user->name}}</small>
                             </div>
