@@ -29,30 +29,30 @@ body
     padding-right: 6px;
 }
 .droptrue{
-    font-size: 12px;
+    font-size: 16px;
 }
 .dropfalse{
-    font-size: 12px;
+    font-size: 16px;
 }
-.my-title{
+/* .my-title{
     display: flex;
     position: relative;
     left: 110px;
     top: -50px;
-}
-.my-subtitle{
+} */
+/* .my-subtitle{
     position: relative;
     left: 150px;
     top: -50px;
-}
+} */
 
-.my-hero{
+/* .my-hero{
     background-image: url(/public/images/photo-hero.jpg);
     background-size: 100%;
     background-position: 50%;
     background-repeat: no-repeat;
 
-}
+} */
 
 
 .product-grid{
@@ -163,7 +163,7 @@ nav, .main-font, footer {
 
 
 
-
+/*
 @media screen and (max-width: 840px) {
 
         .my-title{
@@ -184,4 +184,4 @@ nav, .main-font, footer {
             bottom: 20px;
         }
     }
-
+ */
