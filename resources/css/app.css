@@ -7,7 +7,7 @@ body
 {
     margin:0px;
     padding: 0px;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 
@@ -25,15 +25,10 @@ body
 
 .my-hero{
     background-image: url(/public/images/photo-hero.jpg);
-    background-size:cover;
+    background-size: 100%;
+    background-position: 50%;
     background-repeat: no-repeat;
 }
-
-
-
-
-
-
 
 
 .product-grid{

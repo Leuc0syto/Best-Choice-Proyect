@@ -5,12 +5,12 @@
             <ul class="navbar-nav">
                 @auth
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                    <a href="#" class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Bienvenido {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a href="" class="dropdown-item">Mi perfil</a></li>
+                        <li><a href="" class="dropdown-item">Mi zona</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -35,8 +35,8 @@
                         </li>
                         @endif
 
-                        <li><a href="#" class="dropdown-items"
-                                onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Salir</a>
+                        <li><a href="#" class="dropdown-item"
+                                onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Cerrar sesión</a>
                         </li>
                         <form action="{{ route('logout') }}" method="post" id="form-logout" class="d-none">
                             @csrf
