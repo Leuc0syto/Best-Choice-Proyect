@@ -9,7 +9,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Bienvenido {{ Auth::user()->name }}
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu position-absolute droptrue" aria-labelledby="navbarDropdown">
                         <li><a href="" class="dropdown-item">Mi zona</a></li>
                         <li>
                             <hr class="dropdown-divider">
@@ -45,11 +45,11 @@
                 </li>
                 @endauth
                 @guest
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                <li class="nav-menu dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3 text-white" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">Bienvenido</a>
 
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu position-absolute dropfalse" aria-labelledby="navbarDropdown">
                         <li><a href="{{ route('register') }}" class="dropdown-item">Registrarse</a></li>
                         <li><a href="{{ route('login') }}" class="dropdown-item">Iniciar sesión</a></li>
                     </ul>

@@ -1,14 +1,19 @@
 <x-layout>
     <x-slot name='title'>BestChoice - ads</x-slot>
-    <div class="col-12 my-hero">
+<div class="container-fluid my-hero">
+    <div class="col-12 mx-5 px-5">
         <div class="col-md-5 p-lg-5 mx-auto mb-5 d-flex flex-column align-items-end">
-            <h1 class="display-4 fw-normal">Best Choice</h1>
-            <p class="lead fw-normal">Vende lo que no utilizas en Best Choice</p>
-            <a class="btn btn-outline-secondary" href="{{route('ads.create')}}">Crear anuncio</a>
+            <a class="btn btn-create px-2 my-5" href="{{route('ads.create')}}">Crear anuncio</a>
+            <div class="container-fluid">
+                <h1 class="display-4 fw-normal px-4 my-3 d-flex my-title">¡Best Choice!</h1>
+            </div>
+            <p class="lead fw-normal my-subtitle">Vende lo que no utilizas en Best Choice</p>
+
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
+</div>
     <div class="container">
         <div class="row">
             @forelse($ads as $ad)

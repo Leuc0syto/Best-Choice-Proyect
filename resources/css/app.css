@@ -12,15 +12,38 @@ body
 
 
 .btn-create{
-    background-image: linear-gradient(180deg, #d6c213 0%, #529af2 50%, #fafafa 100%);
+    background:#114358;
     border: 0px;
     color: white;
     border-radius: 15px;
+    text-decoration: none;
+}
+.btn-create:active{
+    border:20px;
 }
 .my-nav{
     font-family: 'Rock Salt', cursive;
     font-family: 'Varela Round', sans-serif;
-    background: #768a96
+    background: #114358;
+    font-size: 12px;
+    padding-right: 6px;
+}
+.droptrue{
+    font-size: 12px;
+}
+.dropfalse{
+    font-size: 12px;
+}
+.my-title{
+    display: flex;
+    position: relative;
+    left: 110px;
+    top: -50px;
+}
+.my-subtitle{
+    position: relative;
+    left: 150px;
+    top: -50px;
 }
 
 .my-hero{
@@ -28,6 +51,7 @@ body
     background-size: 100%;
     background-position: 50%;
     background-repeat: no-repeat;
+
 }
 
 
