@@ -149,3 +149,39 @@ body
 nav, .main-font, footer {
     font-family: 'Comfortaa', cursive;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 840px) {
+
+        .my-title{
+            font-size: 30px;
+            display: flex;
+            position: relative;
+            left: 80px;
+            top: -40px;
+        }
+        .my-subtitle{
+            font-size: 18px;
+            position: relative;
+            left: 40px;
+            top: -30px;
+        }
+        .btn-create{
+            position: relative;
+            bottom: 20px;
+        }
+    }
+
