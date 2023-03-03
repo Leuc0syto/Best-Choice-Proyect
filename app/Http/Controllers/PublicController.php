@@ -19,4 +19,20 @@ class PublicController extends Controller
         $ads = $category->ads()->latest()->paginate(6);
         return view('ad.by-category', compact('category','ads'));
     }
+
+
+    public function about()
+    {
+        return view('about');
+    }
+    public function privacy()
+    {
+        return view('privacy');
+    }
+
+    public function conditions()
+    {
+        return view('conditions');
+    }
+
 }

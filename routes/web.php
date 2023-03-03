@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\PublicController;
+use League\CommonMark\Extension\Footnote\Node\FootnoteRef;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,8 @@ Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCate
 
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
+
+// FOOTER
+Route::get('/about', [PublicController::class, 'about'])->name('about');
+Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
+Route::get('/conditions', [PublicController::class, 'conditions'])->name('conditions');
