@@ -1,5 +1,9 @@
 @import '~bootstrap/dist/css/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rock+Salt&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Condensed&family=Rock+Salt&family=Varela+Round&display=swap');
+
+
 
 
 
@@ -11,22 +15,34 @@ body
 }
 
 
+
+.logo{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 35px;
+}
+
 .btn-create{
-    background:#114358;
-    border: 0px;
+    margin-left: 20px;
+    font-size: 18px;
     color: white;
-    border-radius: 15px;
     text-decoration: none;
+    margin-right: 10px;
+    border-radius: 15px;
+    background:#323b45;
+    padding: 7px;
+    font-family: 'Roboto Condensed', sans-serif;
+
 }
-.btn-create:active{
-    border:20px;
-}
+
+
 .my-nav{
-    font-family: 'Rock Salt', cursive;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     background: #114358;
-    font-size: 12px;
-    padding-right: 6px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    max-height: 80px;
+    background-color: #fff;
 }
 .droptrue{
     font-size: 16px;
@@ -34,25 +50,27 @@ body
 .dropfalse{
     font-size: 16px;
 }
-/* .my-title{
-    display: flex;
-    position: relative;
-    left: 110px;
-    top: -50px;
-} */
-/* .my-subtitle{
-    position: relative;
-    left: 150px;
-    top: -50px;
-} */
 
-/* .my-hero{
-    background-image: url(/public/images/photo-hero.jpg);
-    background-size: 100%;
-    background-position: 50%;
+.box-src input {
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+}
+.my-hero{
+    background: url(/public/images/clothes3.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    height:600px;
+    display: flex;
 
-} */
+}
+.my-subtitle{
+    position: relative;
+    left: 285px;
+    top: 350px;
+}
+
+
 
 
 .product-grid{
@@ -183,5 +201,5 @@ nav, .main-font, footer {
             position: relative;
             bottom: 20px;
         }
-    }
- */
+    } */
+
