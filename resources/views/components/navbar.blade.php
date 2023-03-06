@@ -45,25 +45,25 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        @if (Auth::user()->is_admin)
+                        {{-- @if (Auth::user()->is_admin)
                             <li><a href="{{ route('admin.dashboard') }}" class="dropdown-item">Panel del Administrador</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                        @endif
-                        @if (Auth::user()->is_revisor)
+                        @endif --}}
+                        {{-- @if (Auth::user()->is_revisor)
                             <li><a href="{{ route('revisor.dashboard') }}" class="dropdown-item">Panel del Revisor</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                        @endif
-                        @if (Auth::user()->is_writer)
+                        @endif --}}
+                        {{-- @if (Auth::user()->is_writer)
                             <li><a href="{{ route('writer.dashboard') }}" class="dropdown-item">Panel del Redactor</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                        @endif
+                        @endif --}}
 
                         <li><a href="#" class="dropdown-item"
                                 onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Cerrar
