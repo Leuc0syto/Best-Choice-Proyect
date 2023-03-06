@@ -33,3 +33,9 @@ Route::get('/revisor', [RevisorController::class,'index'])->name('revisor.home')
 Route::get('/about', [PublicController::class, 'about'])->name('about');
 Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
 Route::get('/conditions', [PublicController::class, 'conditions'])->name('conditions');
+
+Route::middleware(['isRevisor'])->group(function(){
+    Route::get('/revisor', [RevisorController::class, 'index'])->name('revisor.home');
+    Route::patch('/revisor/ad/{ad}/accept', [RevisorController::class, 'acceptAd'])->name('revisor.ad.reject');
+    Route::patch('/revisor/ad/{ad}/reject', [RevisorController::class, 'rejectAd'])->name('revisor.ad.reject');
+});

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <title>{{$title ?? 'bestchoice.com'}}</title>
 
     @livewireStyles
@@ -21,6 +21,9 @@
 
 <body>
     <x-navbar />
+    @if (session()has('message'))
+        <x-alert  :type="session('message')['type']" :message="session('message')['text']"/>
+    @endif
     {{ $slot }}
     <x-footer />
 
