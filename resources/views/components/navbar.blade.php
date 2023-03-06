@@ -41,7 +41,15 @@
                         Bienvenido {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu position-absolute droptrue" aria-labelledby="navbarDropdown">
-                        <li><a href="" class="dropdown-item">Mi zona</a></li>
+                        @if (Auth::user()->is_revisor)
+                        <li>
+                            <a href="{{ route('revisor.home') }}" class="dropdown-item">Revisor
+                            <span class="badge rounded-pill bg-danger">
+                                {{\App\Models\Ad::ToBeRevisionedCount() }}
+                            </span>
+                        </a>
+                    </li>
+                    @endif
                         <li>
                             <hr class="dropdown-divider">
                         </li>
