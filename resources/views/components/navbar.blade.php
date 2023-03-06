@@ -28,7 +28,7 @@
         {{-- <div class="create-btn">
             <button><a class="create-btn" href="{{route('ads.create')}}"><i class="fa-solid fa-plus"> Crear anuncio</i></a></button>
         </div> --}}
-        <button type="button" class="btn btn-outline-warning btn-create">Crear anuncio</button>
+        <button type="button" class="btn btn-outline-warning btn-create"> <a href="{{route('ads.create')}}" class="text-decoration-none text-white">Crear anuncio</a></button>
 
 
 

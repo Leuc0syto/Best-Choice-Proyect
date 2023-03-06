@@ -57,7 +57,7 @@ body
     border-radius: 10px;
 }
 .my-hero{
-    background: url(/public/images/clothes3.jpg);
+    background: url(/public/images/hero-photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height:600px;
