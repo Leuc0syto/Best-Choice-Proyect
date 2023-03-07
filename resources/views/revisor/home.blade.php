@@ -1,4 +1,3 @@
-
 <x-layout>
     <x-slot name='title'>BestChoice - Revisor Home</x-slot>
     @if ($ad)
@@ -8,7 +7,7 @@
             <div class='col-12 col-md-8 offset-md-2'>
                 <div class="card">
                     <div class="card-header">
-                        Anuncio #{{$ad->id}}
+                        Anuncio #{{ $ad->id }}
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -16,7 +15,7 @@
                                 <b>Usuario</b>
                             </div>
                             <div class="col-md-9">
-                                #{{$ad->user->id}} - {{$ad->user->name}} - {{$ad->user->email}}
+                                #{{ $ad->user->id }} - {{ $ad->user->name }} - {{ $ad->user->email }}
                             </div>
                         </div>
                         <hr>
@@ -25,7 +24,7 @@
                                 <b>Título</b>
                             </div>
                             <div class="col-md-9">
-                                {{$ad->title}}
+                                {{ $ad->title }}
                             </div>
                         </div>
                         <hr>
@@ -34,7 +33,7 @@
                                 <b>Precio</b>
                             </div>
                             <div class="col-md-9">
-                                {{$ad->price}}
+                                {{ $ad->price }}
                             </div>
                         </div>
                         <hr>
@@ -43,7 +42,7 @@
                                 <b>Descripción</b>
                             </div>
                             <div class="col-md-9">
-                                {{$ad->body}}
+                                {{ $ad->body }}
                             </div>
                         </div>
                         <hr>
@@ -52,7 +51,7 @@
                                 <b>Categoría</b>
                             </div>
                             <div class="col-md-9">
-                                {{-- {{$ad->category->name}} --}}
+                                {{-- {{ $ad->category->name }} --}}
                             </div>
                         </div>
                         <hr>
@@ -61,21 +60,21 @@
                                 <b>Fecha de creación</b>
                             </div>
                             <div class="col-md-9">
-                                {{$ad->created_at}}
+                                {{ $ad->created_at }}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row my-3">
                     <div class="col-6">
-                        <form action="{{route('revisor.ad.reject',$ad)}}" method="POST">
+                        <form action="{{ route('revisor.ad.reject',$ad) }}" method="POST">
                             @csrf
                             @method('PATCH')
                             <button type="submit" class="btn btn-danger">Rechazar</button>
                         </form>
                     </div>
                     <div class="col-6 text-end">
-                        <form action="{{route('revisor.ad.accept',$ad)}}" method="POST">
+                        <form action="{{ route('revisor.ad.accept',$ad) }}" method="POST">
                             @csrf
                             @method('PATCH')
                             <button type="submit" class="btn btn-success">Aceptar</button>

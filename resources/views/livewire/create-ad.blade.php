@@ -3,6 +3,7 @@
         <div class="alert alert-success" role="alert">
             {{session('message')}}
         </div>
+        
     @endif
     <form wire:submit.prevent="store">
 

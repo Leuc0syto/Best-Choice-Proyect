@@ -4,10 +4,11 @@
             <div class="col-5 col-md-4 mb-3">
                 <h5>Best Choice</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="{{route('home')}}" class="nav-link p-0 text-muted">Inicio</a></li>
-                    <li class="nav-item mb-2"><a href="{{route('about')}}" class="nav-link p-0 text-muted">Quiénes somos</a></li>
-                    <li class="nav-item mb-2"><a href="{{route('privacy')}}" class="nav-link p-0 text-muted">Política de Privacidad</a></li>
-                    <li class="nav-item mb-2"><a href="{{route('conditions')}}" class="nav-link p-0 text-muted">Términos y condiciones</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('home') }}" class="nav-link p-0 text-muted">Inicio</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('about') }}" class="nav-link p-0 text-muted">Quiénes somos</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('revisor.become') }}" class="nav-link p-0 text-muted">Trabaja con nosotros</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('privacy') }}" class="nav-link p-0 text-muted">Política de Privacidad</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('conditions') }}" class="nav-link p-0 text-muted">Términos y condiciones</a></li>
                 </ul>
             </div>
 

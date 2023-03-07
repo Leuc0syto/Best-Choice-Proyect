@@ -27,17 +27,23 @@ Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCate
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
 
-Route::get('/revisor', [RevisorController::class,'index'])->name('revisor.home');
-Route::patch('revisor/ad/{ad}/accept', [RevisorController::class, 'acceptAd'])->name('revisor.ad.accept');
-Route::patch('revisor/ad/{ad}/reject', [RevisorController::class, 'rejectAd'])->name('revisor.ad.reject');
+
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('/revisor/become', [RevisorController::class,'becomeRevisor'])->name('revisor.become');
+    Route::get('/revisor/{user}/make',  [RevisorController::class,'makeRevisor'])->name('revisor.make');
+});
+
+
+Route::middleware(['isRevisor'])->group(function(){
+    Route::get('/revisor', [RevisorController::class, 'index'])->name('revisor.home');
+    Route::patch('/revisor/ad/{ad}/accept', [RevisorController::class, 'acceptAd'])->name('revisor.ad.accept');
+    Route::patch('/revisor/ad/{ad}/reject', [RevisorController::class, 'rejectAd'])->name('revisor.ad.reject');
+});
 
 // FOOTER
 Route::get('/about', [PublicController::class, 'about'])->name('about');
 Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
 Route::get('/conditions', [PublicController::class, 'conditions'])->name('conditions');
 
-Route::middleware(['isRevisor'])->group(function(){
-    Route::get('/revisor', [RevisorController::class, 'index'])->name('revisor.home');
-    Route::patch('/revisor/ad/{ad}/accept', [RevisorController::class, 'acceptAd'])->name('revisor.ad.reject');
-    Route::patch('/revisor/ad/{ad}/reject', [RevisorController::class, 'rejectAd'])->name('revisor.ad.reject');
-});
+

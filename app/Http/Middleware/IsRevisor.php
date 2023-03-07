@@ -17,10 +17,9 @@ class IsRevisor
     public function handle(Request $request, Closure $next): Response
     {
         if(Auth::check() && Auth::user()->is_revisor){
-
             return $next($request);
         }else{
-            return redirect()->route('home')->withMessage(['type'=>'danger', 'text'=>'Acceso denegado, no eres un revisor,pregunta al administrador']);
+            return redirect()->route('home')->withMessage(['type'=>'danger', 'text'=>'Acceso denegado. Tu usuario no tiene perfil de revisor, contacta con el administrador.']);
         }
     }
 }
