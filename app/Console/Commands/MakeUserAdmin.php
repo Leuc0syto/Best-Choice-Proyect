@@ -21,7 +21,7 @@ class MakeUserRevisor extends Command
             $this->error("Usuario no encontrado");
             return;
         }
-        $user->is_revisor = true;
+        $user->is_admin = true;
         $user->save();
         $this->info("El usuario $user->name ya es un administrador");
     }

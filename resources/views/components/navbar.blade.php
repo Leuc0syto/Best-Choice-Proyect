@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     @endif
-
+                    
                     <li>
                         <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                             @csrf

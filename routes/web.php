@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use League\CommonMark\Extension\Footnote\Node\FootnoteRef;
@@ -35,9 +36,9 @@ Route::middleware(['auth'])->group(function(){
 });
 
 Route::middleware(['isAdmin'])->group(function(){
-    Route::get('/admin', [RevisorController::class, 'index'])->name('admin.home');
-    // Route::patch('/revisor/ad/{ad}/accept', [RevisorController::class, 'acceptAd'])->name('revisor.ad.accept');
-    // Route::patch('/revisor/ad/{ad}/reject', [RevisorController::class, 'rejectAd'])->name('revisor.ad.reject');
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.home');
+    Route::patch('/admin/ad/{ad}/accept', [AdminController::class, 'acceptAd'])->name('admin.ad.accept');
+    Route::patch('/admin/ad/{ad}/reject', [AdminController::class, 'rejectAd'])->name('admin.ad.reject');
 });
 
 
