@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 use App\Models\User;
 use Illuminate\Console\Command;
 
-class MakeUserRevisor extends Command
+class MakeUserAdmin extends Command
 {
     protected $signature = 'best-choice:makeUserAdmin {email}';
     protected $description = 'Asigna el rol de administrador a un usuario';

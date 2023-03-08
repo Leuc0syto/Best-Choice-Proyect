@@ -9,9 +9,9 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $ad = Ad::where('is_accepted', null)
+        $revisor = Revisor::where('revisor_accepted', null)
                         ->orderBy('created_at', 'desc')
                         ->first();
-        return view('admin.home', compact('ad'));
+        return view('admin.home', compact('revisor'));
     }
 }

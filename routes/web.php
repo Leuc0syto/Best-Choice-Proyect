@@ -37,8 +37,8 @@ Route::middleware(['auth'])->group(function(){
 
 Route::middleware(['isAdmin'])->group(function(){
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.home');
-    Route::patch('/admin/ad/{ad}/accept', [AdminController::class, 'acceptAd'])->name('admin.ad.accept');
-    Route::patch('/admin/ad/{ad}/reject', [AdminController::class, 'rejectAd'])->name('admin.ad.reject');
+    Route::patch('/admin/revisor/{revisor}/accept', [AdminController::class, 'acceptRevisor'])->name('admin.revisor.accept');
+    Route::patch('/admin/revisor/{revisor}/reject', [AdminController::class, 'rejectRevisor'])->name('admin.revisor.reject');
 });
 
 
