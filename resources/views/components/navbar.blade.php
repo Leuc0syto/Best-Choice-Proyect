@@ -80,6 +80,18 @@
                 <li><a href="{{ route('register') }}" class="nav-link text-dark">Registrarse</a></li>
             </ul>
             @endguest
+            
+            <li class="nav-item">
+                <x-locale lang="en" country="gb" />
+            </li>
+
+            <li class="nav-item">
+                <x-locale lang="es" country="es" />
+            </li>
+
+            <li class="nav-item">
+                <x-locale lang="ru" country="ru" />
+            </li>
         </ul>
     </div>
     </div>
