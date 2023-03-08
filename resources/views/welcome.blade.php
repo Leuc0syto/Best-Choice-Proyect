@@ -1,5 +1,8 @@
 <x-layout>
     <x-slot name='title'>BestChoice - ads</x-slot>
+    <div class="col-12">
+        <h1>{{__('messages.welcome')}}</h1>
+    </div>
     <div class="px-4 py-5 my-5 text-center my-hero">
         <h1 class="display-5 fw-bold">Centered hero</h1>
         <div class="col-lg-4 mx-auto">
