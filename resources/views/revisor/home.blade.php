@@ -51,7 +51,7 @@
                                 <b>Categoría</b>
                             </div>
                             <div class="col-md-9">
-                                {{-- {{ $ad->category->name }} --}}
+                                {{ $ad->category->name }}
                             </div>
                         </div>
                         <hr>

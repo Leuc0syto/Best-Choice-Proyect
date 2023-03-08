@@ -27,4 +27,9 @@ class Ad extends Model
     {
         return Ad::where('is_accepted', null)->count();
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
