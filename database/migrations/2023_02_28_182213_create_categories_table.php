@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
         });
         $categories = [
-            'coches', 'motos', 'hogar', 'electrónica', 'móviles', 'ordenadores'
+            'Ropa hombre', 'Ropa mujer', 'Ropa niños', 'Ropa unisex', 'Ropa bebés', 'Complementos'
         ];
         foreach ($categories as $category) {
             Category::create(['name'=>$category]);

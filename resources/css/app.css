@@ -63,6 +63,7 @@ body
     background-size: cover;
     height:600px;
     display: flex;
+    min-width: 600px;
 
 }
 .my-subtitle{

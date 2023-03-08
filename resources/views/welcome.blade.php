@@ -1,10 +1,10 @@
 <x-layout>
     <x-slot name='title'>BestChoice - ads</x-slot>
-    <div class="col-12">
+    <div class="col-12 mx-3">
         <h1>{{__('messages.welcome')}}</h1>
     </div>
     <div class="px-4 py-5 my-5 text-center my-hero">
-        <h1 class="display-5 fw-bold">Centered hero</h1>
+        <h1 class="display-5 fw-bold">Novedades</h1>
         <div class="col-lg-4 mx-auto">
             <p class="lead mb-4 my-subtitle">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
                 most.</p>
