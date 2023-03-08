@@ -1,13 +1,13 @@
 <x-layout>
     <x-slot name='title'>BestChoice - Admin Home</x-slot>
-    @if ($ad)
+    @if ($revisor)
 
     <div class='container my-5 py-5'>
         <div class='row'>
             <div class='col-12 col-md-8 offset-md-2'>
                 <div class="card">
                     <div class="card-header">
-                        Anuncio #{{ $ad->id }}
+                        Solicitud para el puesto de "Revisor"
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -15,66 +15,42 @@
                                 <b>Usuario</b>
                             </div>
                             <div class="col-md-9">
-                                #{{ $ad->user->id }} - {{ $ad->user->name }} - {{ $ad->user->email }}
+                                {{-- #{{ $revisor->id }} - {{ $revisor->name }} - {{ $revisor->email }} --}}
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-md-3">
-                                <b>Título</b>
+                                <b>Email</b>
                             </div>
                             <div class="col-md-9">
-                                {{ $ad->title }}
+                                {{-- {{ $ad->title }} --}}
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-md-3">
-                                <b>Precio</b>
+                                <b>Fecha de creación del usuario: </b>
                             </div>
                             <div class="col-md-9">
-                                {{ $ad->price }}
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <b>Descripción</b>
-                            </div>
-                            <div class="col-md-9">
-                                {{ $ad->body }}
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <b>Categoría</b>
-                            </div>
-                            <div class="col-md-9">
-                                {{-- {{ $ad->category->name }} --}}
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <b>Fecha de creación</b>
-                            </div>
-                            <div class="col-md-9">
-                                {{ $ad->created_at }}
+                                {{-- {{ $revisor->created_at }} --}}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row my-3">
                     <div class="col-6">
-                        <form action="{{ route('admin.ad.reject',$ad) }}" method="POST">
+                        <form action="" method="POST">
+                            {{-- {{ route('admin.revisor.reject',$revisor) }} --}}
                             @csrf
                             @method('PATCH')
                             <button type="submit" class="btn btn-danger">Rechazar</button>
                         </form>
                     </div>
                     <div class="col-6 text-end">
-                        <form action="{{ route('admin.ad.accept',$ad) }}" method="POST">
+                        <form action="" method="POST">
+                            {{-- {{ route('admin.revisor.accept', $revisor) }} --}}
+                            {{-- {{ route('revisor.make',$user) }} --}}
                             @csrf
                             @method('PATCH')
                             <button type="submit" class="btn btn-success">Aceptar</button>
@@ -85,7 +61,7 @@
         </div>
     </div>
     @else
-    <h3 class="text-center mt-5">No hay anuncios para revisar, vuelve más tarde, gracias</h3>
+    <h3 class="text-center mt-5">No hay ninguna solicitud para revisor</h3>
 
     @endif
 </x-layout>

@@ -31,9 +31,6 @@
         <button type="button" class="btn btn-outline-warning btn-create"> <a href="{{route('ads.create')}}"
                 class="text-decoration-none text-white">Crear anuncio</a></button>
 
-
-
-        {{-- FIN CATEGORIAS --}}
         <ul class="navbar-nav">
             @auth
             <li class="nav-item dropdown">
@@ -42,6 +39,17 @@
                     {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @if (Auth::user()->is_admin)
+                    <li>
+                        <a class="dropdown-item" href="{{ route('admin.home') }}">
+                            Solicitudes para revisor
+                            <span class="badge rounded-pill bg-danger">
+                                {{ \App\Models\Revisor::ToBeRevisionedCount() }}
+                            </span>
+                        </a>
+                    </li>
+                    @endif
+
                     @if (Auth::user()->is_revisor)
                     <li>
                         <a class="dropdown-item" href="{{ route('revisor.home') }}">
