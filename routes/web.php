@@ -48,6 +48,8 @@ Route::middleware(['isRevisor'])->group(function(){
     Route::patch('/revisor/ad/{ad}/reject', [RevisorController::class, 'rejectAd'])->name('revisor.ad.reject');
 });
 
+Route::post('/locale/{locale}', [PublicController::class, 'setLocale'])->name('locale.set');
+
 // FOOTER
 Route::get('/about', [PublicController::class, 'about'])->name('about');
 Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
