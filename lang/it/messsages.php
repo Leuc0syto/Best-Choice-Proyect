@@ -1,6 +1,6 @@
 <?php
 
-//lang/ru/messages.php
+//lang/it/messages.php
 
         return [
             'welcome' => 'Benvenuta nella BestChoice',
