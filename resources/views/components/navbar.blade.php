@@ -8,7 +8,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Categorías
+                        {{__('Categorías')}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @foreach ($categories as $category)
@@ -22,14 +22,14 @@
         <div class="d-flex justify-content-start">
             <form class="col-12" role="search">
                 <div class="box-src">
-                    <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Buscar..."
+                    <input type="search" class="form-control form-control-dark text-bg-light" placeholder="{{__('Buscar...')}}"
                         aria-label="Search">
                 </div>
             </form>
         </div>
 
-        <button type="button" class="btn btn-outline-warning btn-create"> <a href="{{route('ads.create')}}"
-                class="text-decoration-none text-white">Crear anuncio</a></button>
+        <button type="button" class="btn btn-outline-warning btn-create"><a href="{{route('ads.create')}}"
+                class="text-decoration-none text-white">{{__('Crear anuncio')}}</a></button>
 
         <ul class="navbar-nav">
             @auth
@@ -76,8 +76,8 @@
 
             <ul class="nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
 
-                <li><a href="{{ route('login') }}" class="nav-link text-dark">Iniciar sesión</a></li>
-                <li><a href="{{ route('register') }}" class="nav-link text-dark">Registrarse</a></li>
+                <li><a href="{{ route('login') }}" class="nav-link text-dark">{{__('Iniciar sesión')}}</a></li>
+                <li><a href="{{ route('register') }}" class="nav-link text-dark">{{__('Registrar')}}</a></li>
             </ul>
             @endguest
 
