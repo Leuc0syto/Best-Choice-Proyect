@@ -48,8 +48,8 @@
                         </form>
                     </div>
                     <div class="col-6 text-end">
-                        <form action="" method="POST">
-                            {{-- {{ route('admin.revisor.accept', $revisor) }} --}}
+                        <form action="route('admin.revisor.accept', $revisor)" method="POST">
+                            {{-- {{  }} --}}
                             {{-- {{ route('revisor.make',$user) }} --}}
                             @csrf
                             @method('PATCH')
