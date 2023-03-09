@@ -3,7 +3,7 @@
         <div class="alert alert-success" role="alert">
             {{session('message')}}
         </div>
-        
+
     @endif
     <form wire:submit.prevent="store">
 
@@ -18,7 +18,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="price" class="form-label">Precio: </label>
+            <label for="price" class="form-label">{{__('Precio:')}} </label>
             <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror">
                 @error('price')
                     {{$message}}
@@ -26,7 +26,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="body" class="form-label">Descripción: </label>
+            <label for="body" class="form-label">{{__('Descripción:')}} </label>
             <textarea wire:model="body" cols="20" rows="5" class="form-control  @error('body') is-invalid @enderror"></textarea>
                 @error('body')
                     {{$message}}
@@ -34,7 +34,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="category" class="form-label">Categoría: </label>
+            <label for="category" class="form-label">{{__('Categorías:')}} </label>
             <select wire:model.defer="category" class="form-control">
                 <option value="">Selecciona la categoría</option>
                 @foreach ($categories as $category)

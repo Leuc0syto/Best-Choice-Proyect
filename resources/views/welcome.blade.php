@@ -4,7 +4,7 @@
         <h1>{{__('messages.welcome')}}</h1>
     </div>
     <div class="px-4 py-5 my-5 text-center my-hero">
-        <h1 class="display-5 fw-bold">Novedades</h1>
+        <h1 class="display-5 fw-bold">{{__('Novedades')}}</h1>
         <div class="col-lg-4 mx-auto">
             <p class="lead mb-4 my-subtitle">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
                 most.</p>
@@ -28,7 +28,7 @@
                                 <h3 class="card-title">{{ $ad->title }}</h3>
                                 <p class="card-text">{{ $ad->body }}</p>
                                 <div class="card-subtitle mb-2">
-                                    <small>Vendedor: {{ $ad->user->name }}</small>
+                                    <small>{{__('Vendedor:')}} {{ $ad->user->name }}</small>
                                     <ul class="rating">
                                         <li class="fa fa-star"></li>
                                         <li class="fa fa-star"></li>
