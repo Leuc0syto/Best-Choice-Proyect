@@ -16,6 +16,7 @@
                                 href="{{ route('category.ads', $category) }}">{{ $category->name }}</a></li>
                         @endforeach
                     </ul>
+                    
                 </li>
             </ul>
         </div>
@@ -39,17 +40,6 @@
                     {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    @if (Auth::user()->is_admin)
-                    <li>
-                        <a class="dropdown-item" href="{{ route('admin.home') }}">
-                            {{__('Solicitudes para revisor')}}
-                            <span class="badge rounded-pill bg-danger">
-                                {{ \App\Models\Revisor::ToBeRevisionedCount() }}
-                            </span>
-                        </a>
-                    </li>
-                    @endif
-
                     @if (Auth::user()->is_revisor)
                     <li>
                         <a class="dropdown-item" href="{{ route('revisor.home') }}">
