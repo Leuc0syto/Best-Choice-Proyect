@@ -1,8 +1,37 @@
 <x-layout>
     <x-slot name='title'>BestChoice - ads</x-slot>
-    <div class="px-4 py-5 my-5 text-center my-hero">
+    {{-- <div class="px-4 py-5 my-5 text-center my-hero">
         <h1 class="display-5 fw-bold">{{__('Novedades')}}</h1>
         <p class="lead mb-2 my-subtitle">{{__('Viste tu actitud.')}}</p>
+    </div> --}}
+    <div id="adImages" class="carousel slide col-12 my-hero" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#adImages" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#adImages" data-bs-slide-to="1" class="active" aria-current="true"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#adImages" data-bs-slide-to="2" class="active" aria-current="true"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/700/600?a" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/700/600?b" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/700/600?c" class="d-block w-100" alt="...">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#adImages" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#adImages" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
     </div>
     <div class="container">
         <div class="row">

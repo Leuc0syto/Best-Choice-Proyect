@@ -58,12 +58,13 @@ body
     border-radius: 10px;
 }
 .my-hero{
-    background: url(/public/images/hero-photo.jpg);
+    /* background: url(/public/images/hero-photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     min-height:600px;
     display: flex;
-    min-width: 600px;
+    min-width: 600px; */
+    
 
 }
 .my-subtitle{
