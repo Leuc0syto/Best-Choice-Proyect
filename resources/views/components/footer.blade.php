@@ -26,10 +26,9 @@
             <div class="col-6 col-md-3 px-5 mb-3">
                 <h5>{{__('Categorías')}}</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">{{__('Ropa de hombre')}}</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">{{__('Ropa de mujer')}}</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">{{__('Ropa de niño')}}</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">{{__('Unisex')}}</a></li>
+                    @foreach ($categories as $category)
+                        <li class="nav-item mb-2"><a href="{{ route('category.ads', $category) }}" class="nav-link p-0 text-muted">{{__($category->name)}}</a></li>   
+                        @endforeach
                 </ul>
             </div>
 
