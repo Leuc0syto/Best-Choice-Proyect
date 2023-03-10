@@ -1,10 +1,8 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light my-nav">
+<nav class="navbar navbar-expand-lg my-nav">
     <div class="container">
         <a class="navbar-brand text-bold logo" aria-current="page" href="{{ route('home') }}">BestChoice</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+        {{--  CATEGORIAS DAR FRONT--}}
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
@@ -12,23 +10,24 @@
                         aria-expanded="false">
                         {{__('Categorías')}}
                     </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @foreach ($categories as $category)
+                        <li><a class="dropdown-item"
+                                href="{{ route('category.ads', $category) }}">{{ $category->name }}</a></li>
+                        @endforeach
+                    </ul>
+                    
                 </li>
             </ul>
         </div>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            @foreach ($categories as $category)
-            <li><a class="dropdown-item"
-                    href="{{ route('category.ads', $category) }}">{{ $category->name }}</a>
-            </li>
-            @endforeach
-        </ul>
-
-        <form class="form-inline" role="search">
+        <div class="d-flex justify-content-start">
+            <form class="col-12" role="search">
                 <div class="box-src">
-                    <input type="search" class="form-control form-control-dark text-bg-light"
-                        placeholder="{{__('Buscar...')}}" aria-label="Search">
+                    <input type="search" class="form-control form-control-dark text-bg-light" placeholder="{{__('Buscar...')}}"
+                        aria-label="Search">
                 </div>
-        </form>
+            </form>
+        </div>
 
         <button type="button" class="btn btn-outline-warning btn-create"><a href="{{route('ads.create')}}"
                 class="text-decoration-none text-white">{{__('Crear anuncio')}}</a></button>
@@ -67,10 +66,8 @@
 
             <ul class="nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
 
-                <li><a href="{{ route('login') }}" class="nav-link text-dark">{{__('Iniciar sesión')}}</a>
-                </li>
-                <li><a href="{{ route('register') }}" class="nav-link text-dark">{{__('Registrar')}}</a>
-                </li>
+                <li><a href="{{ route('login') }}" class="nav-link text-dark">{{__('Iniciar sesión')}}</a></li>
+                <li><a href="{{ route('register') }}" class="nav-link text-dark">{{__('Registrar')}}</a></li>
             </ul>
             @endguest
 
@@ -87,6 +84,5 @@
             </li>
         </ul>
     </div>
-
     </div>
 </nav>
