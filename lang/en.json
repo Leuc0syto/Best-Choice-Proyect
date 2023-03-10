@@ -27,16 +27,22 @@
     "Construye tu mejor versión." : "Build your best version.",
     "Viste tu actitud.": "Dress your attitude.",
 
+    "$category": "",
+
 
     "Inicio" : "Home",
     "Quiénes somos": "About us",
     "Trabaja con nosotros": "Work with us",
     "Política de Privacidad": "Privacy policy",
     "Términos y condiciones": "Terms and Conditions",
-    "Ropa de hombre": "Men´s clothes",
-    "Ropa de mujer" : "Women´s clothes",
-    "Ropa de niño": "Kid´s clothes",
+
+
+    "Ropa hombre": "Men´s clothes",
+    "Ropa mujer" : "Women´s clothes",
+    "Ropa niños": "Kid´s clothes",
     "Unisex": "Unisex",
+    "Complementos": "Complements",
+
     "Resumen mensual de las mejores novedades y promociones": "Monthly summary of the best news and promotions",
     "Suscríbete a nuestro boletín": "Subscribe to our newsletter",
     "Suscríbete": "Subscribe",
