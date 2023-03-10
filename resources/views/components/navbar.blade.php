@@ -42,7 +42,7 @@
                     @if (Auth::user()->is_admin)
                     <li>
                         <a class="dropdown-item" href="{{ route('admin.home') }}">
-                            Solicitudes para revisor
+                            {{__('Solicitudes para revisor')}}
                             <span class="badge rounded-pill bg-danger">
                                 {{ \App\Models\Revisor::ToBeRevisionedCount() }}
                             </span>
@@ -53,7 +53,7 @@
                     @if (Auth::user()->is_revisor)
                     <li>
                         <a class="dropdown-item" href="{{ route('revisor.home') }}">
-                            Anuncios sin revisar
+                            {{__('Anuncios sin revisar')}}
                             <span class="badge rounded-pill bg-danger">
                                 {{ \App\Models\Ad::ToBeRevisionedCount() }}
                             </span>
@@ -65,8 +65,8 @@
                         <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                             @csrf
                         </form>
-                        <a id="logoutBtn" class="dropdown-item" href="#">Cerrar
-                            sesión</a>
+                        <a id="logoutBtn" class="dropdown-item" href="#">{{__('Cerrar
+                            sesión')}}</a>
                     </li>
                 </ul>
             </li>

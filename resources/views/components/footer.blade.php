@@ -4,11 +4,11 @@
             <div class="col-5 col-md-4 mb-3">
                 <h5>Best Choice</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="{{ route('home') }}" class="nav-link p-0 text-muted">Inicio</a></li>
-                    <li class="nav-item mb-2"><a href="{{ route('about') }}" class="nav-link p-0 text-muted">Quiénes somos</a></li>
-                    <li class="nav-item mb-2"><a href="{{ route('revisor.become') }}" class="nav-link p-0 text-muted">Trabaja con nosotros</a></li>
-                    <li class="nav-item mb-2"><a href="{{ route('privacy') }}" class="nav-link p-0 text-muted">Política de Privacidad</a></li>
-                    <li class="nav-item mb-2"><a href="{{ route('conditions') }}" class="nav-link p-0 text-muted">Términos y condiciones</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('home') }}" class="nav-link p-0 text-muted">{{__('Inicio')}}</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('about') }}" class="nav-link p-0 text-muted">{{__('Quiénes somos')}}</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('revisor.become') }}" class="nav-link p-0 text-muted">{{__('Trabaja con nosotros')}}</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('privacy') }}" class="nav-link p-0 text-muted">{{__('Política de Privacidad')}}</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('conditions') }}" class="nav-link p-0 text-muted">{{__('Términos y condiciones')}}</a></li>
                 </ul>
             </div>
 
@@ -24,27 +24,27 @@
             </div> --}}
 
             <div class="col-5 col-md-4 mb-3">
-                <h5>Categorías</h5>
+                <h5>{{__('Categorías')}}</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ropa de hombre</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ropa de mujer</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ropa de niño</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Unisex</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">{{__('Ropa de hombre')}}</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">{{__('Ropa de mujer')}}</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">{{__('Ropa de niño')}}</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">{{__('Unisex')}}</a></li>
                 </ul>
             </div>
 
             <div class="col-2 col-md-4  mb-3 text-end">
                 <form>
-                    <h5>Suscríbete a nuestra newsletter</h5>
-                    <p>Resumen mensual de las mejores novedades y promociones.</p>
+                    <h5>{{__('Suscríbete a nuestro boletín')}}</h5>
+                    <p>{{__('Resumen mensual de las mejores novedades y promociones')}}</p>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">Email</label>
-                        <input id="newsletter1" type="text" class="form-control" placeholder="Email">
-                        <button class="btn btn-outline-warning btn-create" type="button">Suscribirme</button>
+                        <label for="newsletter1" class="visually-hidden">{{__('Email')}}</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="{{__('Tu correo')}}">
+                        <button class="btn btn-outline-warning btn-create" type="button">{{__('Suscríbete')}}</button>
                     </div>
                 </form>
                 <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
-                    <p><?php echo date('Y'); ?> BestChoice. Todos los derechos reservados.</p>
+                    <p><?php echo date('Y'); ?>BestChoice. {{__('Todos los derechos reservados.')}}</p>
                     <ul class="list-unstyled d-flex">
                         <li class="ms-3">
                             <a href="https://www.facebook.com/" target="_blank" class="link-dark"><i class="fa fa-facebook" aria-hidden="true"></i></a>

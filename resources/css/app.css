@@ -61,16 +61,17 @@ body
     background: url(/public/images/hero-photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height:600px;
+    min-height:600px;
     display: flex;
     min-width: 600px;
 
 }
 .my-subtitle{
     position: relative;
-    left: 285px;
-    top: 350px;
+    right: 280px;
+    top: 100px;
 }
+
 
 
 
