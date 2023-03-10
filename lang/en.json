@@ -6,11 +6,12 @@
     "Categoría": "Category",
     "Novedades": "News",
     "Crear anuncio": "Create ads",
+    "Nuevo anuncio": "New Ad",
     "Revisor": "Revisor",
     "Anuncios por categoría": "Ads by category",
-    "Título": "Title",
-    "Precio": "Price",
-    "Descripción": "Description",
+    "Título:": "Title",
+    "Precio:": "Price",
+    "Descripción:": "Description",
     "Tu correo": "Your email",
     "Rechazar": "Reject",
     "Aceptar": "Accept",
@@ -26,8 +27,11 @@
     "Solicitudes para revisor": "Requests for Reviewer",
     "Construye tu mejor versión." : "Build your best version.",
     "Viste tu actitud.": "Dress your attitude.",
+    "Vende algo interesante": "sell something interesting",
+    "Seleccionar Categoría": "Select Category",
+    "Crear": "Create",
+    "€":"$",
 
-    "$category": "",
 
 
     "Inicio" : "Home",
@@ -40,7 +44,7 @@
     "Ropa hombre": "Men´s clothes",
     "Ropa mujer" : "Women´s clothes",
     "Ropa niños": "Kid´s clothes",
-    "Unisex": "Unisex",
+    "Ropa unisex": "Unisex clothes",
     "Complementos": "Complements",
 
     "Resumen mensual de las mejores novedades y promociones": "Monthly summary of the best news and promotions",
@@ -88,8 +92,8 @@
 
 
 
-   "Seleccionar Categoría": "Select Category",
-   "Crear": "Create",
+
+
    "Publicado el": "Published at",
    "Por": "By",
 

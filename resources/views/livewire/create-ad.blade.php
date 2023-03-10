@@ -10,7 +10,7 @@
         @csrf
 
         <div class="mb-3">
-            <label for="title" class="form-label">Título: </label>
+            <label for="title" class="form-label">{{__('Título:')}} </label>
             <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
                 @error('title')
                     {{$message}}
@@ -36,15 +36,15 @@
         <div class="mb-3">
             <label for="category" class="form-label">{{__('Categorías:')}} </label>
             <select wire:model.defer="category" class="form-control">
-                <option value="">Selecciona la categoría</option>
+                <option value="">{{__('Seleccionar Categoría')}}</option>
                 @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    <option value="{{ $category->id }}">{{ __($category->name) }}</option>
                 @endforeach
             </select>
         </div>
 
         <div class="my-3 d-flex justify-content-center">
-            <button type="submit" class="btn btn-info">Crear</button>
+            <button type="submit" class="btn btn-info">{{__('Crear')}}</button>
         </div>
 
     </form>

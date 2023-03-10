@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-none col-md-6">
-                <img class="img-fluid" src="/images/shop.png" alt="">
+                <img class="img-fluid" src="/images/Shopping-rafiki.png" alt="">
             </div>
         </div>
 
