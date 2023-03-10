@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name='title'>BestChoice - ads</x-slot>
-    {{-- <div class="px-4 py-5 my-5 text-center my-hero">
+    <div class="px-4 py-5 my-5 text-center my-hero">
         <h1 class="display-5 fw-bold">{{__('Novedades')}}</h1>
         {{-- <p class="lead mb-2 my-subtitle">{{__('Viste tu actitud.')}}</p> --}}
     </div>
