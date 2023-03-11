@@ -56,8 +56,7 @@
                                 @csrf
                             </form>
                             <a id="logoutBtn" class="dropdown-item"
-                                href="#">{{ __('Cerrar
-                                                            sesión') }}</a>
+                                href="#">{{ __('Cerrar sesión') }}</a>
                         </li>
                     </ul>
                 </li>
@@ -72,15 +71,15 @@
                 </ul>
             @endguest
 
-            <li class="nav-item">
+            <li class="nav-item mt-2">
                 <x-locale lang="es" country="es" />
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item mt-2">
                 <x-locale lang="en" country="gb" />
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item mt-2">
                 <x-locale lang="it" country="it" />
             </li>
         </ul>

@@ -7,7 +7,7 @@
             <div class='col-12 col-md-8 offset-md-2'>
                 <div class="card">
                     <div class="card-header">
-                        Solicitud para el puesto de "Revisor"
+                        {{__('Solicitud para el puesto de Revisor')}}
                     </div>
                     <div class="card-body">
                         <div class="row">

@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>Anuncios por categoría: {{$category->name}}</h1> {{-- despues borrar si da error --}}
+                    <h1>{{__('Anuncios por categoría:')}} {{__($category->name)}}</h1> {{-- despues borrar si da error --}}
                 </div>
             </div>
             <div class="row">
@@ -14,19 +14,19 @@
                             <a href="{{ route("ads.show", $ad) }}" class="image">
                                 <img class="pic-1" src="https://via.placeholder.com/150">
                             </a>
-                            <div class="price">{{$ad->price}}€</div>
-                            <a href="{{ route("ads.show", $ad) }}" class="add-to-cart">Ver</a>
+                            <div class="price">{{$ad->price}}{{__('€')}}</div>
+                            <a href="{{ route("ads.show", $ad) }}" class="add-to-cart">{{__('Ver')}}</a>
                         </div>
-    
+
                         <div class="product-content">
                             <div class="card-body">
                                 <h3 class="card-title">{{$ad->title}}</h3>
-                                <p class="card-text">{{$ad->body}}</p>
+                                <p class="card-text">{{__($ad->body)}}</p>
                                 <strong>
-                                    <p><a href="{{ route('category.ads', $category) }}">{{$category->name}}</a></p>
+                                    <p><a href="{{ route('category.ads', $category) }}">{{__($category->name)}}</a></p>
                                 </strong>
                                 <div class="card-subtitle mb-2">
-                                    <small>Vendedor: {{$ad->user->name}}</small>
+                                    <small>{{__('Vendedor:')}} {{$ad->user->name}}</small>
                                     <ul class="rating">
                                         <li class="fa fa-star"></li>
                                         <li class="fa fa-star"></li>
@@ -41,9 +41,9 @@
                 </div>
                 @empty
                 <div class="col-12">
-                    <h2>Uyy... parece que no hay nada de esta categoría</h2>
-                    <a href="{{ route('ads.create') }}" class="btn btn-success">Vende tu primer objeto</a> o
-                    <a href="{{route('home')}}" class="btn btn-primary" >Vuelve a la home</a>
+                    <h2>{{__('Uyy...parece que no hay nada de esta categoría')}}</h2>
+                    <a href="{{ route('ads.create') }}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a> {{__('o')}}
+                    <a href="{{route('home')}}" class="btn btn-primary" >{{__('Vuelve a la home')}}</a>
                 </div>
                 @endforelse
 

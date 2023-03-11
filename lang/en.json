@@ -8,15 +8,18 @@
     "Crear anuncio": "Create ads",
     "Nuevo anuncio": "New Ad",
     "Revisor": "Revisor",
-    "Anuncios por categoría": "Ads by category",
+    "Anuncios por categoría:": "Ads by category",
     "Título:": "Title",
+    "Título": "Title",
     "Precio:": "Price",
+    "Precio": "Price",
     "Descripción:": "Description",
+    "Descripción": "Description",
     "Tu correo": "Your email",
     "Rechazar": "Reject",
     "Aceptar": "Accept",
     "Comprar": "Buy",
-    "Tu contraseña": "Your Passoword",
+    "Tu contraseña": "Your Password",
     "Buscar...": "Search...",
     "Vendedor:": "Powered by",
     "Uyy...parece que no hay nada de esta categoría": "Oops...it seems that there is nothing in this category",
@@ -31,7 +34,14 @@
     "Seleccionar Categoría": "Select Category",
     "Crear": "Create",
     "€":"$",
-
+    "o" : "or",
+    "Solicitud para el puesto de Revisor": "Application for the position of Reviewer",
+    "Fecha de creación": "Creation date",
+    "No hay anuncios para revisar, vuelve más tarde, gracias!":"There are no ads to review, please come back later, thanks!",
+    "Publicado el": "Published at",
+    "Por": "By",
+    "Usuario": "User",
+    "Anuncio": "Ad",
 
 
     "Inicio" : "Home",
@@ -52,6 +62,12 @@
     "Suscríbete": "Subscribe",
     "Todos los derechos reservados.": "All rights reserved.",
 
+    "Tu nombre":"Your name",
+    "Tu contraseña, una vez más": "Your password, one more time",
+    "Crear cuenta": "Create Account",
+    "¿Ya eres de los nuestros?": "You are already a member?",
+    "¡Entra ya!": "Log In",
+
 
 
 
@@ -59,54 +75,20 @@
     "Iniciar sesión": "Sign In",
     "Entrar": "Login",
     "Registrar": "Register",
+    "Regístrate": "Sign up",
     "Cerrar sesión": "Logout",
+    "¡Registrate!": "Sign Up!",
+    "¿Aún no eres de los nuestros?": "Your're still not a member?",
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-   "coches": "cars",
-   "motos": "motorbikes",
-   "hogar": "home",
-   "electrónica": "electronics",
-   "móviles": "smartphones",
-   "ordenadores": "computers",
    "Mostrar Más": "Show More",
-   "o": "or",
-
-
    "Dónde estamos": "Where",
-   "Nuevo Anuncio": "New Ad",
+   "Nuevo Anuncio": "New Ad"
 
 
-
-
-
-   "Publicado el": "Published at",
-   "Por": "By",
-
-
-   "Donde estamos": "where we are",
-
-
-   "¿Aún no eres de los nuestros?": "Your're still not a member?",
-   "¡Registrate!": "Sign Up!",
-   "¿Ya eres de los nuestros?": "You are already a member?",
-   "¡Entra ya!": "Log In",
-   "Usuario": "User",
-   "Anuncio": "Ad"
 
 
 

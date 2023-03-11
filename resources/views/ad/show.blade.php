@@ -47,7 +47,7 @@
                     <a class="btn btn-outline-success btn-sm my-2"
                         href="{{route('category.ads',$ad->category)}}">{{__($ad->category->name)}}</a>
                     <p class="card-text">{{ $ad->body }}</p>
-                    <p class="card-text"><small class="text-muted">{{ $ad->created_at->format('d/m/Y') }}</small></p>
+                    <p class="card-text"><small class="text-muted">{{__('Publicado el')}}: {{ $ad->created_at->format('d/m/Y') }}</small></p>
                     <a href="#" class="btn btn-success">{{__('Comprar')}}</a>
                 </div>
             </div>
