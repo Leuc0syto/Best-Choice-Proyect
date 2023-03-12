@@ -13,7 +13,7 @@
                             <a href="{{ route('ads.show', $ad) }}" class="image">
                                 <img class="pic-1" src="https://i.ebayimg.com/images/g/WuAAAOSw1iFhqrJZ/s-l1600.jpg">
                             </a>
-                            <div class="price">{{ $ad->price }}€</div>
+                            <div class="price">{{ $ad->price }}{{__('€')}}</div>
                             <a href="{{ route('ads.show', $ad) }}" class="add-to-cart">{{__('Ver')}}</a>
                         </div>
 
