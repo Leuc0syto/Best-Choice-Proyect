@@ -80,7 +80,7 @@
             </li>
 
             <li class="nav-item">
-                <x-locale lang="it" country="it" />
+                <x-locale lang="ru" country="ru" />
             </li>
         </ul>
     </div>

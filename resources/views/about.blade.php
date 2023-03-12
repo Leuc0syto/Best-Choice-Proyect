@@ -19,12 +19,12 @@
             </div>
 
             <div class="col-none col-md-6">
-                <img class="img-fluid" src="/images/shop.png" alt="">
+                <img class="img-fluid img_about" src="/images/venta-personas.jpg" alt="">
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-5">
             <h4>Best Choice y la segunda mano</h4>
             <p> “Si no lo usas, súbelo”. Bajo esta premisa, Best Choice se ha convertido en una comunidad en la que cada
                 día millones de personas compran y venden productos de segunda mano. Y no hemos hecho más que empezar.
