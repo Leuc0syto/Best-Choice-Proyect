@@ -79,7 +79,7 @@
                 <x-locale lang="en" country="gb" />
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item mt-2">
                 <x-locale lang="ru" country="ru" />
             </li>
         </ul>
