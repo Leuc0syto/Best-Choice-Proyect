@@ -57,16 +57,11 @@ body
     height: 40px;
     border-radius: 10px;
 }
-.my-hero{
-    background: url(/public/images/hero-photo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height:600px;
-    display: flex;
-    min-width: 600px;
 
-
+.carousel .item{
+    max-height: 350px;
 }
+
 .my-subtitle{
     position: relative;
     left: 280px;
@@ -191,13 +186,6 @@ hr{
 .social i{
     margin-right: 2px;
 }
-@media screen and (max-width:462px){
-    .form-login{
-        width: 100%;
-    }
-}
-
-
 
 
 .product-grid{
@@ -288,9 +276,6 @@ hr{
 
 
 
-
-
-
 nav, .main-font, footer {
     font-family: 'Comfortaa', cursive;
 }
@@ -302,38 +287,10 @@ nav, .main-font, footer {
 
 }
 
+@media screen and (max-width:462px){
+    .form-login{
+        width: 100%;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-@media screen and (max-width: 840px) {
-
-        .my-title{
-            font-size: 30px;
-            display: flex;
-            position: relative;
-            left: 80px;
-            top: -40px;
-        }
-        .my-subtitle{
-            font-size: 18px;
-            position: relative;
-            left: 40px;
-            top: -30px;
-        }
-        .btn-create{
-            position: relative;
-            bottom: 20px;
-        }
-    } */
 
