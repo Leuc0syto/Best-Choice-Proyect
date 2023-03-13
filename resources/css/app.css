@@ -75,6 +75,129 @@ body
 
 
 
+/* LOGIN */
+
+
+.form-container{
+    width: 100%;
+    display: flex;
+    padding: 50px 20px;
+    justify-items: center;
+}
+.form-login{
+    display: block;
+    margin: auto;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,06);
+    padding: 50px 35px;
+}
+.lable-login{
+    display: block;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+.input-login{
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: #f4f3f367;
+    border-radius: 4px;
+    padding: 15px 10px;
+    margin-top: 8px;
+    font-weight: 100px;
+    margin-bottom: 35px;
+}
+.input-login::before{
+    color: rgb(87,79,79);
+}
+.pass{
+position: relative;
+outline: none;
+border: none;
+background-color: #f4f3f367;
+border-radius: 4px;
+padding: 6px;
+margin-top: 8px;
+
+width: 100%;
+font-weight: 100px;
+}
+.pass i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    right: 20px;
+}
+#show-hide{
+    font-size: 1rem;
+}
+.btn-login{
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.1s;
+}
+.btn-login:hover{
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem #2a2a2c;
+}
+hr{
+    margin-top: 20px;
+    height: 1px;
+    background-color: #ffffff7f;
+    border: none;
+    outline: navajowhite;
+}
+.social-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.social div{
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px 5px;
+    background-color: rgba(255,255,255,0.27);
+    text-align: center;
+    margin: 0 14px;
+    cursor: pointer;
+}
+.social div:hover{
+    background-color: rgba(248,247,247,0.511);
+}
+.social a{
+    text-decoration: none;
+}
+.go{
+    color: #e60000;
+}
+.fb{
+    color: blue;
+}
+.social i{
+    margin-right: 2px;
+}
+@media screen and (max-width:462px){
+    .form-login{
+        width: 100%;
+    }
+}
+
+
 
 
 .product-grid{
@@ -175,8 +298,8 @@ nav, .main-font, footer {
 
 .img_about {
     border-radius: 5%;
-    
-    
+
+
 }
 
 
