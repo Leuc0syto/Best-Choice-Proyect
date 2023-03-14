@@ -18,7 +18,7 @@ showHide.addEventListener('click', function() {
 });
 
 
-//category carrusel
+/* //category carrusel
 
 const grande = document.querySelector('.grande')
 const punto = document.querySelectorAll('.punto')
@@ -39,4 +39,4 @@ const punto = document.querySelectorAll('.punto')
             grande.style.transform = `translateX(${operacion}%)`
 
         })
-    });
+    }); */
