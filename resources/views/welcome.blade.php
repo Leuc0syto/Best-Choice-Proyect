@@ -1,14 +1,7 @@
 <x-layout>
     <x-slot name='title'>BestChoice - ads</x-slot>
-<<<<<<< HEAD
-    <div class="px-4 py-5 my-5 text-center my-hero">
-        <h1 class="display-5 fw-bold">{{ __('Novedades') }}</h1>
-        {{-- <p class="lead mb-2 my-subtitle">{{__('Viste tu actitud.')}}</p> --}}
-    </div>
-=======
 
     <!-- Carousel -->
->>>>>>> e87be3c8fd1caf1ce336d7e9d5245a22c2b7ec7c
     <div class="container">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -56,7 +49,7 @@
     <div class="container my-4">
         <div class="row">
             @forelse($ads as $ad)
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-6">
                     <div class="product-grid">
                         <div class="product-image">
                             <a href="{{ route('ads.show', $ad) }}" class="image">
@@ -95,7 +88,6 @@
             @endforelse
         </div>
     </div>
-
 
 
 
