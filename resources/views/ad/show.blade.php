@@ -11,15 +11,25 @@
                 </div>
                 <div id="adImages" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#adImages" data-bs-slide-to="0" class="active"
+                        @for ($i = 0; $i < $ad->images()->count(); $i++)
+                            <button type="button" data-bs-target="#adImages" data-bs-slide-to="{{ $i }}" class="@if ($i == 0) active @endif" aria-current="true" aria-label="Slide {{ $i + 1 }}"></button>
+                        @endfor
+
+                        {{-- <button type="button" data-bs-target="#adImages" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#adImages" data-bs-slide-to="1" class="active"
                             aria-current="true" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#adImages" data-bs-slide-to="2" class="active"
-                            aria-current="true" aria-label="Slide 3"></button>
+                            aria-current="true" aria-label="Slide 3"></button> --}}
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        @foreach ($ad->images as $image)
+                            <div class="carousel-item @if ($loop->first) active @endif">
+                                <img src="{{ Storage::url($image->path) }}" class="d-block w-100" alt="">
+                            </div>
+                        @endforeach
+
+                        {{-- <div class="carousel-item active">
                             <img src="https://picsum.photos/700/600?a" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
@@ -27,7 +37,7 @@
                         </div>
                         <div class="carousel-item">
                             <img src="https://picsum.photos/700/600?c" class="d-block w-100" alt="...">
-                        </div>
+                        </div> --}}
                         <button class="carousel-control-prev" type="button" data-bs-target="#adImages"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

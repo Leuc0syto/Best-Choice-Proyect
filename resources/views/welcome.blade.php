@@ -52,9 +52,16 @@
             <div class="col-md-3 col-sm-6 col-6">
                 <div class="product-grid">
                     <div class="product-image">
-                        <a href="{{ route('ads.show', $ad) }}" class="image">
+                        @if ($ad->images()->count() > 0)
+                            <img src="{{ Storage::url($ad->images()->first()->path) }}" class="card-img-top" alt="...">
+                        @else
+                            <img src="https://i.ebayimg.com/images/g/WuAAAOSw1iFhqrJZ/s-l1600.jpg" alt="...">
+                        @endif
+
+                        {{-- <a href="{{ route('ads.show', $ad) }}" class="image">
                             <img class="pic-1" src="https://i.ebayimg.com/images/g/WuAAAOSw1iFhqrJZ/s-l1600.jpg">
-                        </a>
+                        </a> --}}
+
                         <div class="price">{{ $ad->price }}{{__('€')}}</div>
                         <a href="{{ route('ads.show', $ad) }}" class="add-to-cart">{{__('Ver')}}</a>
                     </div>
