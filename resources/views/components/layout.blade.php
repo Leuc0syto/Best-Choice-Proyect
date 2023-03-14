@@ -16,6 +16,7 @@
 
     @livewireStyles
     @vite(['resources/css/app.css'])
+    
     {{ $style ?? '' }}
 
 </head>

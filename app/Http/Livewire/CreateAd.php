@@ -1,16 +1,16 @@
 <?php
 
 namespace App\Http\Livewire;
-
 use App\Models\Ad;
+use App\Models\Category;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 
 class CreateAd extends Component
 {
     use WithFileUploads;
+
     public $title;
     public $body;
     public $price;
@@ -63,7 +63,7 @@ class CreateAd extends Component
         // creo el anuncio a partir de la categoria usando la relacion y pasando los datos validados
         $ad = $category->ads()->create($validatedData);
 
-        // vulevo a guardar el anuncio "pasando" por la relacion del usuario
+        // vuelvo a guardar el anuncio "pasando" por la relacion del usuario
         Auth::user()->ads()->save($ad);
         // guardo cada imagen en el db y en el storage
         if (count($this->images)) {
@@ -74,7 +74,7 @@ class CreateAd extends Component
             }
         }
 
-        session()->flash('message', 'Ad creted succesfully');
+        session()->flash('message', 'Anuncio creado con éxito');
         $this->cleanForm();
     }
 
@@ -115,5 +115,28 @@ class CreateAd extends Component
         }
     }
 
-    
+    public function store()
+    {
+        // datos validados
+        $validatedData = $this->validate();
+        // busco la categoria
+        $category = Category::find($this->category);
+
+        // creo el anuncio a partir de la categoria usando la relacion y pasando los datos validados
+        $ad = $category->ads()->create($validatedData);
+
+        // vulevo a guardar el anuncio "pasando" por la relacion del usuario
+        Auth::user()->ads()->save($ad);
+        // guardo cada imagen en el db y en el storage
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                $ad->images()->create([
+                    'path'=>$image->store("images/$ad->id", 'public')
+                ]);
+            }
+        }
+
+        session()->flash('message', 'Ad creted succesfully');
+        $this->cleanForm();
+    }
 }
