@@ -1,7 +1,7 @@
 <div class="container">
     <footer class="py-5">
         <div class="row">
-            <div class="col-6 col-md-3 px-5 mb-3">
+            <div class="col-6 col-md-3 mb-3">
                 <h5>Best Choice</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="{{ route('home') }}" class="nav-link p-0 text-muted">{{__('Inicio')}}</a></li>

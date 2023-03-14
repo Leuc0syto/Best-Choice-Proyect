@@ -1,6 +1,6 @@
 import './bootstrap';
 let showHide = document.getElementById('show-hide');
-let passwordInput = document.getElementById('password');
+let passwordInput = document.getElementById('password-input');
 
 showHide.addEventListener('click', function() {
     showHide.classList.toggle('show');
@@ -16,27 +16,3 @@ showHide.addEventListener('click', function() {
         passwordInput.setAttribute('type', 'password');
     }
 });
-
-
-/* //category carrusel
-
-const grande = document.querySelector('.grande')
-const punto = document.querySelectorAll('.punto')
-
-//Cuando click en punto
-    // Saber aposicion de ese punto
-    // Aplicar un transform translateX al grande
-    //Quitar la clase activo de Todos puntos
-    // Añadir la clase activo al punto que hemos hecho Click
-
-    punto.forEach(( cadapunto, i ) => {
-        punto[i].addEventListener('click', ()=>{
-            let position = i
-            // Cuando la posicion es 0 el transform es 0
-            // Cuando la posicion es 1 el transform es -50%
-            let operacion = operacion *-50
-
-            grande.style.transform = `translateX(${operacion}%)`
-
-        })
-    }); */
