@@ -16,7 +16,7 @@
 
     @livewireStyles
     @vite(['resources/css/app.css'])
-    
+    {{-- @vite(['resources/scss/app.scss']) --}}
     {{ $style ?? '' }}
 
 </head>
@@ -33,7 +33,7 @@
 
     @livewireScripts
     @vite(['resources/js/app.js'])
-    
+
     {{ $script ?? '' }}
 </body>
 

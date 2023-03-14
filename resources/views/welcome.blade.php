@@ -66,19 +66,20 @@
                         <a href="{{ route('ads.show', $ad) }}" class="add-to-cart">{{__('Ver')}}</a>
                     </div>
 
-                    <div class="product-content">
-                        <div class="card-body">
-                            <h3 class="card-title">{{ $ad->title }}</h3>
-                            <p class="card-text">{{ $ad->body }}</p>
-                            <div class="card-subtitle mb-2">
-                                <small>{{__('Vendedor:')}} {{ $ad->user->name }}</small>
-                                <ul class="rating">
-                                    <li class="fa fa-star"></li>
-                                    <li class="fa fa-star"></li>
-                                    <li class="fa fa-star"></li>
-                                    <li class="fa fa-star"></li>
-                                    <li class="fa fa-star-o"></li>
-                                </ul>
+                        <div class="product-content">
+                            <div class="card-body">
+                                <h3 class="card-title">{{ $ad->title }}</h3>
+                                <p class="card-text">{{ $ad->body }}</p>
+                                <div class="card-subtitle mb-2">
+                                    <small>{{ __('Vendedor:') }} {{ $ad->user->name }}</small>
+                                    <ul class="rating">
+                                        <li class="fa fa-star"></li>
+                                        <li class="fa fa-star"></li>
+                                        <li class="fa fa-star"></li>
+                                        <li class="fa fa-star"></li>
+                                        <li class="fa fa-star-o"></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -93,7 +94,8 @@
             </div>
             @endforelse
         </div>
-
     </div>
+
+
 
 </x-layout>

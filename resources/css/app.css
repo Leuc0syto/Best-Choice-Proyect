@@ -186,6 +186,15 @@ hr{
 .social i{
     margin-right: 2px;
 }
+@media screen and (max-width:462px){
+    .form-login{
+        width: 100%;
+    }
+}
+/* Fin Login */
+
+
+
 
 
 .product-grid{
