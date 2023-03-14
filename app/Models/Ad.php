@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use App\Models\Ad;
 use App\Models\User;
 use App\Models\Image;
