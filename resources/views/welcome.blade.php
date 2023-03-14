@@ -1,10 +1,59 @@
 <x-layout>
     <x-slot name='title'>BestChoice - ads</x-slot>
+<<<<<<< HEAD
     <div class="px-4 py-5 my-5 text-center my-hero">
         <h1 class="display-5 fw-bold">{{ __('Novedades') }}</h1>
         {{-- <p class="lead mb-2 my-subtitle">{{__('Viste tu actitud.')}}</p> --}}
     </div>
+=======
+
+    <!-- Carousel -->
+>>>>>>> e87be3c8fd1caf1ce336d7e9d5245a22c2b7ec7c
     <div class="container">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item item active">
+                    <img src="{{ asset('assets/img/hero-new.jpg') }}" alt="Novedades" class="d-flex w-100 rounded">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="text-uppercase">{{__('Novedades')}}</h3>
+                    </div>
+                </div>
+                <div class="carousel-item item">
+                    <img src="{{ asset('assets/img/hero-men.jpg') }}" alt="Moda hombre" class="d-flex w-100 rounded">
+                    <div class="carousel-caption d-none d-md-block col-md-12 text-right text-dark">
+                        <h3 class="text-uppercase">{{__('Ropa hombre')}}</h3>
+                    </div>
+                </div>
+                <div class="carousel-item item">
+                    <img src="{{ asset('assets/img/hero-women.jpg') }}" alt="Moda mujer" class="d-flex w-100 rounded">
+                    <div class="carousel-caption d-none d-md-block col-md-3 text-left text-dark">
+                        <h3 class="text-uppercase">{{__('Ropa mujer')}}</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="container my-4">
         <div class="row">
             @forelse($ads as $ad)
                 <div class="col-md-3 col-sm-6">
@@ -35,13 +84,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
             @empty
-                <div class="col-12">
-                    <h2>{{ __('Uyy...parece que no hay nada de esta categoría') }}</h2>
-                    <a href="{{ route('ads.create') }}" class="btn btn-success">{{ __('Vende tu primer objeto') }}</a>
-                    <a href="{{ route('home') }}" class="btn btn-primary">{{ __('Vuelve a la home') }}</a>
-                </div>
+            <div class="col-12">
+                <h2>{{__('Uyy...parece que no hay nada de esta categoría')}}</h2>
+                <a href="{{ route('ads.create') }}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a>
+                <a href="{{ route('home') }}" class="btn btn-primary">{{__('Vuelve a la home')}}</a>
+            </div>
             @endforelse
         </div>
     </div>
