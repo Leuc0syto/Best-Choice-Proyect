@@ -2,7 +2,7 @@
     <div class="container text-center mt-5">
         <div class="row d-flex align-content-center">
             <div class="col-12 col-md-6">
-                <h1>Quiénes somos</h1>
+                <h1>¿Quiénes somos?</h1>
                 <h2>Si tu primera opción es de segunda mano, este es tu lugar</h2>
                 <p> Cuando haces algo tan sencillo como comprar y vender en Best Choice, en realidad estás haciendo
                     muchas más cosas. Cosas como darle una nueva vida a esa raqueta de pádel que no utilizas y sacarte
