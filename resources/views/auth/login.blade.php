@@ -61,7 +61,7 @@
             <label lable-login for="password"></label>
             <div class="pass">
 
-                <input input-login type="password" class="pass" name="password" placeholder="{{__('Tu contraseña')}}" id="password">
+                <input type="password" class="pass" name="password" placeholder="{{__('Tu contraseña')}}" id="password">
                 <div class="validate"></div>
                 <i id="show-hide" class="fa-solid fa-eye-slash"></i>
 
@@ -73,7 +73,7 @@
                     <div><a class="go" href=""><i class="fab fa-google"></i></a></div>
                     <div><a class="fb" href=""><i class="fab fa-facebook"></i></a></div>
                 </div>
-                <p class="my-3 p-2 p-login">{{__('¿Aún no eres de los nuestros?')}} <a class="btn-create a-login btn-sm ms-2"
+                <p class="my-3 p-2 p-login">{{__('¿Aún no eres de los nuestros?')}} <a class="btn-create btn btn-outline-warning a-login btn-sm ms-2"
                     href="{{ route('register') }}">{{__('¡Registrate!')}}</a></p>
             </div>
         </form>
