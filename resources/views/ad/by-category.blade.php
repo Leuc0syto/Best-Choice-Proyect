@@ -8,7 +8,7 @@
             </div>
             <div class="row">
                 @forelse($ads as $ad)
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-6">
                     <div class="product-grid">
                         <div class="product-image">
                             {{-- @if ($ad->images()->count() > 0)
@@ -53,7 +53,6 @@
                     <a href="{{route('home')}}" class="btn btn-primary" >{{__('Vuelve a la home')}}</a>
                 </div>
                 @endforelse
-
                 {{ $ads->links() }}
             </div>
         </div>
