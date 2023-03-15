@@ -45,7 +45,7 @@
 
                     <button type="submit" class="form-button-edit text-center space-around my-2 btn-login">{{__('Crear cuenta')}}</button>
                     <div class="form-link d-flex">
-                        <p class="my-3 p-2 d-flex">{{__('¿Ya eres de los nuestros?')}}<a class="btn-create a-register d-flex justify-content-between btn-sm ms-2"
+                        <p class="my-3 p-2 d-flex">{{__('¿Ya eres de los nuestros?')}}<a class="btn-create a-register btn btn-outline-warning d-flex justify-content-between btn-sm ms-2"
                         href="{{ route('login') }}">{{__('¡Entra ya!')}}</a></p>
                     </div>
                 </form>

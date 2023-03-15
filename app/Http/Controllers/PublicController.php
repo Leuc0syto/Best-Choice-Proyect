@@ -17,7 +17,7 @@ class PublicController extends Controller
 
     public function adsByCategory(Category $category)
     {
-        $ads = $category->ads()->where('is_accepted', true)->latest()->paginate(1);
+        $ads = $category->ads()->where('is_accepted', true)->latest()->paginate(4);
         return view('ad.by-category', compact('category','ads'));
     }
 
