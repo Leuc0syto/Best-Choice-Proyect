@@ -79,10 +79,17 @@ body
     padding: 50px 20px;
     justify-items: center;
 }
+.form-register{
+    width: 100%;
+    display: flex;
+    padding: 50px 20px;
+    justify-items: center;
+    padding:40px;
+}
 .form-login{
     display: block;
     margin: auto;
-    width: 400px;
+    width: 450px;
     background-color: rgba(255,255,255,0.13);
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -185,6 +192,22 @@ hr{
 }
 .social i{
     margin-right: 2px;
+}
+.p-login{
+    display: flex;
+}
+.a-register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 35px;
+    width: 50%;
+}
+.a-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 @media screen and (max-width:462px){
     .form-login{
