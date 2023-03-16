@@ -90,14 +90,14 @@
                     <form action="{{ route('revisor.ad.reject',$ad) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger">{{__('Rechazar')}}</button>
+                        <button type="submit" class="btn btn-outline-danger">{{__('Rechazar')}}</button>
                     </form>
                 </div>
                 <div class="col-6 text-end">
                     <form action="{{ route('revisor.ad.accept',$ad) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-success">{{__('Aceptar')}}</button>
+                        <button type="submit" class="btn btn-outline-success">{{__('Aceptar')}}</button>
                     </form>
                 </div>
             </div>
