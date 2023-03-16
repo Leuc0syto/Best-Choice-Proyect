@@ -56,7 +56,7 @@
             @csrf
             <h2 class="form-title d-flex justify-content-center">{{__('Iniciar sesión')}}</h2>
             <label class="lable-login" for="username"></label>
-            <input class="input-login form-control forms_field-input border-0" type="email" name="email" id="email" placeholder="{{__('Tu correo')}}"data-rule="minlen:4" data-msg="Please enter at least 4 characters">
+            <input class="input-login form-control forms_field-input border-0 " type="email" name="email" id="email" placeholder="{{__('Tu correo')}}"data-rule="minlen:4" data-msg="Please enter at least 4 characters">
             <div class="validate"></div>
             <label lable-login for="password"></label>
             <div class="pass">
@@ -66,7 +66,7 @@
                 <i id="show-hide" class="fa-solid fa-eye-slash"></i>
 
             </div>
-            <button class="btn-login" type="submit">{{__('Entrar')}}</button>
+            <button class="btn-login py-3" type="submit">{{__('Entrar')}}</button>
             <hr>
             <div class="social-container">
                 <div class="social">

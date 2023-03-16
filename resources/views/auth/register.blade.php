@@ -17,20 +17,20 @@
                     <h2 class="form-title d-flex justify-content-center mb-4">{{__('Crear cuenta')}}</h2>
                     @csrf
                     <div class="space-around my-2 input-login">
-                        <input type="text" name="name" id="name" class="form-control forms_field-input border-0"
+                        <input type="text" name="name" id="name" class="input-register form-control forms_field-input border-0"
                             placeholder="{{__('Tu nombre')}}" data-rule="minlen:4" data-msg="Please enter at least 4 characters">
                         <div class="validate"></div>
                     </div>
 
                     <div class="space-around my-2 input-login">
-                        <input type="email" name="email" id="email" class="form-control forms_field-input border-0"
+                        <input type="email" name="email" id="email" class=" input-register form-control forms_field-input border-0"
                             placeholder="{{__('Tu correo')}}" data-rule="minlen:4" data-msg="Please enter at least 4 characters">
                         <div class="validate"></div>
                     </div>
 
                     {{-- Contraseña --}}
                     <div class="space-around my-2 input-login">
-                        <input type="password" name="password" id="password" class="form-control forms_field-input border-0"
+                        <input type="password" name="password" id="password" class=" input-register form-control forms_field-input border-0"
                             placeholder="{{__('Tu contraseña')}}" data-rule="minlen:4"
                             data-msg="Please enter at least 4 characters">
                         <div class="validate"></div>
@@ -38,7 +38,7 @@
                     {{-- Confirmar contraseña --}}
                     <div class="space-around my-2 input-login">
                         <input type="password" name="password_confirmation" id="password"
-                            class="form-control forms_field-input border-0" placeholder="{{__('Tu contraseña, una vez más')}}"
+                            class="form-control forms_field-input border-0 input-register" placeholder="{{__('Tu contraseña, una vez más')}}"
                             data-rule="minlen:4" data-msg="Please enter at least 4 characters">
                         <div class="validate"></div>
                     </div>
