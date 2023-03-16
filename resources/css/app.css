@@ -133,7 +133,7 @@ body
     margin-top: 8px;
     font-weight: 100px;
     margin-bottom: 30px;
-    
+
 }
 .input-login::before{
     color: rgb(87,79,79);
@@ -245,9 +245,7 @@ hr{
         width: 100%;
     }
 }
-/* Fin Login */
-
-
+/* Fin Login --------------*/
 
 
 
@@ -354,6 +352,21 @@ nav, .main-font, footer {
     .form-login{
         width: 100%;
     }
+}
+
+/* Show-------------- */
+
+.btn-show{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    background:#323b45;
+    padding: 5px 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 150px;
 }
 
 
