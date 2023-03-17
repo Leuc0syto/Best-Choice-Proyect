@@ -17,7 +17,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu"  aria-labelledby="navbarDropdown">
                         @if (Auth::user()->is_revisor)
                         <li>
                             <a class="dropdown-item" href="{{ route('revisor.home') }}">
@@ -53,7 +53,7 @@
                             class="flag-icon flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}"></span>
                         {{ Config::get('languages')[App::getLocale()]['display'] }}
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu my-dropdown-width" aria-labelledby="navbarDropdownMenuLink">
                         @foreach (Config::get('languages') as $lang => $language)
                         @if ($lang != App::getLocale())
                         <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
@@ -65,7 +65,7 @@
                 </li>
             </ul>
 
-            <button type="button" class="btn btn-outline-warning btn-create btn-block nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
+            <button type="button" class="btn btn-warning btn-block nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
                 <a href="{{ route('ads.create') }}"
                     class="text-decoration-none text-white">{{ __('Crear anuncio') }}</a>
             </button>

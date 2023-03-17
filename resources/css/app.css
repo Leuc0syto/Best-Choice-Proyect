@@ -28,11 +28,15 @@ body
     color: white;
     text-decoration: none;
     margin-right: 10px;
-    border-radius: 15px;
+    border-radius: 25px;
     background:#323b45;
     padding: 7px;
     font-family: 'Roboto Condensed', sans-serif;
 
+}
+
+.my-dropdown-width{
+    min-width: 0 !important; 
 }
 
 

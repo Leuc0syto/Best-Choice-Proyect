@@ -1,15 +1,15 @@
 <?php
 return [
     'es' => [
-        'display' => 'Español',
+        'display' => '',
         'flag-icon' => 'es'
     ],
     'en' => [
-        'display' => 'Inglés',
+        'display' => '',
         'flag-icon' => 'gb'
     ],
     'ru' => [
-        'display' => 'Ruso',
+        'display' => '',
         'flag-icon' => 'ru'
     ],
 ];
