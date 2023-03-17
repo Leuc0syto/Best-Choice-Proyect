@@ -14,7 +14,7 @@
                 @endif
                 <div class="form-register">
                     <form action="/register" method="POST" role="form" class="form-login">
-                    <h2 class="form-title d-flex justify-content-center mb-4">{{__('Crear cuenta')}}</h2>
+                    <h2 class=" animate__animated  animate__bounce form-title d-flex justify-content-center mb-4">{{__('Crear cuenta')}}</h2>
                     @csrf
                     <div class="space-around my-2 input-login">
                         <input type="text" name="name" id="name" class="input-register form-control forms_field-input border-0"
