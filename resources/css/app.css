@@ -18,7 +18,7 @@ body
 
 
 .logo{
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Abril Fatface', sans-serif;
     font-size: 35px;
 }
 
@@ -52,12 +52,6 @@ body
 
 .dropfalse{
     font-size: 16px;
-}
-
-.box-src input {
-    width: 400px;
-    height: 40px;
-    border-radius: 10px;
 }
 
 .carousel .item{
@@ -336,9 +330,8 @@ hr{
 }
 
 
-
 nav, .main-font, footer {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 

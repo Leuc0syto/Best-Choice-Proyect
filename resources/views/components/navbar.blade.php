@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg sticky-top bg-white">
     <div class="container container-fluid">
         <a class="navbar-brand text-bold logo" href="{{ route('home') }}">BestChoice</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -6,20 +6,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                <li class="nav-item mt-2">
-                    <x-locale lang="es" country="es" />
-                </li>
-
-                <li class="nav-item mt-2">
-                    <x-locale lang="en" country="gb" />
-                </li>
-
-                <li class="nav-item mt-2">
-                    <x-locale lang="ru" country="ru" />
-                </li>
             </ul>
+
             <ul class="navbar-nav me-2">
                 @auth
                 <li class="nav-item dropdown">
@@ -48,14 +38,34 @@
 
                 @endauth
                 @guest
-                <ul class="nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
+                <ul class="navbar-nav">
 
                     <li><a href="{{ route('login') }}" class="nav-link text-dark">{{ __('Iniciar sesión') }}</a></li>
                     <li><a href="{{ route('register') }}" class="nav-link text-dark">{{ __('Registrar') }}</a></li>
                 </ul>
                 @endguest
             </ul>
-            <button type="button" class="btn btn-secondary btn-block">
+
+            <ul class="navbar-nav col-12 col-lg-auto p-2 ml-2">
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span
+                            class="flag-icon flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}"></span>
+                        {{ Config::get('languages')[App::getLocale()]['display'] }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        @foreach (Config::get('languages') as $lang => $language)
+                        @if ($lang != App::getLocale())
+                        <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
+                                class="flag-icon flag-icon-{{$language['flag-icon']}}"></span>
+                            {{$language['display']}}</a>
+                        @endif
+                        @endforeach
+                    </div>
+                </li>
+            </ul>
+
+            <button type="button" class="btn btn-secondary btn-block nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
                 <a href="{{ route('ads.create') }}"
                     class="text-decoration-none text-white">{{ __('Crear anuncio') }}</a>
             </button>
