@@ -127,6 +127,7 @@ body
     margin-top: 8px;
     font-weight: 100px;
     margin-bottom: 30px;
+    
 
 }
 .input-login::before{
@@ -136,17 +137,18 @@ body
     outline: none;
     border: none;
     width: 100%;
-    background-color: rgb(245, 237, 237);
+    background-color: rgb(249, 246, 246);
     border-radius: 4px;
     padding: 5px 5px;
     margin-top: 8px;
     font-weight: 100px;
 
 }
+
 .pass{
 position: relative;
 border: none;
-background-color: rgb(245, 237, 237);
+background-color: rgb(244, 238, 238);
 border-radius: 4px;
 padding: 6px;
 
