@@ -48,11 +48,11 @@
     <!-- Finder and categories -->
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <h3 class="mt-5 text-center">Compra y vende tu ropa de segunda mano</h3>
+            <h3 class="mt-5 text-center">{{ __('Compra y vende tu ropa de segunda mano') }}</h3>
             <div class="justify-content-center my-3">
                 <form class="d-flex input-group" role="search">
                     <input type="text" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search">
-                    <button class="btn btn-secondary" type="submit" id="button-addon2">
+                    <button class="btn btn-outline-warning btn-create" type="submit" id="button-addon2">
                         {{ __('Buscar') }}
                     </button>
                 </form>
@@ -62,8 +62,13 @@
             <div class="col">
                 <div class="d-flex flex-column">
                     <div class="text-center mg-text">
-                        <span class="badge fs-6 bg-secondary text-wrap my-2"><a class="text-decoration-none text-white font-weight-bolder"
-                                href="{{ route('category.ads', $category) }}">{{ __($category->name) }}</a></span>
+                        <button class="btn btn-outline-warning btn-create">
+                        <span class="fs-6 my-2">
+                            <a class="text-decoration-none text-white font-weight-bolder"
+                                href="{{ route('category.ads', $category) }}">{{ __($category->name) }}</a>
+                        </span>
+                    </button>
+
                     </div>
                 </div>
             </div>
@@ -76,7 +81,7 @@
 
     <!-- Card container -->
     <div class="container mt-5">
-        <h3 class="text-center">Últimos anuncios</h3>
+        <h3 class="text-center">{{ __('Últimos anuncios') }}</h3>
         <div class="row">
             @forelse($ads as $ad)
             <div class="col-md-3 col-sm-6 col-6">
