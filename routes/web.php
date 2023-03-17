@@ -28,7 +28,7 @@ Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCate
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
 
-
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/revisor/become', [RevisorController::class,'becomeRevisor'])->name('revisor.become');

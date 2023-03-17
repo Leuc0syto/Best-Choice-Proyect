@@ -54,19 +54,19 @@
     <div class="form-container">
         <form action="/login" method="POST" role="form" class="form-login">
             @csrf
-            <h2 class="form-title space-around d-flex justify-content-center">{{__('Iniciar sesión')}}</h2>
+            <h2 class="form-title d-flex justify-content-center">{{__('Iniciar sesión')}}</h2>
             <label class="lable-login" for="username"></label>
-            <input class="input-login" type="email" name="email" id="email" placeholder="{{__('Tu correo')}}"data-rule="minlen:4" data-msg="Please enter at least 4 characters">
+            <input class="input-login form-control forms_field-input border-0 " type="email" name="email" id="email" placeholder="{{__('Tu correo')}}"data-rule="minlen:4" data-msg="Please enter at least 4 characters">
             <div class="validate"></div>
             <label lable-login for="password"></label>
             <div class="pass">
 
-                <input type="password" class="pass" name="password" placeholder="{{__('Tu contraseña')}}" id="password">
+                <input type="password" class="pass form-control forms_field-input border-0" name="password" placeholder="{{__('Tu contraseña')}}" id="password">
                 <div class="validate"></div>
                 <i id="show-hide" class="fa-solid fa-eye-slash"></i>
 
             </div>
-            <button class="btn-login" type="submit">{{__('Entrar')}}</button>
+            <button class="btn-login py-3" type="submit">{{__('Entrar')}}</button>
             <hr>
             <div class="social-container">
                 <div class="social">
@@ -78,5 +78,6 @@
             </div>
         </form>
     </div>
+    
 
 </x-layout>

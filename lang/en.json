@@ -5,7 +5,7 @@
     "Categorías": "Categories",
     "Categoría": "Category",
     "Novedades": "News",
-    "Crear anuncio": "Create ads",
+    "Crear anuncio": "Create ad",
     "Nuevo anuncio": "New Ad",
     "Revisor": "Revisor",
     "Anuncios por categoría:": "Ads by category",
@@ -18,8 +18,10 @@
     "Tu correo": "Your email",
     "Rechazar": "Reject",
     "Aceptar": "Accept",
+    "Eliminar":"Eliminate",
     "Comprar": "Buy",
     "Tu contraseña": "Your Password",
+    "Buscar": "Search",
     "Buscar...": "Search...",
     "Vendedor:": "Powered by",
     "Uyy...parece que no hay nada de esta categoría": "Oops...it seems that there is nothing in this category",
@@ -42,6 +44,8 @@
     "Por": "By",
     "Usuario": "User",
     "Anuncio": "Ad",
+    "Imágenes":"Images",
+    "No hay imágenes":"No Pictures",
 
 
     "Inicio" : "Home",
@@ -65,6 +69,7 @@
     "Tu nombre":"Your name",
     "Tu contraseña, una vez más": "Your password, one more time",
     "Crear cuenta": "Create Account",
+    "Vista previa":"Preview",
     "¿Ya eres de los nuestros?": "You are already a member?",
     "¡Entra ya!": "Log In",
 
