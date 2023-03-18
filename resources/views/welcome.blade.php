@@ -52,7 +52,7 @@
             <div class="justify-content-center my-3">
                 <form class="d-flex input-group" role="search">
                     <input type="text" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search">
-                    <button class="btn btn-outline-warning btn-create" type="submit" id="button-addon2">
+                    <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
                         {{ __('Buscar') }}
                     </button>
                 </form>
@@ -62,12 +62,12 @@
             <div class="col">
                 <div class="d-flex flex-column">
                     <div class="text-center mg-text">
-                        <button class="btn btn-outline-warning btn-create">
-                        <span class="fs-6 my-2">
-                            <a class="text-decoration-none text-white font-weight-bolder"
+                        <button class="btn btn-outline-warning my-btn">
+                            <span class="fs-6 my-2">
+                                <a class="text-decoration-none text-white font-weight-bolder"
                                 href="{{ route('category.ads', $category) }}">{{ __($category->name) }}</a>
-                        </span>
-                    </button>
+                            </span>
+                        </button>
 
                     </div>
                 </div>
