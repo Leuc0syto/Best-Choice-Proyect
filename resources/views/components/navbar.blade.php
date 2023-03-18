@@ -8,7 +8,12 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <button type="button" class="btn btn-warning btn-block btn-create nav col-lg-auto p-2 ml-2 justify-content-center">
+                    <a href="{{ route('ads.create') }}"
+                        class="text-decoration-none text-dark">{{ __('Crear anuncio') }}</a>
+                </button>
             </ul>
+
 
             <ul class="navbar-nav me-2">
                 @auth
@@ -64,11 +69,6 @@
                     </div>
                 </li>
             </ul>
-
-            <button type="button" class="btn btn-warning btn-outline-secondary btn-block btn-create nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
-                <a href="{{ route('ads.create') }}"
-                    class="text-decoration-none text-white">{{ __('Crear anuncio') }}</a>
-            </button>
         </div>
     </div>
 </nav>
