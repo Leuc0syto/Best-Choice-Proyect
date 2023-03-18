@@ -87,11 +87,7 @@
             <div class="col-md-3 col-sm-6 col-6">
                 <div class="product-grid">
                     <div class="product-image">
-                        @if ($ad->images()->count() > 0)
-                        <img src="{{ Storage::url($ad->images()->first()->path) }}" class="card-img-top" alt="...">
-                        @else
-                        <img src="{{ asset('assets/img/no-pic.jpg') }}" alt="...">
-                        @endif
+                        <img src="{{!$ad->images()->get()->isEmpty() ? Storage::url($ad->images()->first()->path) : 'https://picsum.photos/400/300'}}" class="card-img-top" alt="...">
                         {{-- <a href="{{ route('ads.show', $ad) }}" class="image">
                         <img class="pic-1" src="https://i.ebayimg.com/images/g/WuAAAOSw1iFhqrJZ/s-l1600.jpg">
                         </a> --}}
