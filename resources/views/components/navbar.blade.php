@@ -65,7 +65,7 @@
                 </li>
             </ul>
 
-            <button type="button" class="btn btn-warning btn-block nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
+            <button type="button" class="btn btn-warning btn-outline-secondary btn-block btn-create nav col-12 col-lg-auto p-2 ml-2 justify-content-center">
                 <a href="{{ route('ads.create') }}"
                     class="text-decoration-none text-white">{{ __('Crear anuncio') }}</a>
             </button>

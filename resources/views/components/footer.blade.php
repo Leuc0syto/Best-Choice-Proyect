@@ -39,7 +39,7 @@
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                         <label for="newsletter1" class="visually-hidden">{{__('Email')}}</label>
                         <input id="newsletter1" type="text" class="form-control" placeholder="{{__('Tu correo')}}">
-                        <button class="btn btn-outline-warning btn-create" type="button">{{__('Suscríbete')}}</button>
+                        <button class="btn btn-outline-warning my-btn" type="button">{{__('Suscríbete')}}</button>
                     </div>
                 </form>
                 <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">

@@ -61,7 +61,12 @@
                         href="{{route('category.ads',$ad->category)}}">{{__($ad->category->name)}}</a>
                     <p class="card-text">{{ $ad->body }}</p>
                     <p class="card-text"><small class="text-muted">{{__('Publicado el')}}: {{ $ad->created_at->format('d/m/Y') }}</small></p>
-                    <a href="#" class="btn btn-outline-warning btn-show">{{__('Comprar')}}</a>
+                    <button class="btn btn-outline-warning btn-show">
+                        <span class="fs-6 my-2">
+                            <a class="text-decoration-none text-white font-weight-bolder"
+                            href="#">{{__('Comprar')}}</a>
+                        </span>
+                    </button>
                 </div>
             </div>
 

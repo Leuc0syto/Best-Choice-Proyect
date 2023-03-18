@@ -29,10 +29,20 @@ body
     text-decoration: none;
     margin-right: 10px;
     border-radius: 25px;
+    padding: 7px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.my-btn{
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 25px;
     background:#323b45;
     padding: 7px;
     font-family: 'Roboto Condensed', sans-serif;
-
 }
 
 .my-dropdown-width{
@@ -359,7 +369,7 @@ nav, .main-font, footer {
     font-size: 25px;
     color: white;
     text-decoration: none;
-    border-radius: 15px;
+    border-radius: 25px;
     background:#323b45;
     padding: 5px 3px;
     font-family: 'Roboto Condensed', sans-serif;
