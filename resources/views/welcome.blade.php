@@ -15,7 +15,7 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item item active">
-                    <a href=""><img src="{{ asset('assets/img/hero-new.jpg') }}" alt="Novedades" class="d-flex w-100 rounded"></a>
+                    <a href=""><img src="{{ asset('assets/img/hero-new.jpg') }}" alt="Novedades" class="d-flex w-100 rounded" style=""></a>
                     <div class="carousel-caption d-none d-md-block">
                         <h3 class="text-uppercase">{{ __('Novedades') }}</h3>
                     </div>
@@ -59,7 +59,7 @@
             </div>
 
             @foreach ($categories as $category)
-            <div class="col">
+            <div class="col py-4">
                 <div class="d-flex flex-column">
                     <div class="text-center mg-text">
                         <button class="btn btn-outline-warning my-btn">
@@ -115,13 +115,15 @@
             @empty
             <div class="col-12 mt-5 text-center">
                 <h2>{{ __('Uyy...parece que no hay nada de esta categoría') }}</h2>
-                <a href="{{ route('ads.create') }}" class="btn btn-success">{{ __('Vende tu primer objeto') }}</a>
+                <a href="{{ route('ads.create') }}" class="btn btn-warning btn-block btn-create">{{ __('Vende tu primer objeto') }}</a>
             </div>
 
             @endforelse
         </div>
     </div>
     <!-- Card container end -->
+
+
 
 
 

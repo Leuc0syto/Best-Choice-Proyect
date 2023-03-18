@@ -7,6 +7,7 @@
     @endif
     <form class="form-login-create" wire:submit.prevent="store">
         @csrf
+        <h2 class=" animate__heartBeat animate__delay-3s form-title d-flex justify-content-center mb-4 pt-4">{{__('Sube tu anuncio')}}</h2>
         <div class="mb-3">
             <label for="title" class="form-label lable-login">{{__('Título:')}} </label>
             <input wire:model="title" type="text" class="form-control input-login @error('title') is-invalid @enderror">

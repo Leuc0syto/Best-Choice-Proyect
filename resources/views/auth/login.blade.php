@@ -54,7 +54,7 @@
     <div class="form-container">
         <form action="/login" method="POST" role="form" class="form-login">
             @csrf
-            <h2 class=" animate__animated  animate__bounce form-title d-flex justify-content-center">{{__('Iniciar sesión')}}</h2>
+            <h2 class="animate__heartBeat animate__delay-3s form-title d-flex justify-content-center">{{__('Iniciar sesión')}}</h2>
             <label class="lable-login" for="username"></label>
             <input class="input-login form-control forms_field-input border-0 " type="email" name="email" id="email" placeholder="{{__('Tu correo')}}"data-rule="minlen:4" data-msg="Please enter at least 4 characters">
             <div class="validate"></div>
@@ -78,4 +78,7 @@
             </div>
         </form>
     </div>
+
+
+
 </x-layout>
