@@ -25,7 +25,7 @@
                     <div class="carousel-inner">
                         @foreach ($ad->images as $image)
                             <div class="carousel-item @if ($loop->first) active @endif">
-                                <img src="{{ $image->getUrl()}}" class="d-block w-100" alt="">
+                                <img src="{{ $image->getUrl(400, 400)}}" class="d-block w-100" alt="">
 
                                 {{-- alternativa --}}
                                 {{-- <img src="{{$image->getUrl()}}" class="d-block" alt="First slide"> --}}

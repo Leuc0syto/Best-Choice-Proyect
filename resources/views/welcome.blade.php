@@ -87,7 +87,8 @@
             <div class="col-md-3 col-sm-6 col-6">
                 <div class="product-grid">
                     <div class="product-image">
-                        <img src="{{!$ad->images()->get()->isEmpty() ? Storage::url($ad->images()->first()->path) : 'https://picsum.photos/400/300'}}" class="card-img-top" alt="...">
+                        {{-- <img src="{{!$ad->images()->get()->isEmpty() ? Storage::url($ad->images()->first()->path) : 'https://picsum.photos/400/300'}}" class="card-img-top" alt="..."> --}}
+                        <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}" class="card-img-top" alt="...">
                         {{-- <a href="{{ route('ads.show', $ad) }}" class="image">
                         <img class="pic-1" src="https://i.ebayimg.com/images/g/WuAAAOSw1iFhqrJZ/s-l1600.jpg">
                         </a> --}}

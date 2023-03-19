@@ -280,12 +280,13 @@ hr{
 }
 
 .product-grid .price{
-    color: #fff;
-    background: #009de1;
+    color: #000;
+    background: #ffc107;
     font-size: 15px;
+    font-weight: bold;
     padding: 2px 6px 2px 18px;
     border: 1px solid rgba(0,0,0,0.08);
-    border-radius: 1px 3px 3px 1px;
+    border-radius: 1px 3px 3px px;
     position: absolute;
     top: 25px;
     left: -15px;

@@ -18,7 +18,8 @@
                                 <div class="row">
                                     @forelse ($ad->images as $image)
                                     <div class="col-md-4">
-                                        <img src="{{ $image->getUrl() }}" class="img-fluid" alt="...">
+                                        {{-- <img src="{{ $image->getUrl() }}" class="img-fluid" alt="..."> --}}
+                                        <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}" class="card-img-top" alt="...">
                                     </div>
                                     @empty
                                     <div class="col-12">
