@@ -1,7 +1,7 @@
 <div class="container">
-    <footer class="py-5">
+    <footer class="pt-5">
         <div class="row">
-            <div class="col-6 col-md-3 mb-3">
+            <div class="col-6 col-md-3">
                 <h5>Best Choice</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="{{ route('home') }}" class="nav-link p-0 text-muted">{{__('Inicio')}}</a></li>
@@ -23,7 +23,7 @@
                 </ul>
             </div> --}}
 
-            <div class="col-6 col-md-3 px-5 mb-3">
+            <div class="col-6 col-md-3 px-5">
                 <h5>{{__('Categorías')}}</h5>
                 <ul class="nav flex-column">
                     @foreach ($categories as $category)
@@ -32,7 +32,7 @@
                 </ul>
             </div>
 
-            <div class="col-12 col-md-6 mb-3 text-end">
+            <div class="col-12 col-md-6 text-end">
                 <form>
                     <h5>{{__('Suscríbete a nuestro boletín')}}</h5>
                     <p>{{__('Resumen mensual de las mejores novedades y promociones')}}</p>
