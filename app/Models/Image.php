@@ -9,10 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Image extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
     
-=======
->>>>>>> 8dd50a8ab8c685acd9991a6d92716b04d265c05f
     protected $fillable = ['path'];
 
     public function ads()
@@ -35,8 +32,5 @@ class Image extends Model
     {
         return self::getUrlByFilePath($this->path, $w, $h);
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8dd50a8ab8c685acd9991a6d92716b04d265c05f
+    
 }
