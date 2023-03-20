@@ -6,15 +6,17 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             @auth
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
                     <button type="button"
                         class="btn btn-warning btn-block my-btn-call nav col-lg-auto p-2 ml-2 justify-content-center">
                         <a href="{{ route('ads.create') }}"
                             class="text-decoration-none text-dark">{{ __('Crear anuncio') }}</a>
                     </button>
-                </ul>
+                
             @endauth
+        </ul>
 
 
 
@@ -50,7 +52,7 @@
 
                         {{-- <li><a href="{{ route('login') }}" class="nav-link text-dark">{{ __('Iniciar sesión') }}</a></li> --}}
                         <a class="nav-link text-dark" data-bs-toggle="modal" href="#exampleModalToggle"
-                            role="button">{{ __('Iniciar sesion') }}</a>
+                            role="button">{{ __('Iniciar sesión') }}</a>
                         {{-- <li><a href="{{ route('register') }}" class="nav-link text-dark">{{ __('Registrar') }}</a></li> --}}
                     </ul>
                 @endguest
