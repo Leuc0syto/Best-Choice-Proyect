@@ -54,9 +54,9 @@
                 {{__('Crear cuenta')}}
             </button>
             <div class="social-container">
-                <p class="my-3 p-2 d-flex">{{__('¿Ya eres de los nuestros?')}} <button type="submit"
+                <p class="my-3 p-2 d-flex">{{__('¿Ya eres de los nuestros?')}} <a
                         class="my-btn btn btn-outline-warning a-login btn-sm ms-2"
-                        href="{{ route('login') }}">{{__('¡Entra ya!')}}</button>
+                        href="{{ route('login') }}">{{__('¡Entra ya!')}}</a>
                 </p>
             </div>
         </form>

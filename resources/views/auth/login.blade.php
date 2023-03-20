@@ -75,9 +75,9 @@
                     <div><a class="go" href=""><i class="fab fa-google"></i></a></div>
                     <div><a class="fb" href=""><i class="fab fa-facebook"></i></a></div>
                 </div>
-                <p class="my-3 p-2 p-login">{{__('¿Aún no eres de los nuestros?')}} <button type="submit"
+                <p class="my-3 p-2 p-login">{{__('¿Aún no eres de los nuestros?')}} <a
                         class="my-btn btn btn-outline-warning a-login btn-sm ms-2"
-                        href="{{ route('register') }}">{{__('¡Registrate!')}}</button>
+                        href="{{ route('register') }}">{{__('¡Registrate!')}}</a>
                 </p>
             </div>
         </form>

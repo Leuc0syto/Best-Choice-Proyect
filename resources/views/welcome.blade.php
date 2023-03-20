@@ -103,7 +103,13 @@
                                 <small>{{ __('Vendedor:') }} {{ $ad->user->name }}</small>
                             </div>
                         </div>
-                    </div>
+                    </div> 
+
+                {{-- <x-card
+                    img="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : 'https://via.placeholder.com/150'}}"
+                    title="{{ $ad->title }}" price="{{ $ad->price }}" body="" :ad="$ad">
+                </x-card> --}}
+
                 </div>
             </div>
             @empty
