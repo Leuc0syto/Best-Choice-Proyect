@@ -62,7 +62,7 @@
             <div class="validate"></div>
             <label lable-login for="password"></label>
             <div class="pass">
-                <input type="password" class="pass form-control forms_field-input border-0" name="password"
+                <input type="password" class="input-login form-control forms_field-input border-0" name="password"
                     placeholder="{{__('Tu contraseña')}}" id="password">
                 <div class="validate"></div>
                 <i id="show-hide" class="fa-solid fa-eye-slash"></i>

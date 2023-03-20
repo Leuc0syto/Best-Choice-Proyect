@@ -23,12 +23,12 @@ body
 }
 
 .my-dropdown-width{
-    min-width: 0 !important; 
+    min-width: 0 !important;
 }
 
 
 .my-nav{
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     background: #114358;
     font-size: 20px;
     display: flex;
@@ -69,9 +69,9 @@ body
 .form-register{
     width: 100%;
     display: flex;
-    padding: 50px 20px;
+    padding: 50px 50px;
     justify-items: center;
-    padding:40px;
+    font-size: 15px;
 }
 .form-login-create{
     display: block;
@@ -98,14 +98,15 @@ body
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,06);
     padding: 50px 35px;
+    font-size: 15px;
 }
 .form-login h2{
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .lable-login{
     display: block;
     margin-top: 2rem;
-    font-size: 1rem;
+    font-size:1rem;
 }
 .input-login{
     outline: none;
@@ -116,7 +117,8 @@ body
     padding: 10px 10px;
     margin-top: 8px;
     font-weight: 100px;
-    
+    font-size: 18px;
+
 
 }
 .input-login::before{
@@ -128,9 +130,10 @@ body
     width: 100%;
     background-color: rgba(245,222,198,1);
     border-radius: 25px;
-    padding: 5px 5px;
+    padding: 10px 20px;
     margin-top: 8px;
     font-weight: 100px;
+    font-size: 18px;
 
 }
 
@@ -220,7 +223,7 @@ hr{
 
 
 .product-grid{
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     margin: 5px 15px 0;
     border-radius: 10px;
@@ -308,7 +311,7 @@ hr{
 
 
 nav, .main-font, footer {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 
@@ -333,7 +336,7 @@ nav, .main-font, footer {
     border-radius: 25px;
     background:#323b45;
     padding: 5px 3px;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: center;
     width: 150px;
@@ -345,7 +348,7 @@ nav, .main-font, footer {
     text-decoration: none;
     border-radius: 25px;
     padding: 7px;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .my-btn{
@@ -357,7 +360,7 @@ nav, .main-font, footer {
     border-radius: 25px;
     background:#323b45;
     padding: 7px;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .btn-login{
