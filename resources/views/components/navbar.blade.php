@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <button type="button" class="btn btn-warning btn-block btn-create nav col-lg-auto p-2 ml-2 justify-content-center">
+                <button type="button" class="btn btn-warning btn-block my-btn-call nav col-lg-auto p-2 ml-2 justify-content-center">
                     <a href="{{ route('ads.create') }}"
                         class="text-decoration-none text-dark">{{ __('Crear anuncio') }}</a>
                 </button>

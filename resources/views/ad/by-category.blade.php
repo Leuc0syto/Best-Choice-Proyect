@@ -34,13 +34,6 @@
                                 </strong>
                                 <div class="card-subtitle mb-2">
                                     <small>{{__('Vendedor:')}} {{$ad->user->name}}</small>
-                                    <ul class="rating">
-                                        <li class="fa fa-star"></li>
-                                        <li class="fa fa-star"></li>
-                                        <li class="fa fa-star"></li>
-                                        <li class="fa fa-star"></li>
-                                        <li class="fa fa-star-o"></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
