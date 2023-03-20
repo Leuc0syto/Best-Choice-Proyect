@@ -69,7 +69,6 @@ body
 .form-register{
     width: 100%;
     display: flex;
-    padding: 50px 50px;
     justify-items: center;
     font-size: 15px;
 }
@@ -92,12 +91,11 @@ body
     display: block;
     margin: auto;
     width: 450px;
-    background-color: rgba(255,255,255,0.13);
+    background-color:#efeaea;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
+    /* backdrop-filter: blur(10px); */
+   /*  border: 2px solid rgba(255,255,255,0.1); */
     box-shadow: 0 0 40px rgba(8,7,16,06);
-    padding: 50px 35px;
     font-size: 15px;
 }
 .form-login h2{
@@ -105,7 +103,6 @@ body
 }
 .lable-login{
     display: block;
-    margin-top: 2rem;
     font-size:1rem;
 }
 .input-login{
@@ -163,10 +160,6 @@ hr{
     background-color: #ffffff7f;
     border: none;
     outline: navajowhite;
-}
-.social-container{
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 .social{
     display: flex;

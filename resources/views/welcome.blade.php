@@ -103,7 +103,7 @@
                                 <small>{{ __('Vendedor:') }} {{ $ad->user->name }}</small>
                             </div>
                         </div>
-                    </div> 
+                    </div>
 
                 {{-- <x-card
                     img="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : 'https://via.placeholder.com/150'}}"
@@ -122,9 +122,5 @@
         </div>
     </div>
     <!-- Card container end -->
-
-
-
-
 
 </x-layout>

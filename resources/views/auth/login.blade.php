@@ -42,7 +42,7 @@
 
 
     {{--Login --}}
-    @if ($errors->any())
+   {{--  @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -53,10 +53,10 @@
     @endif
     <div class="form-container">
         <form action="/login" method="POST" role="form" class="form-login">
-            @csrf
-            <h2 class="animate__heartBeat animate__delay-3s form-title d-flex justify-content-center">
-                {{__('Iniciar sesión')}}</h2>
-            <label class="lable-login" for="username"></label>
+            @csrf --}}
+            {{-- <h2 class="animate__heartBeat animate__delay-3s form-title d-flex justify-content-center">
+                {{__('Iniciar sesión')}}</h2> --}}
+           {{--  <label class="lable-login" for="username"></label>
             <input class="input-login form-control forms_field-input border-0 " type="email" name="email" id="email"
                 placeholder="{{__('Tu correo')}}" data-rule="minlen:4" data-msg="Please enter at least 4 characters">
             <div class="validate"></div>
@@ -67,7 +67,7 @@
                 <div class="validate"></div>
                 <i id="show-hide" class="fa-solid fa-eye-slash"></i>
             </div>
-            <button type="submit" class="btn btn-login btn-warning my-btn-call col-12 py-3 text-dark justify-content-center">{{__('Entrar')}}
+            <button type="submit" class="btn btn-login btn-warning my-btn-call col-12 py-3 mt-5 text-dark justify-content-center">{{__('Entrar')}}
             </button>
             <hr>
             <div class="social-container">
@@ -81,7 +81,7 @@
                 </p>
             </div>
         </form>
-    </div>
+    </div> --}}
 
 
 
