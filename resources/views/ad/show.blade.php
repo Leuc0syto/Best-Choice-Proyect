@@ -57,15 +57,11 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ $ad->price }}{{__('€')}}</h2>
                     <h5 class="card-title">{{ $ad->title }}</h5>
-                    <a class="btn btn-outline-secondary btn-sm my-2"
-                        href="{{route('category.ads',$ad->category)}}">{{__($ad->category->name)}}</a>
                     <p class="card-text">{{ $ad->body }}</p>
+                    <a class="btn btn-outline-secondary btn-sm my-2"
+                    href="{{route('category.ads',$ad->category)}}">{{__($ad->category->name)}}</a>
                     <p class="card-text"><small class="text-muted">{{__('Publicado el')}}: {{ $ad->created_at->format('d/m/Y') }}</small></p>
-                    <button class="btn btn-outline-warning btn-show">
-                        <span class="fs-6 my-2">
-                            <a class="text-decoration-none text-white font-weight-bolder"
-                            href="#">{{__('Comprar')}}</a>
-                        </span>
+                    <button type="button" class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder">{{__('Comprar')}}
                     </button>
                 </div>
             </div>

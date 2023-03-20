@@ -101,13 +101,6 @@
                             <p class="card-text">{{ $ad->body }}</p>
                             <div class="card-subtitle mb-2">
                                 <small>{{ __('Vendedor:') }} {{ $ad->user->name }}</small>
-                                <ul class="rating">
-                                    <li class="fa fa-star"></li>
-                                    <li class="fa fa-star"></li>
-                                    <li class="fa fa-star"></li>
-                                    <li class="fa fa-star"></li>
-                                    <li class="fa fa-star-o"></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -116,7 +109,7 @@
             @empty
             <div class="col-12 mt-5 text-center">
                 <h2>{{ __('Uyy...parece que no hay nada de esta categoría') }}</h2>
-                <a href="{{ route('ads.create') }}" class="btn btn-warning btn-block btn-create">{{ __('Vende tu primer objeto') }}</a>
+                <a href="{{ route('ads.create') }}" class="btn btn-warning btn-block my-btn-call">{{ __('Vende tu primer objeto') }}</a>
             </div>
 
             @endforelse

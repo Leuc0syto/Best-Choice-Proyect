@@ -18,7 +18,7 @@
 
         <div class="mb-3">
             <label for="price" class="form-label lable-login ">{{__('Precio:')}} </label>
-            <input wire:model="price" type="number" class="form-control input-login @error('price') is-invalid @enderror">
+            <input wire:model="price" type="number" min="0" class="form-control input-login @error('price') is-invalid @enderror">
             @error('price')
             {{$message}}
             @enderror
@@ -69,7 +69,7 @@
         @endif
 
         <div class="my-3 d-flex justify-content-center">
-            <button type="submit" class="btn-create px-5 py-2 btn btn-outline-warning">{{__('Crear')}}</button>
+            <button type="submit" class="btn btn-login btn-warning my-btn-call text-black col-12 py-3 justify-content-center">{{__('Crear')}}</button>
         </div>
 
     </form>
