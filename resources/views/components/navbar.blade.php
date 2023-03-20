@@ -148,12 +148,12 @@
     tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content form-register">
-            <div class="modal-header d-flex justify-content-center">
+            <div class="modal-header d-flex justify-content-center" style="background-color:#d3a1a0;">
                 <h5 class="modal-title animate__heartBeat animate__delay-3s" id="exampleModalToggleLabel2">
                     {{ __('Crear cuenta') }}</h5>
 
             </div>
-            <div class="modal-body">
+            <div class="modal-body label-login">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -207,19 +207,20 @@
 
 
                         <button type="submit"
-                            class="btn btn-login btn-warning my-btn-call col-12 py-3 justify-content-center text-decoration-none text-dark">
+                            class="btn btn-login my-btn-call col-12 py-3 mt-4 text-dark justify-content-center" style="background-color:#d3a1a0;">
                             {{ __('Crear cuenta') }}
                         </button>
                         <div class="social-container">
                         </div>
+
                     </form>
                 </div>
             </div>
-            <div class="modal-footer">
-                <p class="my-3 p-2 d-flex">{{ __('¿Ya eres de los nuestros?') }} <a
+            <div class="modal-footer" style="background-color:#d3a1a0;">
+                <p class="my-3 p-2 mb-5 p-login">{{ __('¿Ya eres de los nuestros?') }} <a
                         class="my-btn btn btn-outline-warning a-login btn-sm ms-2" href="{{ route('login') }}"
                         data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
-                        data-bs-dismiss="modal">{{ __('¡Entra ya!') }}</a>
+                        data-bs-dismiss="modal">{{ __('Identifícate!') }}</a>
                 </p>
                 {{-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button> --}}
             </div>
