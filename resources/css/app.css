@@ -1,4 +1,5 @@
 @import '~bootstrap/dist/css/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons';
 @import '~flag-icon-css/css/flag-icons';
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rock+Salt&family=Varela+Round&display=swap');
@@ -370,4 +371,24 @@ nav, .main-font, footer {
 .btn-login:hover{
     transform: translate(-0.25rem, -0.25rem);
     box-shadow: 0.25rem 0.25rem #2a2a2c;
+}
+
+/* Estilos para las etiquetas de las imagenes de Google en vista revisor*/
+.VERY_UNLIKELY {
+    color: greenyellow
+}
+.UNLIKELY {
+    color: green
+}
+.POSSIBLE {
+    color: orange
+}
+.LIKELY {
+    color: orangered
+}
+.VERY_LIKELY {
+    color: red
+}
+.UNKNOWN {
+    color: grey
 }

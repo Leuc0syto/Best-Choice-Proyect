@@ -19,7 +19,7 @@
 
                         {{-- Refactoring del codigo anterior --}}
                         
-                        <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400, 400) : 'https://i.ebayimg.com/images/g/WuAAAOSw1iFhqrJZ/s-l1600.jpg' }}" class="card-img-top" alt="">
+                        <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400, 400) : 'https://via.placeholder.com/150' }}" class="card-img-top" alt="">
                         
                             <div class="price">{{$ad->price}}{{__('€')}}</div>
                             <a href="{{ route("ads.show", $ad) }}" class="add-to-cart">{{__('Ver')}}</a>

@@ -9,6 +9,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Image extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+    'labels'=>'array'
+    ];
     
     protected $fillable = ['path'];
 
@@ -31,5 +35,10 @@ class Image extends Model
     public function getUrl($w = null, $h = null)
     {
         return self::getUrlByFilePath($this->path, $w, $h);
+    }
+
+    public function getLabels()
+    {
+        return $this->labels ? $this : [];
     }
 }
