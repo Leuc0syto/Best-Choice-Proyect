@@ -63,12 +63,12 @@ body
 
 .form-container{
     width: 100%;
-    display: flex;
-    padding: 50px 20px;
     justify-items: center;
 }
+
 .form-register{
     width: 100%;
+    background-color: rgba(255,255,255,1);
     display: flex;
     justify-items: center;
     font-size: 15px;
@@ -93,10 +93,8 @@ body
     display: block;
     margin: auto;
     width: 450px;
-    background-color:#efeaea;
+    background-color: rgba(255,255,255,1);
     border-radius: 10px;
-    /* backdrop-filter: blur(10px); */
-   /*  border: 2px solid rgba(255,255,255,0.1); */
     box-shadow: 0 0 40px rgba(8,7,16,06);
     font-size: 15px;
 }
@@ -192,9 +190,7 @@ hr{
 .social i{
     margin-right: 2px;
 }
-.p-login{
-    display: flex;
-}
+
 .a-register{
     display: flex;
     align-items: center;
