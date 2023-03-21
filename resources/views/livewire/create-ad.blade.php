@@ -1,7 +1,7 @@
 <div class="container">
     <div class="d-flex justify-content-center">
         <div class="col-md-6 d-sm-none d-md-block">
-            <img src="{{ asset('assets/img/Shopping-rafiki.png') }}" class="w-100 img-fluid" alt="image">
+            <img src="{{ asset('assets/img/sell-img.jpg') }}" class="img-fluid" alt="image">
         </div>
         <div class="col-md-6 col-sm-12 p-5">
             <div class="text-center">
