@@ -206,7 +206,7 @@
 
 
                         <button type="submit"
-                            class="btn btn-login my-btn-call col-12 py-3 mt-4 text-dark justify-content-center">
+                            class="btn btn-login btn-warning my-btn-call col-12 py-3 mt-4 text-dark justify-content-center">
                             {{ __('Crear cuenta') }}
                         </button>
                         <div class="social-container">
