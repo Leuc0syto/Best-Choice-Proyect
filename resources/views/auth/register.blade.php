@@ -26,7 +26,7 @@
 
             {{-- Correo --}}
 
-            <input type="email" name="email" id="email" class="input-register form-control forms_field-input border-0 " 
+            <input type="email" name="email" id="email" class="input-register form-control forms_field-input border-0 "
                 placeholder="{{__('Tu correo')}}" data-rule="minlen:4" data-msg="Please enter at least 4 characters">
             <div class="validate"></div>
 
