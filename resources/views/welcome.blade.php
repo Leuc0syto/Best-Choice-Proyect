@@ -141,11 +141,11 @@
             </div>
             @empty
             <div class="col-12 mt-5 text-center">
-                <h2>{{ __('Uyy...parece que no hay nada de esta categoría') }}</h2>
-                <a href="{{ route('ads.create') }}"
-                    class="btn btn-warning btn-block my-btn-call">{{ __('Vende tu primer objeto') }}</a>
+                <h2>{{__('Uyy...parece que no hay nada de esta categoría')}}</h2>
+                <a href="{{ route('ads.create') }}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a>
+                {{__('o')}}
+                <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la home')}}</a>
             </div>
-
             @endforelse
         </div>
     </div>
