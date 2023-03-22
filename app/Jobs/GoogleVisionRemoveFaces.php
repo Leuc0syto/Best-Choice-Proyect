@@ -64,7 +64,7 @@ class GoogleVisionRemoveFaces implements ShouldQueue
                 ->watermarkPosition('top-left')
                 ->watermarkPadding($bounds[0][0], $bounds[0][1])
                 ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
-                ->waterHeight($h, Manipulations::UNIT_PIXELS)
+                ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
                 ->watermarkFit(Manipulations::FIT_STRETCH);
             $image->save($srcPath);
         }
