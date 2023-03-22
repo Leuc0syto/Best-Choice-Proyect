@@ -341,16 +341,16 @@ nav, .main-font, footer {
 
 /* Estilos para las etiquetas de las imagenes de Google en vista revisor*/
 .VERY_UNLIKELY {
-    color: greenyellow
+    color: green;
 }
 .UNLIKELY {
-    color: green
+    color: greenyellow
 }
 .POSSIBLE {
-    color: orange
+    color: gold
 }
 .LIKELY {
-    color: orangered
+    color: orange
 }
 .VERY_LIKELY {
     color: red
