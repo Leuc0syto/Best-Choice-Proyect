@@ -39,6 +39,6 @@ class Image extends Model
 
     public function getLabels()
     {
-        return $this->labels ? $this : [];
+        return $this->labels ? $this->labels : [];
     }
 }

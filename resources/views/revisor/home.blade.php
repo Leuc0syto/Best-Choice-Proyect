@@ -39,6 +39,7 @@
                                         <b>Racy :</b> <i class="bi bi-circle-fill {{ $image->racy }}"></i> [{{ $image->racy }}]
                                         <br><br>
 
+
                                         <b>Labels</b><br>
                                         @forelse ($image->getLabels() as $label)
                                             <a href="#" class="btn btn-info btn-sm m-1">{{ $label }}</a>
