@@ -2,7 +2,7 @@
 
     <div class="container">
         <div class="row my-5">
-            <div class="card mx-auto col-12 col-md-7">
+            <div class="card mx-auto col-9 col-md-7">
                 <div class="card-header">
                     <div class="row">
                         <div>{{ $ad->user->name }}</div>
