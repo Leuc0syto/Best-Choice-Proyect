@@ -360,3 +360,33 @@ nav, .main-font, footer {
 .UNKNOWN {
     color: grey
 }
+
+
+
+
+
+
+
+
+.container-cat{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items:baseline
+}
+.my-baby a {
+    width: 50px;
+    display: flex;
+    justify-content:space-between;
+    margin: 30px;
+    padding: 10px;
+
+}
+.my-baby img{
+    width: 50px;
+}
+.container-cat .my-baby:hover{
+    color: blue;
+}
+
+

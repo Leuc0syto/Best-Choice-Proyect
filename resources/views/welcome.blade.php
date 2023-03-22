@@ -61,7 +61,7 @@
                 </form>
             </div>
 
-            @foreach ($categories as $category)
+            {{-- @foreach ($categories as $category)
             <div class="col py-4">
                 <div class="d-flex flex-column">
                     <div class="text-center mg-text">
@@ -75,7 +75,28 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @endforeach --}}
+
+            {{-- CATEGORIAS --}}
+            <div class="container-cat">
+                <div class="row my-baby">
+
+                        <a href=""><img src="{{asset('assets/img/enfermero.png')}}" alt=""></a>
+
+
+                        <a href=""><img src="{{asset('assets/img/mujer.png')}}" alt=""></a>
+
+
+                        <a href=""><img src="{{asset('assets/img/nino.png')}}" alt=""></a>
+
+
+                        <a href=""><img src="{{asset('assets/img/joyas.png')}}" alt=""></a>
+
+
+                        <a href=""><img src="{{asset('assets/img/zapato-inteligente.png')}}" alt=""></a>
+
+                </div>
+            </div>
 
         </div>
 
@@ -94,8 +115,8 @@
                         <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
                             class="card-img-top my-card" alt="...">
                         <div class="price">{{ $ad->price }}{{ __('€') }}</div>
-                        
-                            
+
+
                             </a>
                     </div>
                     <div class="product-content">
@@ -115,7 +136,7 @@
                         <x-slot name='title'>{{$ad->title}}</x-slot>
                         <x-slot name='price'>{{$ad->price}}€</x-slot>
                     </x-card> --}}
-                    
+
                 </div>
             </div>
             @empty
