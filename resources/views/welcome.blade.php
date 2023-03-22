@@ -94,37 +94,20 @@
                         <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
                             class="card-img-top my-card" alt="...">
                         <div class="price">{{ $ad->price }}{{ __('€') }}</div>
-                        
-                            
                             </a>
                     </div>
                     <div class="product-content">
                             <p class="card-title">{{ $ad->title }}</p>
                     </div>
-
-                    {{-- <x-card>
-                        @if ($ad->images()->count() > 0)
-                        <x-slot name='image'>{{$ad->images()->first()->getUrl(500,500)}}</x-slot>
-                        @else
-                        <x-slot name='image'>{{'https://picsum.photos/700/600?a'}}</x-slot>
-                        @endif
-                        <x-slot name='show'>{{route('ads.show', $ad)}}</x-slot>
-                        <x-slot name='category'>{{__($ad->category->name)}}</x-slot>
-                        <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot>
-                        <x-slot name='categoryName'>{{__($ad->category->name)}}</x-slot>
-                        <x-slot name='title'>{{$ad->title}}</x-slot>
-                        <x-slot name='price'>{{$ad->price}}€</x-slot>
-                    </x-card> --}}
-                    
                 </div>
             </div>
             @empty
             <div class="col-12 mt-5 text-center">
-                <h2>{{ __('Uyy...parece que no hay nada de esta categoría') }}</h2>
-                <a href="{{ route('ads.create') }}"
-                    class="btn btn-warning btn-block my-btn-call">{{ __('Vende tu primer objeto') }}</a>
+                <h2>{{__('Uyy...parece que no hay nada de esta categoría')}}</h2>
+                <a href="{{ route('ads.create') }}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a>
+                {{__('o')}}
+                <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la home')}}</a>
             </div>
-
             @endforelse
         </div>
     </div>
