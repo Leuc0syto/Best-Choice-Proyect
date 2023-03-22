@@ -42,7 +42,7 @@
 
                                         <b>Labels</b><br>
                                         @forelse ($image->getLabels() as $label)
-                                            <a href="#" class="btn btn-info btn-sm m-1">{{ $label }}</a>
+                                            <a href="#" class="btn btn-warning btn-sm m-1">{{ $label }}</a>
                                         @empty
                                         No labels
                                         @endforelse
