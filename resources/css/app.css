@@ -222,13 +222,12 @@ hr{
     text-align: center;
     margin: 5px 15px 0;
     border-radius: 25px;
-    box-shadow:  0 0 3px rgba(0,0,0,0.1);
     transition: all 0.5s;
 }
-.product-grid:hover{ box-shadow:  0 0 15px rgba(0,0,0,0.1); }
+.product-grid:hover{ box-shadow:  0 0 10px rgba(0,0,0,0.5); }
 .product-grid .product-image{ position: relative; }
 .product-grid .product-image a.image{
-    border-radius: 10px 10px 0 0;
+    border-radius: 25px;
     overflow: hidden;
     display: block;
 }
@@ -262,8 +261,7 @@ hr{
     background-color: #fff;
     text-align: left;
     padding: 15px 10px;
-    border-top: 1px solid transparent;
-    border-radius: 0 0 10px 10px;
+    border-radius: 25px;
     transition: all 0.3s;
 }
 
