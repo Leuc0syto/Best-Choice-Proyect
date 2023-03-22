@@ -1,9 +1,9 @@
-<div class="container-fluid vh-100">
-    <div class="rounded d-flex justify-content-center">
-        <div class="col-md-4 d-sm-none d-md-block">
-            <img src="{{ asset('assets/img/Shopping-rafiki.png') }}" class="w-100 img-fluid" alt="image">
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div class="col-md-6 d-sm-none d-md-block">
+            <img src="{{ asset('assets/img/sell-img.jpg') }}" class="img-fluid" alt="image">
         </div>
-        <div class="col-md-4 col-sm-12 p-5">
+        <div class="col-md-6 col-sm-12 p-5">
             <div class="text-center">
                 <h2 class=" animate__heartBeat animate__delay-3s form-title d-flex justify-content-center mb-4 pt-4">
                     {{ __('Sube tu anuncio') }}</h2>
