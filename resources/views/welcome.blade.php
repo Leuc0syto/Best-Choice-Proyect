@@ -85,7 +85,7 @@
 
 
         <div class="container">
-            <ul class="d-flex justify-content-around align-items-center">
+            <ul class="categories">
                 @foreach ($categories as $category)
                 <li class="nav-link">
                     <a class="nav-link text-center text-dark" href="{{ route('category.ads', $category) }}">
