@@ -21,9 +21,9 @@
             @empty
             <div class="col-12 mt-5 text-center">
                 <h2>{{__('Uy...parece que no hay nada de esta categoría')}}</h2>
-                <a href="{{ route('ads.create') }}" class="btn btn-warning btn-block my-btn-call">{{__('Vende tu primer objeto')}}</a>
+                <a href="{{ route('ads.create') }}" class="btn btn-warning btn-block my-btn-call p-2 ml-2">{{__('Vende tu primer objeto')}}</a>
                 {{__('o')}}
-                <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la home')}}</a>
+                <a href="{{route('home')}}" class="btn btn-outline-warning my-btn">{{__('Vuelve a la home')}}</a>
             </div>
             @endforelse
             {{ $ads->links() }}

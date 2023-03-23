@@ -110,26 +110,42 @@
 
                     </div>
                 </div>
-                <div class="row my-3">
-                    <div class="d-md-block">
-                        <div class="d-flex">
-                            <form action="{{ route('revisor.ad.accept',$ad) }}" method="POST">
-                                @csrf
-                                @method('PATCH')
+
+                <div class="d-flex">
+                    <div class="flex-fill d-md-block">
+                        <form action="{{ route('revisor.ad.accept',$ad) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <div class="d-md-flex my-2">
                                 <button type="submit"
                                     class="btn btn-lg btn-outline-success flex-fill">{{__('Aceptar')}}</button>
-                            </form>
-                            <form action="{{ route('revisor.ad.reject',$ad) }}" method="POST">
-                                @csrf
-                                @method('PATCH')
+                            </div>
+
+                        </form>
+                        <form action="{{ route('revisor.ad.reject',$ad) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <div class="d-md-flex my-2">
                                 <button type="submit"
                                     class="btn btn-lg btn-outline-danger flex-fill">{{__('Rechazar')}}</button>
-                            </form>
-                        </div>
+
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    </div>
     </div>
     @else
     <h3 class="text-center mt-5">{{__('No hay anuncios para revisar, vuelve más tarde, gracias!')}}</h3>
