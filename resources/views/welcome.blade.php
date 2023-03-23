@@ -85,23 +85,23 @@
 
  <div class="categories">
     <div class="category">
-        <a href=""><img src="{{asset('assets/img/enfermero.png')}}" alt="Hombre"></a>
+        <a href="#"><img src="{{asset('assets/img/enfermero.png')}}" alt="Hombre"></a>
         <p>{{__('Hombre')}}</p>
     </div>
     <div class="category">
-        <a href=""><img src="{{asset('assets/img/mujer.png')}}" alt="Mujer"></a>
+        <a href="#"><img src="{{asset('assets/img/mujer.png')}}" alt="Mujer"></a>
         <p>{{__('Mujer')}}</p>
     </div>
     <div class="category">
-        <a href=""><img src="{{asset('assets/img/nino.png')}}" alt="Niños"></a>
+        <a href="#"><img src="{{asset('assets/img/nino.png')}}" alt="Niños"></a>
         <p>{{__('Niños')}}</p>
     </div>
     <div class="category">
-        <a href=""><img src="{{asset('assets/img/joyas.png')}}" alt="Accesorios"></a>
+        <a href="#"><img src="{{asset('assets/img/joyas.png')}}" alt="Accesorios"></a>
         <p>{{__('Accesorios')}}</p>
     </div>
     <div class="category">
-        <a href=""><img src="{{asset('assets/img/zapato-inteligente.png')}}" alt="Calzado"></a>
+        <a href="#"><img src="{{asset('assets/img/zapato-inteligente.png')}}" alt="Calzado"></a>
         <p>{{__('Calzado')}}</p>
     </div>
 </div>
