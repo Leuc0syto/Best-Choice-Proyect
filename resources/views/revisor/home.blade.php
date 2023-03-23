@@ -64,20 +64,25 @@
                                             class="card-img-top img-fluid" alt="...">
                                     </div>
                                     <div class="col-md-8">
-                                        <p class="mb-2"><b>{{__('Contenido pornográfico')}}: </b><i class="bi bi-circle-fill {{ $image->adult }}"></i>
-                                        <br></p>
-
-                                        <p class="mb-2"><b>{{__('Erótico')}}: </b><i class="bi bi-circle-fill {{ $image->racy }}"></i>
+                                        <p class="mb-2"><b>{{__('Contenido pornográfico')}}: </b><i
+                                                class="bi bi-circle-fill {{ $image->adult }}"></i>
                                             <br></p>
 
-                                        <p class="mb-2"><b>{{__('Degradante')}}: </b><i class="bi bi-circle-fill {{ $image->spoof }}"></i>
-                                        <br></p>
+                                        <p class="mb-2"><b>{{__('Erótico')}}: </b><i
+                                                class="bi bi-circle-fill {{ $image->racy }}"></i>
+                                            <br></p>
 
-                                        <p class="mb-2"><b>{{__('Médico')}}: </b><i class="bi bi-circle-fill {{ $image->medical }}"></i>
-                                        <br></p>
+                                        <p class="mb-2"><b>{{__('Degradante')}}: </b><i
+                                                class="bi bi-circle-fill {{ $image->spoof }}"></i>
+                                            <br></p>
 
-                                        <p class="mb-2"><b>{{__('Violencia')}}: </b><i class="bi bi-circle-fill {{ $image->violence }}"></i>
-                                        <br></p>
+                                        <p class="mb-2"><b>{{__('Médico')}}: </b><i
+                                                class="bi bi-circle-fill {{ $image->medical }}"></i>
+                                            <br></p>
+
+                                        <p class="mb-2"><b>{{__('Violencia')}}: </b><i
+                                                class="bi bi-circle-fill {{ $image->violence }}"></i>
+                                            <br></p>
 
 
                                         <p class="mb-2"><b>{{__('Etiquetas')}}: </b><br></p>
@@ -106,24 +111,28 @@
                     </div>
                 </div>
                 <div class="row my-3">
-
-                    <form action="{{ route('revisor.ad.reject',$ad) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <div class="d-md-block">
-                            <div class="d-flex gap-2 ">
+                    <div class="d-md-block">
+                        <div class="d-flex">
+                            <form action="{{ route('revisor.ad.accept',$ad) }}" method="POST">
+                                @csrf
+                                @method('PATCH')
                                 <button type="submit"
                                     class="btn btn-lg btn-outline-success flex-fill">{{__('Aceptar')}}</button>
-                                <button type="submit"
+                            </form>
+                            <form action="{{ route('revisor.ad.reject',$ad) }}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit text-end"
                                     class="btn btn-lg btn-outline-danger flex-fill">{{__('Rechazar')}}</button>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-        @else
-        <h3 class="text-center mt-5">{{__('No hay anuncios para revisar, vuelve más tarde, gracias!')}}</h3>
+    </div>
+    @else
+    <h3 class="text-center mt-5">{{__('No hay anuncios para revisar, vuelve más tarde, gracias!')}}</h3>
 
-        @endif
+    @endif
 </x-layout>
