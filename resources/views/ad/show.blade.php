@@ -1,5 +1,4 @@
 <x-layout>
-    .col-12
     <div class="container my-3">
         <div class="card mx-auto col-l-9 col-md-7">
             <div class="card-header" style="background-color: #F5DEC6">
