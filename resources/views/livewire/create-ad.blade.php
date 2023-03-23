@@ -58,7 +58,7 @@
                     <div class="mb-3">
                         <label for="text">{{__('Elige una fotografía :')}}</label>
                         <input wire:model="temporary_images" type="file" name="images" multiple
-                            class="form-control in input-login @error('temporary_images.*') is-invalid @enderror">
+                            class="form-control in input-login text-bg-light @error('temporary_images.*') is-invalid @enderror">
                         @error('temporary_images.*')
                         <p class="text-danger mt-2">{{ $message }}</p>
                         @enderror

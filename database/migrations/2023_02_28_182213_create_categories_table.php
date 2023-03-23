@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
         });
         $categories = [
-            'Hombre', 'Mujer', 'Niños', 'Bolsos', 'Accesorios'
+            'Hombre', 'Mujer', 'Niños', 'Accesorios', 'Calzado'
         ];
         foreach ($categories as $category) {
             Category::create(['name'=>$category]);
