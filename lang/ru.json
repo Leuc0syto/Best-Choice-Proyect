@@ -6,13 +6,17 @@
     "Novedades": "Новинки",
     "Crear anuncio": "Создать объявление",
     "Revisor": "Ревизор",
-    "Anuncios por categoría": "Объявления по категории",
+    "Anuncios por categoría:": "Объявления по категории",
     "Título": "Заголовок",
+    "Título:": "Заголовок",
     "Precio": "Цена",
+    "Precio:": "Цена",
     "Descripción": "Описание",
+    "Descripción:": "Описание",
     "Tu correo": "Твой email",
     "Rechazar": "Отклонить",
     "Aceptar": "Разрешить",
+    "Eliminar": "",
     "Comprar": "Купить",
     "Tu contraseña": "Твой пароль",
     "Buscar": "Искать",
@@ -26,7 +30,20 @@
     "Solicitudes para revisor": "Запросы на роль ревизора",
     "Construye tu mejor versión." : "Создай себя еще лучше.",
     "Viste tu actitud.": "Приобразись.",
- 
+    "Vende algo interesante": "sell something interesting",
+    "o" : "or",
+    "Solicitud para el puesto de Revisor": "Application for the position of Reviewer",
+    "Fecha de creación": "Creation date",
+    "No hay anuncios para revisar, vuelve más tarde, gracias!": "There are no ads to review, please come back later, thanks!",
+    "Imágenes":"Images",
+    "No hay imágenes":"No Pictures",
+    "Que vas a vender hoy?":"What are you going to sell today?",
+    "Sube tu anuncio":"Upload your ad",
+    "Cual es su precio?":"What is your price?",
+    "Como es el producto:":"How is the product:",
+    "Elige una categoría :":"Choose a category :",
+    "Elige una fotografía :":"Choose a photograph:",
+    "Calzado":"Footwear",
     
  
     "Inicio" : "Главная",
@@ -35,11 +52,11 @@
     "Política de Privacidad": "Правила конфиденциальности",
     "Términos y condiciones": "Правила и условия пользования",
  
-    "Ropa hombre": "Мужская одежда",
-    "Ropa mujer" : "Женская одежда",
-    "Ropa niños": "Детская одежда",
-    "Ropa unisex": "Одежда унисекс",
-    "Complementos": "Акссесуары",
+    "Hombre": "Мужская одежда",
+    "Mujer" : "Женская одежда",
+    "Niños": "Детская одежда",
+    "Bolsos": "...",
+    "Accesorios": "Акссесуары",
  
     "Resumen mensual de las mejores novedades y promociones": "Каталог лучших предложений и новинок за месяц",
     "Suscríbete a nuestro boletín": "Подпишись на наш каталог",
@@ -55,31 +72,6 @@
     "Entrar": "Войти",
     "Registrar": "Зарегистрироваться",
     "Cerrar sesión": "Выйти",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-   "coches": "cars",
-   "motos": "motorbikes",
-   "hogar": "home",
-   "electrónica": "electronics",
-   "móviles": "smartphones",
-   "ordenadores": "computers",
-   "Mostrar Más": "Show More",
-   "o": "or",
  
    "Dónde estamos": "Где мы находимся",
    "Nuevo Anuncio": "Новое объявление",

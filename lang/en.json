@@ -35,7 +35,6 @@
     "Vende algo interesante": "sell something interesting",
     "Seleccionar Categoría": "Select Category",
     "Crear": "Create",
-    "€":"$",
     "o" : "or",
     "Solicitud para el puesto de Revisor": "Application for the position of Reviewer",
     "Fecha de creación": "Creation date",
@@ -106,6 +105,5 @@
 
 
 
-
-
+   
 }

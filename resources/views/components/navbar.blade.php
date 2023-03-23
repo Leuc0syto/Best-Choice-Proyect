@@ -24,8 +24,8 @@
                 @endauth
             </ul>
 
-
-
+            <div class="d-flex flex-row align-items-center">
+        <div class="col-6">
             <ul class="navbar-nav me-2">
                 @auth
                 <li class="nav-item dropdown">
@@ -61,7 +61,9 @@
                 </ul>
                 @endguest
             </ul>
+        </div>
 
+        <div class="col-6 text-end">
             <ul class="navbar-nav col-12 col-lg-auto p-2 ml-2">
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -81,6 +83,9 @@
                     </div>
                 </li>
             </ul>
+        </div>
+    </div>
+
         </div>
     </div>
 </nav>
