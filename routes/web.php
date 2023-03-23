@@ -22,6 +22,8 @@ use League\CommonMark\Extension\Footnote\Node\FootnoteRef;
 
 Route::get('/', [PublicController::class, 'index'])->name('home');
 
+Route::get("/search", [PublicController::class, 'search'])->name('search');
+
 Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCategory'])->name('category.ads');
 
 
@@ -54,5 +56,6 @@ Route::post('/locale/{locale}', [PublicController::class, 'setLocale'])->name('l
 Route::get('/about', [PublicController::class, 'about'])->name('about');
 Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
 Route::get('/conditions', [PublicController::class, 'conditions'])->name('conditions');
+
 
 

@@ -53,8 +53,14 @@
         <div class="row d-flex justify-content-center">
             <h3 class="mt-5 text-center">{{ __('Compra y vende tu ropa de segunda mano') }}</h3>
             <div class="justify-content-center my-3">
-                <form class="d-flex input-group" role="search">
+                {{-- <form class="d-flex input-group" role="search">
                     <input type="text" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search">
+                    <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
+                        {{ __('Buscar') }}
+                    </button>
+                </form> --}}
+                <form action="{{ route('search') }}" method="GET" class="d-flex input-group" role="search">
+                    <input type="search" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search" name="q">
                     <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
                         {{ __('Buscar') }}
                     </button>
