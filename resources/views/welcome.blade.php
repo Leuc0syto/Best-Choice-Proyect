@@ -53,10 +53,16 @@
         <div class="row d-flex justify-content-center">
             <h3 class="mt-5 text-center">{{ __('Compra y vende tu ropa de segunda mano') }}</h3>
             <div class="justify-content-center my-3">
-                <form class="d-flex input-group" role="search">
+                {{-- <form class="d-flex input-group" role="search">
                     <input type="text" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search">
                     <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
                         {{ __('Buscar') }}
+                    </button>
+                </form> --}}
+                <form action="{{ route('search') }}" method="GET" class="d-flex input-group" role="search">
+                    <input type="search" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search" name="q">
+                    <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
+                        <i class="bi bi-search"></i>
                     </button>
                 </form>
             </div>
@@ -141,7 +147,7 @@
             </div>
             @empty
             <div class="col-12 mt-5 text-center">
-                <h2>{{__('Uyy...parece que no hay nada de esta categoría')}}</h2>
+                <h2>{{__('Uy...parece que no hay nada de esta categoría')}}</h2>
                 <a href="{{ route('ads.create') }}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a>
                 {{__('o')}}
                 <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la home')}}</a>

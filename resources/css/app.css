@@ -305,16 +305,15 @@ nav, .main-font, footer {
 
 .my-btn-call{
     font-size: 18px;
-    color: white;
     text-decoration: none;
     border-radius: 25px;
+    background-color: #ffc107;
+    border: 1px solid rgba(0,0,0,0.08);
     padding: 7px;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 .my-btn{
-    margin-left: 20px;
-    margin-right: 10px;
     font-size: 18px;
     color: white;
     text-decoration: none;
@@ -339,18 +338,23 @@ nav, .main-font, footer {
     box-shadow: 0.25rem 0.25rem #2a2a2c;
 }
 
+.pagination > .active > span {
+    background-color: #ffc107;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
 /* Estilos para las etiquetas de las imagenes de Google en vista revisor*/
 .VERY_UNLIKELY {
-    color: greenyellow
+    color: green;
 }
 .UNLIKELY {
-    color: green
+    color: greenyellow
 }
 .POSSIBLE {
-    color: orange
+    color: gold
 }
 .LIKELY {
-    color: orangered
+    color: orange
 }
 .VERY_LIKELY {
     color: red

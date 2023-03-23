@@ -11,7 +11,10 @@ class PublicController extends Controller
 {
     public function index()
     {
-        $ads = Ad::where('is_accepted', true)->orderBy('created_at','desc')->take(8)->get();
+        $ads = Ad::where('is_accepted', true)
+            ->orderBy('created_at','desc')
+            ->take(8)
+            ->get();
         return view('welcome', compact('ads'));
     }
 
@@ -19,6 +22,15 @@ class PublicController extends Controller
     {
         $ads = $category->ads()->where('is_accepted', true)->latest()->paginate(16);
         return view('ad.by-category', compact('category','ads'));
+    }
+
+    public function search(Request $request)
+    {
+        $q = $request->input('q');
+        $ads = Ad::search($q)
+            ->where('is_accepted', true)
+            ->paginate(16);
+        return view('ad.by-search', compact('q', 'ads'));    
     }
 
     public function about()
@@ -40,4 +52,5 @@ class PublicController extends Controller
         session()->put('locale', $locale);
         return redirect()->back();
     }
+
 }
