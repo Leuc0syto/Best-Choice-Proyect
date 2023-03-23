@@ -67,7 +67,7 @@
                 </form>
             </div>
 
-            @foreach ($categories as $category)
+            {{-- @foreach ($categories as $category)
             <div class="col py-4">
                 <div class="d-flex flex-column">
                     <div class="text-center mg-text">
@@ -81,7 +81,28 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @endforeach --}}
+
+            {{-- CATEGORIAS --}}
+            <div class="container-cat">
+                <div class="row my-baby">
+
+                        <a href=""><img src="{{asset('assets/img/enfermero.png')}}" alt=""></a>
+
+
+                        <a href=""><img src="{{asset('assets/img/mujer.png')}}" alt=""></a>
+
+
+                        <a href=""><img src="{{asset('assets/img/nino.png')}}" alt=""></a>
+
+
+                        <a href=""><img src="{{asset('assets/img/joyas.png')}}" alt=""></a>
+
+
+                        <a href=""><img src="{{asset('assets/img/zapato-inteligente.png')}}" alt=""></a>
+
+                </div>
+            </div>
 
         </div>
 
@@ -100,11 +121,28 @@
                         <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
                             class="card-img-top my-card" alt="...">
                         <div class="price">{{ $ad->price }}{{ __('€') }}</div>
+
+
                             </a>
                     </div>
                     <div class="product-content">
                             <p class="card-title">{{ $ad->title }}</p>
                     </div>
+
+                    {{-- <x-card>
+                        @if ($ad->images()->count() > 0)
+                        <x-slot name='image'>{{$ad->images()->first()->getUrl(500,500)}}</x-slot>
+                        @else
+                        <x-slot name='image'>{{'https://picsum.photos/700/600?a'}}</x-slot>
+                        @endif
+                        <x-slot name='show'>{{route('ads.show', $ad)}}</x-slot>
+                        <x-slot name='category'>{{__($ad->category->name)}}</x-slot>
+                        <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot>
+                        <x-slot name='categoryName'>{{__($ad->category->name)}}</x-slot>
+                        <x-slot name='title'>{{$ad->title}}</x-slot>
+                        <x-slot name='price'>{{$ad->price}}€</x-slot>
+                    </x-card> --}}
+
                 </div>
             </div>
             @empty
