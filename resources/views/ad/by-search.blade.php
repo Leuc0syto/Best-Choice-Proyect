@@ -1,7 +1,7 @@
 <x-layout>
-    <x-slot name='title'>BestChoice - {{$category->name}} ads</x-slot>
+    <x-slot name='title'>BestChoice - ads</x-slot>
     <div class="container mt-3">
-        <h3>{{__('Anuncios por categoría:')}} {{__($category->name)}}</h3>
+        <h3>{{__('Resultados para:')}} {{__($q)}}</h3>
         <div class="row">
             @forelse($ads as $ad)
             <div class="col-md-3 col-sm-6 col-6 my-2">
@@ -21,13 +21,14 @@
             @empty
             <div class="col-12 mt-5 text-center">
                 <h2>{{__('Uy...parece que no hay nada de esta categoría')}}</h2>
-                <a href="{{ route('ads.create') }}" class="btn btn-warning btn-block my-btn-call">{{__('Vende tu primer objeto')}}</a>
+                <a href="{{ route('ads.create') }}" class="btn btn-warning btn-block my-btn-call p-2 ml-2">{{__('Vende tu primer objeto')}}</a>
                 {{__('o')}}
-                <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la home')}}</a>
+                <a href="{{route('home')}}" class="btn btn-outline-warning my-btn">{{__('Vuelve a la home')}}</a>
             </div>
             @endforelse
+
             {{ $ads->links() }}
-        </div>
+
     </div>
 
 </x-layout>
