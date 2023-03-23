@@ -122,7 +122,7 @@
                             <form action="{{ route('revisor.ad.reject',$ad) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit text-end"
+                                <button type="submit"
                                     class="btn btn-lg btn-outline-danger flex-fill">{{__('Rechazar')}}</button>
                             </form>
                         </div>
