@@ -6,16 +6,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Condensed&family=Rock+Salt&family=Varela+Round&display=swap');
 
 
-
-
-
 body
 {
     margin:0px;
     padding: 0px;
     font-family: 'Comfortaa', sans-serif;
 }
-
 
 
 .logo{
@@ -362,12 +358,6 @@ nav, .main-font, footer {
 .UNKNOWN {
     color: grey
 }
-
-
-
-
-
-
 
 
 /* .container-cat{
