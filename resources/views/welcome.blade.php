@@ -62,7 +62,7 @@
                 <form action="{{ route('search') }}" method="GET" class="d-flex input-group" role="search">
                     <input type="search" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search" name="q">
                     <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
-                        <i class="bi bi-search"></i>
+                        <i class="bi bi-search px-3"></i>
                     </button>
                 </form>
             </div>
@@ -83,7 +83,48 @@
             </div>
             @endforeach --}}
 
- <div class="categories">
+
+        <div class="container">
+            <ul class="d-flex justify-content-around align-items-center">
+                @foreach ($categories as $category)
+                <li class="nav-link">
+                    <a class="nav-link text-center text-dark" href="{{ route('category.ads', $category) }}">
+                        @switch( __($category->name))
+                            @case( __('Hombre'))
+                            <div class="category">
+                                <img src="{{asset('assets/img/enfermero.png')}}" alt="Hombre">
+                            </div>
+                            @break
+                            @case( __('Mujer'))
+                            <div class="category">
+                                <img src="{{asset('assets/img/mujer.png')}}" alt="Mujer">
+                            </div>
+                            @break
+                            @case( __('Niños'))
+                            <div class="category">
+                                <img src="{{asset('assets/img/nino.png')}}" alt="Niños">
+                            </div>
+                            @break
+                            @case( __('Accesorios'))
+                            <div class="category">
+                                <img src="{{asset('assets/img/joyas.png')}}" alt="Accesorios">
+                            </div>
+                            @break
+                            @case( __('Calzado'))
+                            <div class="category">
+                                <img src="{{asset('assets/img/zapato-inteligente.png')}}" alt="Calzado">
+                            </div>
+                            @break
+                            @default
+                        @endswitch
+                        <p class="p-category-name m-0">{{ __($category->name)}}</p>
+                    </a>
+                </li>
+                @endforeach
+            </ul>
+        </div>
+
+{{-- <div class="categories">
     <div class="category">
         <a href="#"><img src="{{asset('assets/img/enfermero.png')}}" alt="Hombre"></a>
         <p>{{__('Hombre')}}</p>
@@ -104,7 +145,7 @@
         <a href="#"><img src="{{asset('assets/img/zapato-inteligente.png')}}" alt="Calzado"></a>
         <p>{{__('Calzado')}}</p>
     </div>
-</div>
+</div> --}}
 
         </div>
 

@@ -1,7 +1,7 @@
 <div class="container">
     <footer class="pt-5">
         <div class="row">
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 mb-5">
                 <h5>Best Choice</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="{{ route('home') }}" class="nav-link p-0 text-muted">{{__('Inicio')}}</a></li>
@@ -28,7 +28,7 @@
                 <ul class="nav flex-column">
                     @foreach ($categories as $category)
                         <li class="nav-item mb-2"><a href="{{ route('category.ads', $category) }}" class="nav-link p-0 text-muted">{{__($category->name)}}</a></li>   
-                        @endforeach
+                    @endforeach
                 </ul>
             </div>
 
