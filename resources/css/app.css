@@ -421,15 +421,11 @@ nav, .main-font, footer {
     border-radius: 40px;
     border: none;
     overflow: hidden;
-    /* background: navajowhite;
-    box-shadow:
-    10px 10px 10px #ffc107,
-    -10px -10px 20px navajowhite; */
     padding: 25px;
     margin: 30px;
     border-radius: 54px;
     background: navajowhite;
-    box-shadow:  15px 15px 30px #ffc107,
+    box-shadow:  15px 15px 20px #ffc107,
             -41px -41px 84px #ffffff;
     display: flex;
     justify-content: center;
