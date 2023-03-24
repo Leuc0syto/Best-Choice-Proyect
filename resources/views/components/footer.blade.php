@@ -43,7 +43,7 @@
                     </div>
                 </form>
                 <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
-                    <p><?php echo date('Y'); ?>BestChoice. {{__('Todos los derechos reservados.')}}</p>
+                    <p><?php echo date('Y'); ?> BestChoice. {{__('Todos los derechos reservados.')}}</p>
                     <ul class="list-unstyled d-flex">
                         <li class="ms-3">
                             <a href="https://www.facebook.com/" target="_blank" class="link-dark"><i class="fa fa-facebook" aria-hidden="true"></i></a>

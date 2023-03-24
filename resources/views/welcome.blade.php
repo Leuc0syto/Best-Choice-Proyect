@@ -55,12 +55,13 @@
             <div class="justify-content-center my-3">
                 {{-- <form class="d-flex input-group" role="search">
                     <input type="text" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search">
-                    <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
-                        {{ __('Buscar') }}
-                    </button>
+                <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
+                    {{ __('Buscar') }}
+                </button>
                 </form> --}}
                 <form action="{{ route('search') }}" method="GET" class="d-flex input-group" role="search">
-                    <input type="search" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search" name="q">
+                    <input type="search" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search"
+                        name="q">
                     <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
                         <i class="bi bi-search px-3"></i>
                     </button>
@@ -75,59 +76,59 @@
                             <span class="fs-6 my-2">
                                 <a class="text-decoration-none text-white font-weight-bolder"
                                     href="{{ route('category.ads', $category) }}">{{ __($category->name) }}</a>
-                            </span>
-                        </button>
+            </span>
+            </button>
 
-                    </div>
-                </div>
-            </div>
-            @endforeach --}}
-
-
-        <div class="container">
-            <ul class="categories">
-                @foreach ($categories as $category)
-                <li class="nav-link">
-                    <a class="nav-link text-center text-dark" href="{{ route('category.ads', $category) }}">
-                        @switch( __($category->name))
-                            @case( __('Hombre'))
-                            <div class="category">
-                                <img src="{{asset('assets/img/enfermero.png')}}" alt="Hombre">
-                            </div>
-                            @break
-                            @case( __('Mujer'))
-                            <div class="category">
-                                <img src="{{asset('assets/img/mujer.png')}}" alt="Mujer">
-                            </div>
-                            @break
-                            @case( __('Niños'))
-                            <div class="category">
-                                <img src="{{asset('assets/img/nino.png')}}" alt="Niños">
-                            </div>
-                            @break
-                            @case( __('Accesorios'))
-                            <div class="category">
-                                <img src="{{asset('assets/img/joyas.png')}}" alt="Accesorios">
-                            </div>
-                            @break
-                            @case( __('Calzado'))
-                            <div class="category">
-                                <img src="{{asset('assets/img/zapato-inteligente.png')}}" alt="Calzado">
-                            </div>
-                            @break
-                            @default
-                        @endswitch
-                        <p class="p-category-name m-0">{{ __($category->name)}}</p>
-                    </a>
-                </li>
-                @endforeach
-            </ul>
         </div>
+    </div>
+    </div>
+    @endforeach --}}
 
-{{-- <div class="categories">
+
+    <div class="container">
+        <ul class="categories">
+            @foreach ($categories as $category)
+            <li class="nav-link">
+                <a class="nav-link text-center text-dark" href="{{ route('category.ads', $category) }}">
+                    @switch( __($category->name))
+                    @case( __('Hombre'))
+                    <div class="category">
+                        <img src="{{asset('assets/img/enfermero.png')}}" alt="Hombre">
+                    </div>
+                    @break
+                    @case( __('Mujer'))
+                    <div class="category">
+                        <img src="{{asset('assets/img/mujer.png')}}" alt="Mujer">
+                    </div>
+                    @break
+                    @case( __('Niños'))
+                    <div class="category">
+                        <img src="{{asset('assets/img/nino.png')}}" alt="Niños">
+                    </div>
+                    @break
+                    @case( __('Accesorios'))
+                    <div class="category">
+                        <img src="{{asset('assets/img/joyas.png')}}" alt="Accesorios">
+                    </div>
+                    @break
+                    @case( __('Calzado'))
+                    <div class="category">
+                        <img src="{{asset('assets/img/zapato-inteligente.png')}}" alt="Calzado">
+                    </div>
+                    @break
+                    @default
+                    @endswitch
+                    <p class="p-category-name m-0">{{ __($category->name)}}</p>
+                </a>
+            </li>
+            @endforeach
+        </ul>
+    </div>
+
+    {{-- <div class="categories">
     <div class="category">
         <a href="#"><img src="{{asset('assets/img/enfermero.png')}}" alt="Hombre"></a>
-        <p>{{__('Hombre')}}</p>
+    <p>{{__('Hombre')}}</p>
     </div>
     <div class="category">
         <a href="#"><img src="{{asset('assets/img/mujer.png')}}" alt="Mujer"></a>
@@ -145,9 +146,9 @@
         <a href="#"><img src="{{asset('assets/img/zapato-inteligente.png')}}" alt="Calzado"></a>
         <p>{{__('Calzado')}}</p>
     </div>
-</div> --}}
+    </div> --}}
 
-        </div>
+    </div>
 
     </div>
     <!-- Finder and categories end -->
@@ -160,30 +161,28 @@
             <div class="col-md-3 col-sm-6 col-6 my-2">
                 <div class="product-grid">
                     <div class="product-image">
-                        <a href="{{ route('ads.show', $ad) }}" class="add-to-cart">
-                        <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
-                            class="card-img-top my-card" alt="...">
-                        <div class="price">{{ $ad->price }}{{ __('€') }}</div>
-
-
-                            </a>
+                        <a href="{{ route('ads.show', $ad) }}">
+                            <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
+                                class="card-img-top my-card" alt="...">
+                            <div class="price">{{ $ad->price }}{{ __('€') }}</div>
+                        </a>
                     </div>
                     <div class="product-content">
-                            <p class="card-title">{{ $ad->title }}</p>
+                        <p class="card-title">{{ $ad->title }}</p>
                     </div>
 
                     {{-- <x-card>
                         @if ($ad->images()->count() > 0)
                         <x-slot name='image'>{{$ad->images()->first()->getUrl(500,500)}}</x-slot>
-                        @else
-                        <x-slot name='image'>{{'https://picsum.photos/700/600?a'}}</x-slot>
-                        @endif
-                        <x-slot name='show'>{{route('ads.show', $ad)}}</x-slot>
-                        <x-slot name='category'>{{__($ad->category->name)}}</x-slot>
-                        <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot>
-                        <x-slot name='categoryName'>{{__($ad->category->name)}}</x-slot>
-                        <x-slot name='title'>{{$ad->title}}</x-slot>
-                        <x-slot name='price'>{{$ad->price}}€</x-slot>
+                    @else
+                    <x-slot name='image'>{{'https://picsum.photos/700/600?a'}}</x-slot>
+                    @endif
+                    <x-slot name='show'>{{route('ads.show', $ad)}}</x-slot>
+                    <x-slot name='category'>{{__($ad->category->name)}}</x-slot>
+                    <x-slot name='categoryLink'>{{route('category.ads',$ad->category)}}</x-slot>
+                    <x-slot name='categoryName'>{{__($ad->category->name)}}</x-slot>
+                    <x-slot name='title'>{{$ad->title}}</x-slot>
+                    <x-slot name='price'>{{$ad->price}}€</x-slot>
                     </x-card> --}}
 
                 </div>
@@ -191,7 +190,8 @@
             @empty
             <div class="col-12 mt-5 text-center">
                 <h2>{{__('Uy...parece que no hay nada de esta categoría')}}</h2>
-                <a href="{{ route('ads.create') }}" class="btn btn-warning btn-block my-btn-call p-2 ml-2">{{__('Vende tu primer objeto')}}</a>
+                <a href="{{ route('ads.create') }}"
+                    class="btn btn-warning btn-block my-btn-call p-2 ml-2">{{__('Vende tu primer objeto')}}</a>
                 {{__('o')}}
                 <a href="{{route('home')}}" class="btn btn-outline-warning my-btn">{{__('Vuelve a la home')}}</a>
             </div>
