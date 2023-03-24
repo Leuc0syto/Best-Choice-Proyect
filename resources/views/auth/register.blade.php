@@ -1,4 +1,4 @@
-{{-- <x-layout>
+<x-layout>
     <x-slot name="title">Best Choice - Register</x-slot>
 
 
@@ -18,17 +18,19 @@
                 {{__('Crear cuenta')}}</h2>
             @csrf
 
+            {{-- Nombre --}}
+
             <input type="text" name="name" id="name" class="input-register form-control forms_field-input border-0"
                 placeholder="{{__('Tu nombre')}}" data-rule="minlen:4" data-msg="Please enter at least 4 characters">
             <div class="validate"></div>
 
-
+            {{-- Correo --}}
 
             <input type="email" name="email" id="email" class="input-register form-control forms_field-input border-0 "
                 placeholder="{{__('Tu correo')}}" data-rule="minlen:4" data-msg="Please enter at least 4 characters">
             <div class="validate"></div>
 
-
+            {{-- Contraseña --}}
             <div class="pass">
             <input type="password" name="password" id="password"
                 class=" input-register form-control forms_field-input border-0" placeholder="{{__('Tu contraseña')}}"
@@ -36,7 +38,7 @@
             <div class="validate"></div>
             <i id="show-hide" class="fa-solid fa-eye-slash"></i>
         </div>
-
+            {{-- Confirmar contraseña --}}
             <div class="pass">
             <input type="password" name="password_confirmation" id="password"
                 class="form-control forms_field-input border-0 input-register"
@@ -59,4 +61,4 @@
             </div>
         </form>
     </div>
-</x-layout> --}}
+</x-layout>
