@@ -25,66 +25,66 @@
             </ul>
 
             <div class="d-flex flex-row align-items-center">
-        <div class="col-6">
-            <ul class="navbar-nav me-2">
-                @auth
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" href="#"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ Auth::user()->name }}
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @if (Auth::user()->is_revisor)
-                        <li>
-                            <a class="dropdown-item" href="{{ route('revisor.home') }}">
-                                {{ __('Anuncios sin revisar') }}
-                                <span class="badge rounded-pill bg-danger">
-                                    {{ \App\Models\Ad::ToBeRevisionedCount() }}
-                                </span>
+                <div class="col-6">
+                    <ul class="navbar-nav me-2">
+                        @auth
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" href="#"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ Auth::user()->name }}
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @if (Auth::user()->is_revisor)
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('revisor.home') }}">
+                                        {{ __('Anuncios sin revisar') }}
+                                        <span class="badge rounded-pill bg-danger">
+                                            {{ \App\Models\Ad::ToBeRevisionedCount() }}
+                                        </span>
+                                    </a>
+                                </li>
+                                @endif
+
+                                <form id="logoutForm" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <a id="logoutBtn" class="dropdown-item" href="#">{{ __('Cerrar sesión') }}</a>
+                                </form>
+                            </ul>
                         </li>
-                        @endif
 
-                        <form id="logoutForm" action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <a id="logoutBtn" class="dropdown-item" href="#">{{ __('Cerrar sesión') }}</a>
-                        </form>
+                        @endauth
+                        @guest
+                        <ul class="navbar-nav">
+
+                            <a class="nav-link text-dark" data-bs-toggle="modal" href="#exampleModalToggle"
+                                role="button">{{ __('Iniciar sesión') }}</a>
+                        </ul>
+                        @endguest
                     </ul>
-                </li>
+                </div>
 
-                @endauth
-                @guest
-                <ul class="navbar-nav">
-
-                    <a class="nav-link text-dark" data-bs-toggle="modal" href="#exampleModalToggle"
-                        role="button">{{ __('Iniciar sesión') }}</a>
-                </ul>
-                @endguest
-            </ul>
-        </div>
-
-        <div class="col-6 text-end">
-            <ul class="navbar-nav col-12 col-lg-auto p-2 ml-2">
-                <li class="nav-item dropdown">
-                    <a class="nav-link text-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <span
-                            class="flag-icon flag-icon-{{ Config::get('languages')[App::getLocale()]['flag-icon'] }}"></span>
-                        {{ Config::get('languages')[App::getLocale()]['display'] }}
-                    </a>
-                    <div class="dropdown-menu my-dropdown-width" aria-labelledby="navbarDropdownMenuLink">
-                        @foreach (Config::get('languages') as $lang => $language)
-                        @if ($lang != App::getLocale())
-                        <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
-                                class="flag-icon flag-icon-{{ $language['flag-icon'] }}"></span>
-                            {{ $language['display'] }}</a>
-                        @endif
-                        @endforeach
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
+                <div class="col-6 text-end">
+                    <ul class="navbar-nav col-12 col-lg-auto p-2 ml-2">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span
+                                    class="flag-icon flag-icon-{{ Config::get('languages')[App::getLocale()]['flag-icon'] }}"></span>
+                                {{ Config::get('languages')[App::getLocale()]['display'] }}
+                            </a>
+                            <div class="dropdown-menu my-dropdown-width" aria-labelledby="navbarDropdownMenuLink">
+                                @foreach (Config::get('languages') as $lang => $language)
+                                @if ($lang != App::getLocale())
+                                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
+                                        class="flag-icon flag-icon-{{ $language['flag-icon'] }}"></span>
+                                    {{ $language['display'] }}</a>
+                                @endif
+                                @endforeach
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -135,8 +135,8 @@
                                 <div><a class="go" href=""><i class="fab fa-google"></i></a></div>
                                 <div><a class="fb" href=""><i class="fab fa-facebook"></i></a></div>
                             </div>
-                            <p class="my-5 px-5 d-flex justify-content-center">{{ __('¿Aún no eres de los nuestros?') }} <a
-                                    class="my-btn btn btn-outline-warning a-login btn-sm ms-2"
+                            <p class="my-5 px-5 d-flex justify-content-center">{{ __('¿Aún no eres de los nuestros?') }}
+                                <a class="my-btn btn btn-outline-warning a-login btn-sm ms-2"
                                     href="{{ route('register') }}" data-bs-target="#exampleModalToggle2"
                                     data-bs-toggle="modal" data-bs-dismiss="modal">{{ __('¡Registrate!') }}</a>
                             </p>
@@ -214,10 +214,10 @@
                         </button>
                         <div class="social-container">
                             <p class="my-5 px-5 d-flex justify-content-center">{{ __('¿Ya eres de los nuestros?') }} <a
-                                class="my-btn btn btn-outline-warning a-login btn-sm ms-2" href="{{ route('login') }}"
-                                data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
-                                data-bs-dismiss="modal">{{ __('Identifícate!') }}</a>
-                        </p>
+                                    class="my-btn btn btn-outline-warning a-login btn-sm ms-2"
+                                    href="{{ route('login') }}" data-bs-target="#exampleModalToggle"
+                                    data-bs-toggle="modal" data-bs-dismiss="modal">{{ __('Identifícate!') }}</a>
+                            </p>
                         </div>
                     </form>
                 </div>
