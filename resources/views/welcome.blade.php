@@ -29,7 +29,7 @@
                         <img src="{{ asset('assets/img/hero-men.jpg') }}" alt="Moda hombre"
                             class="d-flex w-100 rounded">
                         <div class="carousel-caption d-none d-md-block col-md-12 text-right text-dark">
-                            <h3 class="text-uppercase">{{ __('Ropa hombre') }}</h3>
+                            <h3 class="text-uppercase">{{ __('Hombre') }}</h3>
                         </div>
                 </div>
                 @break
@@ -37,7 +37,7 @@
                 <div class="carousel-item item">
                     <img src="{{ asset('assets/img/hero-women.jpg') }}" alt="Moda mujer" class="d-flex w-100 rounded">
                     <div class="carousel-caption d-none d-md-block col-md-3 text-left text-dark">
-                        <h3 class="text-uppercase">{{ __('Ropa mujer') }}</h3>
+                        <h3 class="text-uppercase">{{ __('Mujer') }}</h3>
                     </div>
                 </div>
                 @break

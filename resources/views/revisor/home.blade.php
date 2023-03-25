@@ -112,11 +112,11 @@
                 </div>
 
                 <div class="d-flex">
-                    <div class="flex-fill d-md-block">
+                    <div class="row flex-fill d-md-block">
                         <form action="{{ route('revisor.ad.accept',$ad) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <div class="d-md-flex my-2">
+                            <div class="d-flex my-2">
                                 <button type="submit"
                                     class="btn btn-lg btn-outline-success flex-fill">{{__('Aceptar')}}</button>
                             </div>
@@ -125,7 +125,7 @@
                         <form action="{{ route('revisor.ad.reject',$ad) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <div class="d-md-flex my-2">
+                            <div class="d-flex my-2">
                                 <button type="submit"
                                     class="btn btn-lg btn-outline-danger flex-fill">{{__('Rechazar')}}</button>
 

@@ -57,5 +57,7 @@ Route::get('/about', [PublicController::class, 'about'])->name('about');
 Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
 Route::get('/conditions', [PublicController::class, 'conditions'])->name('conditions');
 
+// Route::delete ('/ad/{ad}', [AdController::class, 'destroy'])->name('ad.destroy');
 
 
+Route::get('/destroy/{ad}', [AdController::class, 'destroy'])->name('ad.destroy');

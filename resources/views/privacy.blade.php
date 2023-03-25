@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container text-center">
         <div class="col-12 mt-5">
-            <h1>{{__('POLÍTICA DE PRIVACIDAD DE BEST CHOICE')}}</h1>
-            <p> {{__('Es compromiso de Best Choice el respeto de la privacidad de los usuarios y la protección y seguridad de
+            <h1>POLÍTICA DE PRIVACIDAD DE BEST CHOICE</h1>
+            <p> 'Es compromiso de Best Choice el respeto de la privacidad de los usuarios y la protección y seguridad de
                 tus datos personales. Por ello, para nosotros es muy importante informarte sobre la forma en que
                 recabamos, tratamos y protegemos los datos de carácter personal que nos son facilitados a través de
                 nuestra página web, redes sociales y aplicación.
@@ -16,7 +16,7 @@
                 Las enmiendas específicas locales a las que se hace referencia a continuación también se aplican a los
                 consumidores de esos territorios y, en algunos casos, pueden establecer normas diferentes debido a las
                 leyes, normas y reglamentos locales aplicables. De ser así, la enmienda específica local regirá en caso
-                de conflicto')}}
+                de conflicto
             </p>
 
 

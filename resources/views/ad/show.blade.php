@@ -36,7 +36,7 @@
                     </button>
                 </div>
             </div>
-
+            
             <div class="card-body">
                 <h2 class="card-title">{{ $ad->price }}{{__('€')}}</h2>
                 {{-- <h5 class="card-title">{{ $ad->title }}</h5>
@@ -45,10 +45,23 @@
                     href="{{route('category.ads',$ad->category)}}">{{__($ad->category->name)}}</a>
                 <p class="card-text"><small class="text-muted">{{__('Publicado el')}}:
                         {{ $ad->created_at->format('d/m/Y') }}</small></p>
+                @if (Auth::user()->id != $ad->user->id)
                 <button type="button"
                     class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder">{{__('Comprar')}}
                 </button>
+                @endif
             </div>
+            
+            @if (Auth::user()->id == $ad->user->id)
+            <a class="btn my-btn-delete justify-content-center mx-auto text-dark font-weight-bolder" href="{{ route('ad.destroy', $ad) }}">{{__('Borrar')}}</a>
+            @endif
+            {{-- <div>
+                <form method="GET" action="{{ route('ad.destroy', $ad) }}">
+                    @method('DELETE')
+                    @csrf
+                    <button time="submit" class="btn btn-danger">Borrar</button>
+                </form> 
+            </div> --}}
         </div>
     
 
