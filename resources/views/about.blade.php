@@ -1,5 +1,5 @@
 <x-layout>
-{{--     <div class="container text-center mt-5">
+    {{--     <div class="container text-center mt-5">
         <div class="row d-flex align-content-center">
             <div class="col-12 col-md-6">
                 <h1>¿Quiénes somos...?</h1>
@@ -40,88 +40,77 @@
         </div>
     </div>
     </div> --}}
+    <div class="container">
+        <div class="col-12">
+            <h1 class="text-center title-about mb-2 mt-5"> {{ __('El equipo de desarrolladores de BestChoice')}}</h1>
+        </div>
 
-    <div class="col-12">
-        <h1 class="text-center title-about mb-2 mt-5"> {{ __('El equipo de desarrolladores de BestChoice')}}</h1>
+        <div class="row m-5 d-flex justify-content-around">
+            {{-- Leudys --}}
+            <div class="card col-md-3 col-l-4 about__card my-2 mx-2">
+                <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
+                    src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Leudys">
+                <div class="card-body text-center">
+                    <h2 class="about__name fs-5">Leudys Torres</h2>
+                    <hr>
+                    <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
+                            href="https://aulab.es/" target="_blank" class="text-decoration-none">
+                            <img src="{{asset('assets/img/logo-aulab-hackademy-horizontal.png')}}" class="w-75 mt-3"
+                                alt="logo aulab">
+                        </a>
+                    </p> <a href="https://www.linkedin.com/in/leudys-torres" target="_blank" class="about__button"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Leuc0syto" target="_blank" class="about__button"><i
+                            class="fa-brands fa-github"></i></i></a>
+                    <a href="mailto:leudystorres30@gmail.com" class="about__button"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            {{-- Daniel --}}
+            <div class="card col-md-3 col-l-4 about__card my-2 mx-2">
+                <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
+                    src="{{asset('assets/img/photo-dani.jpeg')}}" alt="Daniel">
+                <div class="card-body text-center">
+                    <h2 class="about__name fs-5">Daniel Rubio</h2>
+                    <hr>
+                    <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
+                            href="https://aulab.es/" target="_blank" class="text-decoration-none">
+                            <img src="{{asset('assets/img/logo-aulab-hackademy-horizontal.png')}}" class="w-75 mt-3"
+                                alt="logo aulab">
+                        </a>
+                    </p>
+                    <div class="">
+                        <a href="https://www.linkedin.com/in/daniel-rubio-garcia/" target="_blank"
+                            class="about__button"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/DanielRubi0" target="_blank" class="about__button"><i
+                                class="fa-brands fa-github"></i></i></a>
+                        <a href="mailto:drubiogarcia@gmail.com" class="about__button"><i
+                                class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Miquel --}}
+            <div class="card col-md-3 col-l-4 about__card my-2 mx-2">
+                <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
+                    src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Miquel">
+                <div class="card-body text-center">
+                    <h2 class="about__name fs-5">Miquel Prokhorov</h2>
+                    <hr>
+                    <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
+                            href="https://aulab.es/" target="_blank" class="text-decoration-none">
+                            <img src="{{asset('assets/img/logo-aulab-hackademy-horizontal.png')}}" class="w-75 mt-3"
+                                alt="logo aulab">
+                        </a>
+                    </p>
+                    <div class="">
+                        <a href="#" target="_blank" class="about__button"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Mickyaaaaa" target="_blank" class="about__button"><i
+                                class="fa-brands fa-github"></i></i></a>
+                        <a href="#" class="about__button"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-<div class=" image-container m-5" id="card">
-      <div class="card-about">
-        <div class="image-container">
-          <img src="{{asset('assets/img/Leudys LinkedIn.JPG')}}" alt="Leudys">
-        </div>
-        <div class="content">
-          <h2>Leudys Torres</h2>
-          <p>Estudiante:</p>
-          <p>Aulab Hackademy</p>
-          <a href="https://www.linkedin.com/in/leudys-torres/" class="button"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://github.com/Leuc0syto" class="button"><i class="fa-brands fa-github"></i></i></a>
-          <a href="www.leudystorres30@gmail.com" class="button"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="card-about">
-        <div class="image-container">
-          <img src="{{asset('assets/img/Leudys LinkedIn.JPG')}}" alt="Daniel">
-        </div>
-        <div class="content">
-          <h2>Daniel Rubio</h2>
-          <p>Estudiante:</p>
-          <p>Aulab Hackademy</p>
-          <a href="#" class="button"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#" class="button"><i class="fa-brands fa-github"></i></a>
-          <a href="#" class="button"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="card-about">
-        <div class="image-container">
-          <img src="{{asset('assets/img/Leudys LinkedIn.JPG')}}" alt="Miquel">
-        </div>
-        <div class="content">
-          <h2>Miquel etc</h2>
-          <p>Estudiante:</p>
-          <p> Aulab Hackademy</p>
-          <a href="#" class="button"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#" class="button"><i class="fa-brands fa-github"></i></a>
-          <a href="#" class="button"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-      </div>
-    </div>
-
-
 </x-layout>
-
-{{-- <x-layout>
-    <div class="container mt-5">
-        <div class="row">
-
-            <div class="col-12">
-                <h1 class="text-center nombre_about mb-5"> {{ __('Les presentamos a...¡Los creadores de Ventapop!')}}</h1>
-            </div>
-
-            <div class="col-12 col-md-6 mt-2">
-                    <h2 class="text-center nombre_about mb-5">Marco Antonio Galian</h2>
-                    <div class="d-flex justify-content-center">
-                       <img src="{{ asset('images/logo_ventapopclaro.png')}}" alt="Fotografía creador Marco"
-                        class="m-3 rounded fotografia_about">
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque similique adipisci quas facere
-                        delectus, fuga tenetur maxime eaque, consequuntur voluptatibus, consequatur quo? A est natus
-                        enim velit odio sequi sint.</p>
-            </div>
-
-            <div class="col-12 col-md-6 mt-2">
-                    <h2 class="text-center nombre_about mb-5">Chechu Giménez</h2>
-                    <div class="d-flex justify-content-center">
-                       <img src="{{ asset('images/logo_ventapopnegro.png')}}" alt="Fotografía creador Chechu"
-                        class="m-3 rounded fotografia_about">
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque similique adipisci quas facere
-                        delectus, fuga tenetur maxime eaque, consequuntur voluptatibus, consequatur quo? A est natus
-                        enim velit odio sequi sint.</p>
-            </div>
-
-        </div>
-    </div>
-</x-layout> --}}
-
