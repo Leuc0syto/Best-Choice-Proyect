@@ -47,21 +47,21 @@
 <div class=" image-container m-5" id="card">
       <div class="card-about">
         <div class="image-container">
-          <img class="rounded-circle" src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Leudys">
+          <img src="{{asset('assets/img/Leudys LinkedIn.JPG')}}" alt="Leudys">
         </div>
         <div class="content">
           <h2>Leudys Torres</h2>
           <p>Estudiante:</p>
           <p>Aulab Hackademy</p>
-          <a href="www.linkedin.com/in/leudys-torres" class="button"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#" class="button"><i class="fa-brands fa-github"></i></i></a>
-          <a href="#" class="button"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/leudys-torres/" class="button"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Leuc0syto" class="button"><i class="fa-brands fa-github"></i></i></a>
+          <a href="www.leudystorres30@gmail.com" class="button"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
 
       <div class="card-about">
         <div class="image-container">
-          <img class="rounded-circle" src="{{asset('assets/img/Leudys LinkedIn.JPG')}}" alt="Daniel">
+          <img src="{{asset('assets/img/Leudys LinkedIn.JPG')}}" alt="Daniel">
         </div>
         <div class="content">
           <h2>Daniel Rubio</h2>
@@ -75,7 +75,7 @@
 
       <div class="card-about">
         <div class="image-container">
-          <img src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Miquel">
+          <img src="{{asset('assets/img/Leudys LinkedIn.JPG')}}" alt="Miquel">
         </div>
         <div class="content">
           <h2>Miquel etc</h2>
