@@ -45,7 +45,7 @@
         <h1 class="text-center title-about mb-2 mt-5"> {{ __('El equipo de desarrolladores de BestChoice')}}</h1>
     </div>
 <div class=" image-container m-5" id="card">
-      <div class="card">
+      <div class="card-about">
         <div class="image-container">
           <img class="rounded-circle" src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Leudys">
         </div>
@@ -59,7 +59,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card-about">
         <div class="image-container">
           <img class="rounded-circle" src="{{asset('assets/img/Leudys LinkedIn.JPG')}}" alt="Daniel">
         </div>
@@ -73,7 +73,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card-about">
         <div class="image-container">
           <img src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Miquel">
         </div>

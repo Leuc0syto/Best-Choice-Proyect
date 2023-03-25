@@ -427,13 +427,12 @@ nav, .main-font, footer {
 
 
 
-/* .card {
+.card-about {
     width: 300px;
-    height: 550px;
+    height: 450px;
     border-radius: 40px;
     border: none;
     overflow: hidden;
-    padding: 25px;
     margin: 30px;
     border-radius: 54px;
     background: navajowhite;
@@ -442,7 +441,7 @@ nav, .main-font, footer {
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
 
 .image-container {
     width: 92%;
