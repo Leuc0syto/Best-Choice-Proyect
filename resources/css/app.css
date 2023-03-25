@@ -301,9 +301,21 @@ nav, .main-font, footer {
 
 .my-btn-call{
     font-size: 18px;
+    width: 7rem;
     text-decoration: none;
     border-radius: 25px;
     background-color: #ffc107;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 7px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.my-btn-delete{
+    font-size: 18px;
+    width: 10rem;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: red;
     border: 1px solid rgba(0,0,0,0.08);
     padding: 7px;
     font-family: 'Roboto Condensed', sans-serif;

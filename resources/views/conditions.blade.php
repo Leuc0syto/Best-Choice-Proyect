@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container text-center">
         <div class="col-12 mt-5">
-            <h1>Términos y Condiciones de uso de Best Choice</h1>
-            <p>Los presentes Términos y Condiciones de uso (en adelante, “Términos y Condiciones”) establecen las
+            <h1>{{__('Términos y Condiciones de uso de Best Choice')}}</h1>
+            <p>{{__('Los presentes Términos y Condiciones de uso (en adelante, “Términos y Condiciones”) establecen las
                 condiciones bajo las cuales se ofrece a los usuarios el acceso a los sitios web, servicios y
                 aplicaciones Best Choice (en adelante, “el Servicio”) , que es una plataforma que permite a los usuarios
                 publicar ofertas para la compra–venta de una amplia variedad de artículos de su propiedad, así como la
@@ -29,7 +29,7 @@
                 Servicio u otra función de los Servicios. Al acceder o usar los Servicios después de que Best Choice haya
                 notificado al Usuario sobre una modificación o actualización, el Usuario acepta quedar obligado por los
                 Términos y Condiciones modificados. Si los Términos y Condiciones modificados no resultan aceptables al
-                Usuario, su única opción es dejar de utilizar los Servicios.
+                Usuario, su única opción es dejar de utilizar los Servicios.')}}
             </p>
 
 

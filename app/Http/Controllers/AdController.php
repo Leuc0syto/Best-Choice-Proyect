@@ -22,4 +22,13 @@ class AdController extends Controller
     {
         return view("ad.show", compact('ad'));
     }
+
+    public function destroy(Ad $ad){
+        if (Auth::user()->id = $ad->user->id){
+        $ad->deleteOrFail();
+        return redirect()->route('home')->withMessage(['type'=>'danger', 'text'=>'Anuncio eliminado']);
+        } else {
+            return redirect()->back()->withMessage(['type'=>'danger', 'text'=>'Acción no disponible: Un anuncio solo puede ser borrado por el creador']);
+        }
+    }
 }
