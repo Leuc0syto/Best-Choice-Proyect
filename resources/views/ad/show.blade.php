@@ -46,12 +46,51 @@
                 <p class="card-text"><small class="text-muted">{{__('Publicado el')}}:
                         {{ $ad->created_at->format('d/m/Y') }}</small></p>
 
+
                 @auth
                 @if (Auth::user()->id != $ad->user->id)
                 <button type="button"
                     class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder"
                     style="width: 7rem">{{__('Comprar')}}
                 </button>
+
+                {{-- Funciones Favoritos --------------------------------------------------------------------------------------}}
+                @if (Auth::user()->id != $ad->user->id)
+                @forelse (Auth::user()->favoriteAds as $favorite_ad)
+                @if ($favorite_ad->id == $ad->id)
+                <p class="d-flex justify-content-end text-danger"><i class="bi bi-heart-fill me-1"></i>
+                    {{ __('Anuncio marcado como favorito')}} <i class="bi bi-heart-fill ms-1"></i></p>
+                <form action="{{ route('favorite.ad.reject', $ad)}}" method="POST" class="d-flex justify-content-end">
+                    @method('PATCH')
+                    @csrf
+                    <button type="submit" class="btn btn-danger">{{ __('Eliminar de favoritos')}}</button>
+                </form>
+                @break
+                @else
+                @if ($favorite_ad == Auth::user()->favoriteAds[(count(Auth::user()->favoriteAds)-1)])
+                <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST" class="d-flex justify-content-end">
+                    @method('PATCH')
+                    @csrf
+                    <button type="submit" class="btn btn-white text-danger rounded fs-2"><i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+                    </button>
+                </form>
+                @break
+                @endif
+                @endif
+
+                @empty
+                <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST" class="d-flex justify-content-end">
+                    @method('PATCH')
+                    @csrf
+                    <button type="submit" class="btn btn-white text-danger border-danger rounded">
+                        <i class="bi bi-heart-fill"></i> {{ __('Marcar como favorito')}} 
+                        <i class="bi bi-heart-fill"></i></button>
+                </form>
+                @endforelse
+                @endif
+                {{-- Acaba funciones Favoritos --------------------------------------------------------------------------------------}}
+
+
                 @endif
 
                 @if (Auth::user()->id == $ad->user->id || Auth::user()->is_admin)
@@ -68,10 +107,10 @@
         </div>
 
     </div>
-    <div class="mt-5 related_ads_show p-1 row justify-content-center">
+    {{-- <div class="mt-5 related_ads_show p-1 row justify-content-center">
         <h4 class="col-12 text-center my-4">{{ __('Otros articulos de esta categoría:')}}</h4>
         <div class="mini-card col-12 d-flex">
 
         </div>
-
+    </div> --}}
 </x-layout>

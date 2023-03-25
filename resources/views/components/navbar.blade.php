@@ -45,7 +45,7 @@
                                 @endif
                                 @if(Auth::user()->is_admin)
                                 <a class="dropdown-item"
-                                    href="{{ route('admin.home')}}">{{ __('Panel de administrador')}}                            
+                                    href="{{ route('admin.home')}}">{{ __('Panel del administrador')}}                            
                                 </a>
                                 @endif
 
