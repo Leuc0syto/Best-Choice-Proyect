@@ -12,18 +12,16 @@
                             <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
                                 class="card-img-top my-card" alt="...">
                             <div class="price">{{ $ad->price }}{{ __('€') }}</div>
-
                         </a>
                     </div>
                     <div class="product-content">
                         <p class="card-title">{{ $ad->title }}</p>
                     </div>
-
                 </div>
             </div>
             @empty
             <div class="col-12">
-                <h2>{{ __('No hay artículos revisados')}}</h2>
+                <h2 class="mb-4">{{ __('No hay artículos revisados')}}</h2>
             </div>
             @endforelse
         </div>

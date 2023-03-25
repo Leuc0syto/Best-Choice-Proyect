@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name='title'>BestChoice - {{ __('Anuncios por usuario')}}</x-slot>
+
     <div class="container mt-3">
         <h3>{{ __('Tus anuncios favoritos:')}}</h3>
         <div class="row">
@@ -11,21 +12,18 @@
                             <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
                                 class="card-img-top my-card" alt="...">
                             <div class="price">{{ $ad->price }}{{ __('€') }}</div>
-
                         </a>
                     </div>
                     <div class="product-content">
                         <p class="card-title">{{ $ad->title }}</p>
                     </div>
-
                 </div>
             </div>
+            @empty
+            <div class="col-12 text-center">
+                <h2 class="mb-4">{{ __('No tienes ningún producto añadido a la lista de favoritos')}}</h2>
+            </div>
+            @endforelse
         </div>
-
-        @empty
-        <div class="col-12 text-center">
-            <h2 class="mb-4">{{ __('No tienes ningún producto añadido a la lista de favoritos')}}</h2>
-        </div>
-        @endforelse
     </div>
 </x-layout>
