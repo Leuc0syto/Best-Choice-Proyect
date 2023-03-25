@@ -28,12 +28,12 @@ Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCate
 Route::get("/search", [PublicController::class, 'search'])->name('search');
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 
-
+Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 
 // Rutas de anuncios
 Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
 Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
-Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
+
 Route::get('/destroy/{ad}', [AdController::class, 'destroy'])->name('ad.destroy');
 Route::get('/favorite/ads', [AdController::class,'adsByFavorite'])->name('favorite.ad');
 Route::patch('/favorite/ad/{ad}/accept', [AdController::class, 'acceptAdFavorite'])->name('favorite.ad.accept');
