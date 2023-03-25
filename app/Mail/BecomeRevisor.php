@@ -29,11 +29,15 @@ class BecomeRevisor extends Mailable
     /**
      * Get the message envelope.
      */
-    public function envelope(): Envelope
+    // public function envelope(): Envelope
+    // {
+    //     return new Envelope(
+    //         subject: 'Become Revisor',
+    //     );
+    // }
+    public function attachments(): array
     {
-        return new Envelope(
-            subject: 'Become Revisor',
-        );
+        return [];
     }
 
 }
