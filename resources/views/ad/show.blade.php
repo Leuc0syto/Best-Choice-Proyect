@@ -49,7 +49,7 @@
                 @auth
                 @if (Auth::user()->id != $ad->user->id)
                 <button type="button"
-                    class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder">{{__('Comprar')}}
+                    class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder" style="width: 7rem" >{{__('Comprar')}}
                 </button>
                 @endif
             </div>
