@@ -36,7 +36,7 @@
                     </button>
                 </div>
             </div>
-            
+
             <div class="card-body">
                 <h2 class="card-title">{{ $ad->price }}{{__('€')}}</h2>
                 <h5 class="card-title">{{ $ad->title }}</h5>
@@ -49,23 +49,29 @@
                 @auth
                 @if (Auth::user()->id != $ad->user->id)
                 <button type="button"
-                    class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder" style="width: 7rem" >{{__('Comprar')}}
+                    class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder"
+                    style="width: 7rem">{{__('Comprar')}}
                 </button>
                 @endif
-            </div>
-            
-            @if (Auth::user()->id == $ad->user->id)
-            <a class="btn my-btn-delete justify-content-center mx-auto text-dark font-weight-bolder" href="{{ route('ad.destroy', $ad) }}">{{__('Borrar')}}</a>
-            @endif
 
-            @endauth
+                @if (Auth::user()->id == $ad->user->id || Auth::user()->is_admin)
+                @if (!Auth::user()->is_admin)
+                <h5>{{ __('Anuncio creado por ti.')}}</h5>
+                @else
+                <h5 class="mt-4">{{ __('Acciones de administrador')}}</h5>
+                @endif
+                <a class="btn my-btn-delete justify-content-center mx-auto text-dark font-weight-bolder"
+                    href="{{ route('ad.destroy', $ad) }}"><i class="fa-solid fa-trash-can mx-2"></i>{{__('Borrar')}}</a>
+                @endif
+                @endauth
+            </div>
         </div>
 
     </div>
-        <div class="mt-5 related_ads_show p-1 row justify-content-center">
-            <h4 class="col-12 text-center my-4">{{ __('Otros articulos de esta categoría:')}}</h4>
-            <div class="mini-card col-12 d-flex">
+    <div class="mt-5 related_ads_show p-1 row justify-content-center">
+        <h4 class="col-12 text-center my-4">{{ __('Otros articulos de esta categoría:')}}</h4>
+        <div class="mini-card col-12 d-flex">
 
-    </div>
+        </div>
 
 </x-layout>

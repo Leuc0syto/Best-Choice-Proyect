@@ -9,18 +9,11 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @auth
-
-                {{-- <button type="button"
-                    class="btn btn-warning btn-block my-btn-call nav col-lg-auto p-2 ml-2 justify-content-center"
-                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">{{ __('Crear anuncio') }}</a>
-                </button> --}}
-
                 <button type="button"
                     class="btn btn-warning btn-block my-btn-call nav col-lg-auto p-2 ml-2 justify-content-center">
                     <a href="{{ route('ads.create') }}"
                         class="text-decoration-none text-dark">{{ __('Crear anuncio') }}</a>
                 </button>
-
                 @endauth
             </ul>
 
@@ -34,6 +27,12 @@
                                 {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item"
+                                href="{{ route('favorite.ad')}}">{{ __('Listado de favoritos')}}
+                                <span class="badge rounded-pill bg-danger">
+                                    {{ \App\Models\Ad::favoritedCount() }}
+                                </span>
+                                </a>
                                 @if (Auth::user()->is_revisor)
                                 <li>
                                     <a class="dropdown-item" href="{{ route('revisor.home') }}">
@@ -43,6 +42,11 @@
                                         </span>
                                     </a>
                                 </li>
+                                @endif
+                                @if(Auth::user()->is_admin)
+                                <a class="dropdown-item"
+                                    href="{{ route('admin.home')}}">{{ __('Panel de administrador')}}                            
+                                </a>
                                 @endif
 
                                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
