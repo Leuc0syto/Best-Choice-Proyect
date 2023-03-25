@@ -1,67 +1,42 @@
 <x-layout>
-    <x-slot name='title'>BestChoice - Admin Home</x-slot>
-    @if ($revisor)
+    <x-slot name='title'> BestChoice - Admin Home</x-slot>
+    <h3 class="titulo_barra text-center">{{ __('Listado de revisores')}}</h3>
+    <div class="d-flex justify-content-center">
+        
+        <table class="table w-50 text-center tabla_revisores">
+            <thead>
+                <tr>
+                    <th scope="col">{{ __('Id')}}</th>
+                    <th scope="col">{{ __('Nombre')}}</th>
+                    <th scope="col">{{ __('Número de anuncios revisados')}} </th>
+                    <th scope="col">{{ __('Desactivar revisor')}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($revisors as $revisor)
+                <tr>
+                    <td>{{ $revisor->id}}</td>
+                    <td>{{ $revisor->name}}</td>
+                    <td>
+                        {{ $ads_by_revisors[$revisor->id]}} <a href="{{ route('adsByRevisor', $revisor) }}"><button
+                                class="ms-3 btn btn-primary">{{ __('Ver')}}</button></a>
+                    </td>
+                    <td>
+                        <form action="{{ route('deleteRevisor', $revisor)}}" method="POST" class="text-center">
+                            @method('PATCH')
+                            @csrf
+                            <button type="submit" class="btn btn-danger">{{ __('Eliminar Revisor')}}</button>
+                        </form>
+                    </td>
+                    @empty
+                    <div class="col-12">
+                        <h2>{{ __('No hay ningún usuario acreditado como revisor.')}}</h2>
+                    </div>
+                    @endforelse
+                </tr>
 
-    <div class='container my-5 py-5'>
-        <div class='row'>
-            <div class='col-12 col-md-8 offset-md-2'>
-                <div class="card">
-                    <div class="card-header">
-                        {{__('Solicitud para el puesto de Revisor')}}
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <b>Usuario</b>
-                            </div>
-                            <div class="col-md-9">
-                                {{-- #{{ $revisor->id }} - {{ $revisor->name }} - {{ $revisor->email }} --}}
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <b>Email</b>
-                            </div>
-                            <div class="col-md-9">
-                                {{-- {{ $ad->title }} --}}
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <b>Fecha de creación del usuario: </b>
-                            </div>
-                            <div class="col-md-9">
-                                {{-- {{ $revisor->created_at }} --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-3">
-                    <div class="col-6">
-                        <form action="" method="POST">
-                            {{-- {{ route('admin.revisor.reject',$revisor) }} --}}
-                            @csrf
-                            @method('PATCH')
-                            <button type="submit" class="btn btn-danger">Rechazar</button>
-                        </form>
-                    </div>
-                    <div class="col-6 text-end">
-                        <form action="route('admin.revisor.accept', $revisor)" method="POST">
-                            {{-- {{  }} --}}
-                            {{-- {{ route('revisor.make',$user) }} --}}
-                            @csrf
-                            @method('PATCH')
-                            <button type="submit" class="btn btn-success">Aceptar</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </tbody>
+        </table>
     </div>
-    @else
-    <h3 class="text-center mt-5">No hay ninguna solicitud para revisor</h3>
 
-    @endif
 </x-layout>
