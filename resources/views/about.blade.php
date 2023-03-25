@@ -51,7 +51,7 @@
                 <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
                     src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Leudys">
                 <div class="card-body text-center">
-                    <h2 class="about__name fs-5">Leudys Torres</h2>
+                    <h2 class="about__name fs-6">Leudys Torres</h2>
                     <hr>
                     <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
                             href="https://aulab.es/" target="_blank" class="text-decoration-none">
@@ -71,7 +71,7 @@
                 <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
                     src="{{asset('assets/img/photo-dani.jpeg')}}" alt="Daniel">
                 <div class="card-body text-center">
-                    <h2 class="about__name fs-5">Daniel Rubio</h2>
+                    <h2 class="about__name fs-6">Daniel Rubio</h2>
                     <hr>
                     <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
                             href="https://aulab.es/" target="_blank" class="text-decoration-none">
@@ -95,7 +95,7 @@
                 <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
                     src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Miquel">
                 <div class="card-body text-center">
-                    <h2 class="about__name fs-5">Miquel Prokhorov</h2>
+                    <h2 class="about__name fs-6">Miquel Prokhorov</h2>
                     <hr>
                     <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
                             href="https://aulab.es/" target="_blank" class="text-decoration-none">
