@@ -13,10 +13,20 @@ use Laravel\Scout\Searchable;
 
 class Ad extends Model
 {
+
+    protected $fillable = [
+        'title', 
+        'body', 
+        'price',
+    ];
+
     use HasFactory, Searchable;
 
-    protected $fillable = ['title', 'body', 'price'];
-
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -29,19 +39,24 @@ class Ad extends Model
         return true;
     }
 
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
+
     static public function ToBeRevisionedCount()
     {
         return Ad::where('is_accepted', null)->count();
     }
 
-    public function category()
+    static public function favoritedCount()
     {
-        return $this->belongsTo(Category::class);
+        return Auth::user()->favoriteAds->count();
     }
 
-    public function images()
+    public function favoritedBy()
     {
-        return $this->hasMany(Image::class);
+        return $this->belongsToMany(User::class);
     }
 
     public function toSearchableArray()

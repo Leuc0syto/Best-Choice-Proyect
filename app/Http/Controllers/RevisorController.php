@@ -2,31 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BecomeRevisor;
 use App\Models\Ad;
 use App\Models\User;
-use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Redirect;
 
 
 class RevisorController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('isRevisor')->except('becomeRevisor','makeRevisor');
+    }
 
     public function index()
     {
         $ad = Ad::where('is_accepted', null)
-                        ->orderBy('created_at', 'desc')
-                        ->first();
+            ->orderBy('created_at', 'desc')
+            ->first();
+
         return view('revisor.home', compact('ad'));
     }
 
     public function acceptAd(Ad $ad)
     {
         $ad->setAccepted(true);
+        $ad->accepted_by = Auth::user()->name;
+        $ad->accepted_by_id = Auth::user()->id;
+        $ad->save();
+
         return redirect()->back()->withMessage(['type'=>'success', 'text'=>'Anuncio aceptado']);
     }
 
@@ -38,14 +45,19 @@ class RevisorController extends Controller
 
     public function becomeRevisor()
     {
+        if(Auth::user()->is_revisor)
+        {
+            return redirect()->route('home')->withMessage(['type'=>'warning','text'=>'Usted ya es revisor, si tiene alguna duda o problema contacte con el administrador.']);
+        }else{
         Mail::to('admin@bestchoice.com')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->route('home')->withMessage(['type'=>'success','text'=>'Solicitud enviada con éxito, próximamente nos pondremos en contacto con usted. Gracias por su interés.']);
+        return redirect()->route('home')->withMessage(['type'=>'success','text'=>'Solicitud enviada con éxito, le responderemos lo antes posible, gracias.']);
+    }
     }
 
     public function makeRevisor(User $user)
     {
         Artisan::call('best-choice:makeUserRevisor',['email'=>$user->email]);
-        return redirect()->route('home')->withMessage(['type'=>'success','text'=>'Ya tenemos un compañero más']);
+        return redirect()->route('home')->withMessage(['type'=>'success','text'=>'Usuario acreditado como revisor']);
     }
 
 }

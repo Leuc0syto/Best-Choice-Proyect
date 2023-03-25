@@ -16,3 +16,13 @@ showHide.addEventListener('click', function() {
             passwordInput.setAttribute('type', 'password');
         }
 });
+
+
+/* const cards = document.querySelectorAll('.card');
+
+function toggleHoverEffect() {
+    this.classList.toggle('hovered');
+}
+
+cards.forEach(card => card.addEventListener('mouseover', toggleHoverEffect));
+cards.forEach(card => card.addEventListener('mouseout', toggleHoverEffect)); */
