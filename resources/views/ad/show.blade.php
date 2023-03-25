@@ -47,7 +47,7 @@
                         {{ $ad->created_at->format('d/m/Y') }}</small></p>
 
                 @auth
-                @if (Auth::user()->id == $ad->user->id)
+                @if (Auth::user()->id != $ad->user->id)
                 <button type="button"
                     class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder">{{__('Comprar')}}
                 </button>
