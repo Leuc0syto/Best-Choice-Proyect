@@ -27,7 +27,6 @@ Route::get('/conditions', [PublicController::class, 'conditions'])->name('condit
 Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCategory'])->name('category.ads');
 Route::get("/search", [PublicController::class, 'search'])->name('search');
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
-
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 
 // Rutas de anuncios
