@@ -45,7 +45,9 @@
                     href="{{route('category.ads',$ad->category)}}">{{__($ad->category->name)}}</a>
                 <p class="card-text"><small class="text-muted">{{__('Publicado el')}}:
                         {{ $ad->created_at->format('d/m/Y') }}</small></p>
-                @if (Auth::user()->id != $ad->user->id)
+
+                @auth
+                @if (Auth::user()->id == $ad->user->id)
                 <button type="button"
                     class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder">{{__('Comprar')}}
                 </button>
@@ -55,58 +57,14 @@
             @if (Auth::user()->id == $ad->user->id)
             <a class="btn my-btn-delete justify-content-center mx-auto text-dark font-weight-bolder" href="{{ route('ad.destroy', $ad) }}">{{__('Borrar')}}</a>
             @endif
-            {{-- <div>
-                <form method="GET" action="{{ route('ad.destroy', $ad) }}">
-                    @method('DELETE')
-                    @csrf
-                    <button time="submit" class="btn btn-danger">Borrar</button>
-                </form> 
-            </div> --}}
+
+            @endauth
         </div>
 
-
+    </div>
         <div class="mt-5 related_ads_show p-1 row justify-content-center">
             <h4 class="col-12 text-center my-4">{{ __('Otros articulos de esta categoría:')}}</h4>
             <div class="mini-card col-12 d-flex">
-                {{-- @forelse($ads as $ad)
-                @endforelse --}}
-                
-                {{-- @forelse($ads as $ad)
-                <div class="col-md-3 col-sm-6 col-6 my-2">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <a href="{{ route('ads.show', $ad) }}" class="add-to-cart">
-                                <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
-                                    class="card-img-top my-card" alt="...">
-                                <div class="price">{{ $ad->price }}{{ __('€') }}</div>
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <p class="card-title">{{ $ad->title }}</p>
-                        </div>
-
-                    </div>
-                </div> --}}
-                {{-- @forelse ($ads as $ad)
-                    <div class="col-3 container d-flex justify-content-center content-mini-card">
-                        <x-minicard
-                            img="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : 'https://via.placeholder.com/150'}}"
-                title="{{ $ad->title }}"
-                price="{{ $ad->price }}"
-                body=""
-                :ad="$ad">
-                </x-minicard>
-            </div>
-            @empty
-            <h5>{{ __('Parece que no hay más productos en esta categoría...')}}</h5>
-            @endforelse --}}
-            {{-- @empty
-            <div class="col-12 mt-5 text-center">
-                <h2>{{__('Parece que no hay más productos en esta categoría...')}}</h2>
-                <a href="{{route('home')}}" class="btn btn-outline-warning my-btn">{{__('Vuelve a la home')}}</a>
-            </div>
-            @endforelse --}}
-        </div>
 
     </div>
 
