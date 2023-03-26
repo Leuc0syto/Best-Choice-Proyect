@@ -30,8 +30,9 @@ Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controller
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 
 // Rutas de anuncios
-Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
 Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
+Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
+
 
 Route::get('/destroy/{ad}', [AdController::class, 'destroy'])->name('ad.destroy');
 Route::get('/favorite/ads', [AdController::class,'adsByFavorite'])->name('favorite.ad');
