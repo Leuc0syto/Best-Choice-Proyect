@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot name='title'> BestChoice - Admin Home</x-slot>
-    <div class="container-fluid my-3">
-        <div class="card mx-auto col-l-9 col-md-7">
+    <div class="container my-3">
+        <div class="card w-100 col-l-9 col-md-8">
             <div class="card-header" style="background-color: #F5DEC6">
                 <h3 class="titulo_barra text-center my-2">{{ __('Revisores de BestChoice')}}</h3>
             </div>
