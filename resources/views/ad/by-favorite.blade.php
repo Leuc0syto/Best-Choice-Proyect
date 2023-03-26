@@ -2,7 +2,9 @@
     <x-slot name='title'>BestChoice - {{ __('Anuncios por usuario')}}</x-slot>
 
     <div class="container mt-3">
-        <h3>{{ __('Tus anuncios favoritos:')}}</h3>
+        <div class="title-ads text-center">
+            <h3>{{ __('Tus anuncios favoritos:')}}</h3>
+        </div>
         <div class="row">
             @forelse ($ads_user as $ad)
             <div class="col-md-3 col-sm-6 col-6 my-2">
