@@ -44,14 +44,14 @@
         <div class="col-12">
             <h1 class="text-center title-about mb-2 mt-5"> {{ __('El equipo de desarrolladores de BestChoice')}}</h1>
         </div>
-            
+
         <div class="row m-5 d-flex justify-content-around">
             {{-- Leudys --}}
             <div class="card col-md-3 col-l-4 about__card my-2 mx-2">
                 <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
-                    src="{{asset('assets/img/Leudys-LinkedIn.JPG')}}" alt="Leudys">
+                    src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Leudys">
                 <div class="card-body text-center">
-                    <h2 class="about__name fs-5">Leudys Torres</h2>
+                    <h2 class="about__name">Leudys Torres</h2>
                     <hr>
                     <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
                             href="https://aulab.es/" target="_blank" class="text-decoration-none">
@@ -71,7 +71,7 @@
                 <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
                     src="{{asset('assets/img/photo-dani.jpeg')}}" alt="Daniel">
                 <div class="card-body text-center">
-                    <h2 class="about__name fs-5">Daniel Rubio</h2>
+                    <h2 class="about__name">Daniel Rubio</h2>
                     <hr>
                     <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
                             href="https://aulab.es/" target="_blank" class="text-decoration-none">
@@ -95,7 +95,7 @@
                 <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
                     src="{{asset('assets/img/photo-miquel.jpg')}}" alt="Miquel">
                 <div class="card-body text-center">
-                    <h2 class="about__name fs-6">Miquel Prokhorov</h2>
+                    <h2 class="about__name">Miquel Prokhorov</h2>
                     <hr>
                     <p class="about__description">Estudiante del bootcamp en desarrollo web: <br><a
                             href="https://aulab.es/" target="_blank" class="text-decoration-none">

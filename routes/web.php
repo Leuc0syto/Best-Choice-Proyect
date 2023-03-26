@@ -36,6 +36,8 @@ Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
 Route::patch('/cart/ad/{ad}/reject', [AdController::class, 'removeAdCart'])->name('cart.ad.reject');
 Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
 Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
+Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
+
 
 Route::get('/destroy/{ad}', [AdController::class, 'destroy'])->name('ad.destroy');
 Route::get('/favorite/ads', [AdController::class,'adsByFavorite'])->name('favorite.ad');
