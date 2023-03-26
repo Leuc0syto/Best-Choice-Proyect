@@ -314,7 +314,7 @@ nav, .main-font, footer {
     width: 10rem;
     text-decoration: none;
     border-radius: 25px;
-    background-color: red;
+    background-color: #ff0000;
     border: 1px solid rgba(0,0,0,0.08);
     padding: 7px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -461,5 +461,6 @@ nav, .main-font, footer {
     background-color:#ffc107;
     transform: translateY(-3px);
 }
+
 
 

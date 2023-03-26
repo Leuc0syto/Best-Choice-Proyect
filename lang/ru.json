@@ -99,5 +99,21 @@
     "Violencia": "Насилие",
     "Etiquetas": "Ярлыки",
     "Borrar": "Удалить",
-    "Otros articulos de esta categoría:": "Другие товары по данной категории"
+    "Otros articulos de esta categoría:": "Другие товары по данной категории",
+
+    "Acciones de administrador": "Действия администратора",
+    "Listado de favoritos": "Лист понравившихся товаров",
+    "Panel del administrador": "Панель администратора",
+    "Tus anuncios favoritos:": "Твои понравившиеся товары:",
+    "Anuncio marcado como favorito": "Объявление помечено понравившимся",
+    "Revisores de BestChoice": "Ревизоры на BestChoice",
+ 
+    "Nombre": "Имя",
+    "Anuncios revisados": "Проверенные объявления",
+    "Desactivar revisor": "Дезактивировать ревизора",
+    "Anuncios revisados por:": "Объявления проверены:",
+    "No tienes ningún producto añadido a la lista de favoritos": "У тебя нет ни одного товара в списке понравившихся",
+    "El equipo de desarrolladores de BestChoice": "Команда разработчиков BestChoice",
+    "Añadido a favoritos": "Добавлено в понравившиеся",
+    "Eliminado de favoritos": "Удалено из понравившихся"
 }

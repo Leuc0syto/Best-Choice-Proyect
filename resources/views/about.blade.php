@@ -44,7 +44,7 @@
         <div class="col-12">
             <h1 class="text-center title-about mb-2 mt-5"> {{ __('El equipo de desarrolladores de BestChoice')}}</h1>
         </div>
-
+            
         <div class="row m-5 d-flex justify-content-around">
             {{-- Leudys --}}
             <div class="card col-md-3 col-l-4 about__card my-2 mx-2">
@@ -93,7 +93,7 @@
             {{-- Miquel --}}
             <div class="card col-md-3 col-l-4 about__card my-2 mx-2">
                 <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
-                    src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Miquel">
+                    src="{{asset('assets/img/photo-miquel.jpg')}}" alt="Miquel">
                 <div class="card-body text-center">
                     <h2 class="about__name fs-6">Miquel Prokhorov</h2>
                     <hr>
@@ -105,9 +105,9 @@
                     </p>
                     <div class="">
                         <a href="#" target="_blank" class="about__button"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/Mickyaaaaa" target="_blank" class="about__button"><i
+                        <a href="https://github.com/Mickyfsd" target="_blank" class="about__button"><i
                                 class="fa-brands fa-github"></i></i></a>
-                        <a href="#" class="about__button"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="mailto:micpro79@gmail.com" class="about__button"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
             </div>

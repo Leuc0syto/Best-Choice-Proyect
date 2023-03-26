@@ -108,5 +108,21 @@
     "Violencia": "Violence",
     "Etiquetas": "Labels",
     "Borrar": "Delete",
-   "Otros articulos de esta categoría:" :"Other articles of this category"
+   "Otros articulos de esta categoría:" :"Other articles of this category",
+
+   "Acciones de administrador": "Administrator actions",
+    "Listado de favoritos": "List of favorites",
+    "Panel del administrador": "Administrator's panel",
+    "Tus anuncios favoritos:": "Your favorite ads:",
+    "Anuncio marcado como favorito": "Ad marked as favorite",
+    "Revisores de BestChoice": "Revisors of BestChoice",
+ 
+    "Nombre": "Name",
+    "Anuncios revisados": "Ckecked ads",
+    "Desactivar revisor": "Deactivate revisor",
+    "Anuncios revisados por:": "Ads checked by:",
+    "No tienes ningún producto añadido a la lista de favoritos": "You dont have any product added to the favorite list",
+    "El equipo de desarrolladores de BestChoice": "The team of developers of BestChoice",
+    "Añadido a favoritos": "Added to favorites",
+    "Eliminado de favoritos": "Deleted from favorites"
 }
