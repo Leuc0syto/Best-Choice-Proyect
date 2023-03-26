@@ -6,6 +6,42 @@
                     <img src="{{ asset('assets/img/default-profile-icon.jpg') }}" class="rounded-circle"
                         style="width: 50px;" alt="Avatar">
                     <div class="my-auto mx-3">{{ $ad->user->name }}</div>
+                    {{-- Funciones Favoritos --------------------------------------------------------------------------------------}}
+                @if (Auth::user()->id != $ad->user->id)
+                @forelse (Auth::user()->favoriteAds as $favorite_ad)
+                @if ($favorite_ad->id == $ad->id)
+                <p class="ms-auto my-auto d-flex justify-content-end text-danger"></i>
+                    {{ __('Anuncio marcado como favorito')}}</i></p>
+                <form action="{{ route('favorite.ad.reject', $ad)}}" method="POST" class="d-flex justify-content-end">
+                    @method('PATCH')
+                    @csrf
+                    <button type="submit" class="btn btn-white fs-2"><i class="fa-solid fa-heart" style="color: #ff0000;"></i></button>
+                </form>
+                @break
+                @else
+                @if ($favorite_ad == Auth::user()->favoriteAds[(count(Auth::user()->favoriteAds)-1)])
+                <p class="ms-auto d-flex justify-content-end text-danger">
+                <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST" class="d-flex justify-content-end">
+                    @method('PATCH')
+                    @csrf
+                    <button type="submit" class="ms-auto btn btn-white text-danger rounded fs-2"><i class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                    </button></p>
+                </form>
+                @break
+                @endif
+                @endif
+
+                @empty
+                <p class="ms-auto d-flex justify-content-end text-danger">
+                <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST" class="d-flex justify-content-end">
+                    @method('PATCH')
+                    @csrf
+                    <button type="submit" class="btn btn-white text-danger rounded fs-2">
+                        <i class="fa-regular fa-heart" style="color: #ff0000;"></i></button></p>
+                </form>
+                @endforelse
+                @endif
+                {{-- Acaba funciones Favoritos --------------------------------------------------------------------------------------}}
 
                 </div>
 
@@ -55,7 +91,7 @@
                 </button>
 
                 {{-- Funciones Favoritos --------------------------------------------------------------------------------------}}
-                @if (Auth::user()->id != $ad->user->id)
+                {{-- @if (Auth::user()->id != $ad->user->id)
                 @forelse (Auth::user()->favoriteAds as $favorite_ad)
                 @if ($favorite_ad->id == $ad->id)
                 <p class="d-flex justify-content-end text-danger"><i class="bi bi-heart-fill me-1"></i>
@@ -87,7 +123,7 @@
                         <i class="bi bi-heart-fill"></i></button>
                 </form>
                 @endforelse
-                @endif
+                @endif --}}
                 {{-- Acaba funciones Favoritos --------------------------------------------------------------------------------------}}
 
 

@@ -70,7 +70,7 @@
                 </button>
                 </form> --}}
                 <form action="{{ route('search') }}" method="GET" class="d-flex input-group" role="search">
-                    <input type="search" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search"
+                    <input type="search" class="form-control" style="background-color: #F5DEC6;" placeholder="{{ __('Buscar...') }}" aria-label="Search"
                         name="q">
                     <button class="btn btn-outline-warning my-btn" type="submit" id="button-addon2">
                         <i class="bi bi-search px-3"></i>
