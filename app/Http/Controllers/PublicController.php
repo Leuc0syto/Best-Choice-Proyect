@@ -15,7 +15,7 @@ class PublicController extends Controller
     {
         $ads = Ad::where('is_accepted', true)
             ->orderBy('created_at','desc')
-            ->take(8)
+            ->take(12)
             ->get();
         $total_ads = Ad::get();
         $user = Auth::user();
@@ -55,7 +55,7 @@ class PublicController extends Controller
         $ads = Ad::search($q)
             ->where('is_accepted', true)
             ->paginate(16);
-        return view('ad.by-search', compact('q', 'ads'));    
+        return view('ad.by-search', compact('q', 'ads'));
     }
 
 }

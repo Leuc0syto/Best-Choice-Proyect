@@ -11,16 +11,17 @@
             </div>
         </div>
         <div>
-            <form action="{{ route('cart.ad.reject', $ad->id ) }}" method="POST" class="d-flex justify-content-center mb-3">
+            <form action="{{ route('cart.ad.reject', $ad->id ) }}" method="POST" class="d-flex justify-content-center mb-3 erase-cart">
                 @method('PATCH')
                 @csrf
-                <button type="submit" class="badge rounded-pill bg-danger border-0 fs-5"><span class="fa-solid fa-trash-can"></span></button>
+                <button type="submit" class="badge rounded-pill bg-danger border-0 fs-7"><span class="fa-solid fa-trash-can"></span></button>
+
             </form>
         </div>
     </div>
     @empty
     <div>
-        <p class="text-center">Tu carrito está vacío</p>
+        <p class="text-center">{{__('Tu carrito está vacío')}}</p>
     </div>
     @endforelse
     @endisset
