@@ -4,7 +4,7 @@
     <div class="container my-3">
         <div class="card w-100 col-l-9 col-md-8">
             <div class="card-header" style="background-color: #F5DEC6">
-                <h3>{{ __('Anuncios revisados por:')}} {{ __($user->name) }} #{{ __($user->id) }}</h3>
+                <h3 class="titulo_barra text-center my-2">{{ __('Anuncios revisados por:')}} {{ __($user->name) }} #{{ __($user->id) }}</h3>
             </div>
             <div class="row">
                 @forelse ($ads as $ad)
