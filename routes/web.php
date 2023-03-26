@@ -4,6 +4,7 @@ use App\Http\Controllers\AdController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Livewire\CartDropdown;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use League\CommonMark\Extension\Footnote\Node\FootnoteRef;
@@ -27,9 +28,12 @@ Route::get('/conditions', [PublicController::class, 'conditions'])->name('condit
 Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCategory'])->name('category.ads');
 Route::get("/search", [PublicController::class, 'search'])->name('search');
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
-Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
+
 
 // Rutas de anuncios
+Route::patch('/cart/ad/{ad}/add', [AdController::class, 'userAddCart'])->name('cart.ad.add');
+Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
+Route::patch('/cart/ad/{ad}/reject', [AdController::class, 'removeAdCart'])->name('cart.ad.reject');
 Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
 Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
 

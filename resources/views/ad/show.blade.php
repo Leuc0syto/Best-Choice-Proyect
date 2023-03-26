@@ -7,6 +7,7 @@
                         style="width: 50px;" alt="Avatar">
                     <div class="my-auto mx-3">{{ $ad->user->name }}</div>
                     {{-- Funciones Favoritos --------------------------------------------------------------------------------------}}
+                @auth
                 @if (Auth::user()->id != $ad->user->id)
                 @forelse (Auth::user()->favoriteAds as $favorite_ad)
                 @if ($favorite_ad->id == $ad->id)
@@ -41,6 +42,7 @@
                 </form>
                 @endforelse
                 @endif
+                @endauth
                 {{-- Acaba funciones Favoritos --------------------------------------------------------------------------------------}}
 
                 </div>
