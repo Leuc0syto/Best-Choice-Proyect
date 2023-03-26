@@ -468,5 +468,7 @@ nav, .main-font, footer {
     transform: translateY(-3px);
 }
 
-
+.card-body h2{
+    font-size: 24px;
+}
 

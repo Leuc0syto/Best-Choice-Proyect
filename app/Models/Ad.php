@@ -62,4 +62,16 @@ class Ad extends Model
             'body'=>$this->body,
         ];
     }
+    
+    public function cartUsers()
+    {
+        return $this->belongsToMany(User::class, 'ad_user_cart');
+    }
+
+    static public function itemToCartCount()
+    {
+        if (auth()->check()) {
+            return Auth::user()->cartAds->count();
+        }
+    }
 }
