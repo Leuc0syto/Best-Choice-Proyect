@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rock+Salt&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Condensed&family=Rock+Salt&family=Varela+Round&display=swap');
 
-
 body
 {
     margin:0px;
@@ -212,6 +211,15 @@ hr{
     text-align: center;
 }
 
+.title-ads {
+    width: 90%;
+    background-color: #F5DEC6;
+    margin-right: auto;
+    border-top-right-radius: 25px;
+    /* border-bottom-right-radius: 25px; */
+    padding-top: 3px;
+}
+
 
 .product-grid{
     font-family: 'Roboto Condensed', sans-serif;
@@ -235,7 +243,7 @@ hr{
 .product-grid .price{
     color: #000;
     background: #ffc107;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     padding: 2px 12px 2px 12px;
     border: 1px solid rgba(0,0,0,0.08);
@@ -274,8 +282,6 @@ nav, .main-font, footer {
 
 .img_about {
     border-radius: 5%;
-
-
 }
 
 @media screen and (max-width:462px){

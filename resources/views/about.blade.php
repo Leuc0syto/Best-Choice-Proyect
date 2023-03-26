@@ -42,6 +42,7 @@
     </div> --}}
     <div class="container">
         <div class="col-12">
+
             <h1 class="text-center title-about mb-2 mt-5"> {{ __('El equipo de desarrolladores de BestChoice')}}</h1>
         </div>
 
