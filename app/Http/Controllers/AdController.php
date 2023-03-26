@@ -64,4 +64,19 @@ class AdController extends Controller
         $user->favoriteAds()->detach($ad);
         return redirect()->back()->withMessage(['type'=>'danger', 'text'=>'Eliminado de favoritos']);
     }
+
+    public function userAddCart(Ad $ad)
+    {
+        $user = Auth::user();
+
+        $user->cartAds()->attach($ad);
+        return redirect()->back()->withMessage(['type'=>'success', 'text'=>'Articulo agregado al carrito']);
+    }
+
+    public function removeAdCart(Ad $ad)
+    {
+        $user = Auth::user();
+        $user->cartAds()->detach($ad->id);
+        return redirect()->back()->withMessage(['type'=>'danger', 'text'=>'Articulo eliminado del carrito']);;
+    }
 }

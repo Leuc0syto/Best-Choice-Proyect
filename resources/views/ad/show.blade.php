@@ -87,10 +87,12 @@
 
                 @auth
                 @if (Auth::user()->id != $ad->user->id)
-                <button type="button"
-                    class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder"
-                    style="width: 7rem">{{__('Comprar')}}
-                </button>
+                <form action="{{ route('cart.ad.add', $ad) }}" method="POST">
+                    @method('PATCH')
+                    @csrf
+                    <button type="submit" class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder" style="width: 7rem">{{ __('Comprar')}}</button>
+                </form>
+            @endif
 
                 {{-- Funciones Favoritos --------------------------------------------------------------------------------------}}
                 {{-- @if (Auth::user()->id != $ad->user->id)
@@ -127,9 +129,6 @@
                 @endforelse
                 @endif --}}
                 {{-- Acaba funciones Favoritos --------------------------------------------------------------------------------------}}
-
-
-                @endif
 
                 @if (Auth::user()->id == $ad->user->id || Auth::user()->is_admin)
                 @if (!Auth::user()->is_admin)
