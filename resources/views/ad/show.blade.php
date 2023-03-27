@@ -4,7 +4,7 @@
             <div class="card-header" style="background-color: #F5DEC6">
                 <div class="d-flex">
                         <img src="{{ asset('assets/img/default-profile-icon.jpg') }}" class="rounded-circle"
-                            style="width: 50px;" alt="Avatar">
+                            style="width: 60px;" alt="Avatar">
                         <a class="text-decoration-none text-dark my-auto mx-3" href="">{{ $ad->user->name }}</a>
                     {{-- Funciones Favoritos --------------------------------------------------------------------------------------}}
                     @auth
