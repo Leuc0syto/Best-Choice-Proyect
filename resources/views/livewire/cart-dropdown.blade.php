@@ -20,7 +20,7 @@
         </div>
     </div>
     @empty
-    <div>
+    <div class="my-2">
         <p class="text-center">{{__('Tu carrito está vacío')}}</p>
     </div>
     @endforelse
