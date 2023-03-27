@@ -50,6 +50,8 @@ Route::post('/locale/{locale}', [PublicController::class, 'setLocale'])->name('l
 Route::middleware(['auth'])->group(function(){
     Route::get('/revisor/become', [RevisorController::class,'becomeRevisor'])->name('revisor.become');
     Route::get('/revisor/{user}/make',  [RevisorController::class,'makeRevisor'])->name('revisor.make');
+    Route::get ('/ad/{ad}/edit', [BreweryController::class, 'edit'])->name ('ad.edit');
+    Route::put ('/ad/{ad}', [BreweryController::class, 'update'])->name ('ad.update');
 });
 
 Route::middleware(['isRevisor'])->group(function(){
