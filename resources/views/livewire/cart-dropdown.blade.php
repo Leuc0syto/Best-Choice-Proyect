@@ -11,10 +11,10 @@
             </div>
         </div>
         <div>
-            <form action="{{ route('cart.ad.reject', $ad->id ) }}" method="POST" class="d-flex justify-content-center mb-3 erase-cart">
+            <form action="{{ route('cart.ad.reject', $ad->id ) }}" method="POST" class="d-flex justify-content-center mb-3">
                 @method('PATCH')
                 @csrf
-                <button type="submit" class="badge rounded-pill bg-danger border-0 fs-7"><span class="fa-solid fa-trash-can"></span></button>
+                <button type="submit" class="badge rounded-pill bg-danger border-0 fs-7 col-12"><span class="fa-solid fa-trash-can"></span></button>
 
             </form>
         </div>
