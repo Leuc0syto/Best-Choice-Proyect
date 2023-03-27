@@ -109,7 +109,8 @@
                 @else
                 <h5 class="mt-4">{{ __('Acciones de administrador')}}</h5>
                 @endif
-                <a class="btn my-btn-delete justify-content-center mx-auto text-white font-weight-bolder"
+                <a class="btn btn-danger my-btn-delete justify-content-center mx-auto text-white font-weight-bolder"
+                {{-- btn btn-warning btn-block col-lg-auto --}}
                     href="{{ route('ad.destroy', $ad) }}"><i class="fa-solid fa-trash-can mx-2"></i>{{__('Borrar')}}</a>
                 @endif
                 @endauth
