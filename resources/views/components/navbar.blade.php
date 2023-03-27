@@ -87,7 +87,7 @@
                 </div>
 
                 {{-- Desplegable idioma --}}
-                <div class="col-6 text-end">
+                <div class="col-5 text-end">
                     <ul class="navbar-nav col-12 col-lg-auto p-2 ml-2">
                         <li class="nav-item dropdown">
                             <a class="nav-link text-dark dropdown-toggle" href="#" role="button"
