@@ -212,11 +212,11 @@ hr{
 }
 
 .title-ads {
-    width: 90%;
+    width: 100%;
     background-color: #F5DEC6;
     margin-right: auto;
     border-top-right-radius: 25px;
-    /* border-bottom-right-radius: 25px; */
+    border-top-left-radius: 25px;
     padding-top: 3px;
 }
 

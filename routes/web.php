@@ -33,13 +33,13 @@ Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controller
 // Rutas de anuncios
 Route::patch('/cart/ad/{ad}/add', [AdController::class, 'userAddCart'])->name('cart.ad.add');
 Route::get('/ads/create', [AdController::class,'create'])->name('ads.create');
-Route::patch('/cart/ad/{ad}/reject', [AdController::class, 'removeAdCart'])->name('cart.ad.reject');
-Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
 Route::get('/ads/{ad}', [AdController::class,'show'])->name('ads.show');
-Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
-
-
+Route::get ('/ad/{ad}/edit', [BreweryController::class, 'edit'])->name ('ad.edit');
+Route::put ('/ad/{ad}', [BreweryController::class, 'update'])->name ('ad.update');
 Route::get('/destroy/{ad}', [AdController::class, 'destroy'])->name('ad.destroy');
+Route::patch('/cart/ad/{ad}/reject', [AdController::class, 'removeAdCart'])->name('cart.ad.reject');
+
+Route::get('/user/{user:name}/ads', [AdController::class, 'adsByUser'])->name('user.ads');
 Route::get('/favorite/ads', [AdController::class,'adsByFavorite'])->name('favorite.ad');
 Route::patch('/favorite/ad/{ad}/accept', [AdController::class, 'acceptAdFavorite'])->name('favorite.ad.accept');
 Route::patch('/favorite/ad/{ad}/reject', [AdController::class, 'rejectAdFavorite'])->name('favorite.ad.reject');
@@ -50,8 +50,6 @@ Route::post('/locale/{locale}', [PublicController::class, 'setLocale'])->name('l
 Route::middleware(['auth'])->group(function(){
     Route::get('/revisor/become', [RevisorController::class,'becomeRevisor'])->name('revisor.become');
     Route::get('/revisor/{user}/make',  [RevisorController::class,'makeRevisor'])->name('revisor.make');
-    Route::get ('/ad/{ad}/edit', [BreweryController::class, 'edit'])->name ('ad.edit');
-    Route::put ('/ad/{ad}', [BreweryController::class, 'update'])->name ('ad.update');
 });
 
 Route::middleware(['isRevisor'])->group(function(){

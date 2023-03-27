@@ -1,6 +1,5 @@
 <x-layout>
     <x-slot name='title'>BestChoice - {{ __('Anuncios por usuario')}}</x-slot>
-
     <div class="container mt-3">
         <div class="title-ads text-center">
             <h3>{{ __('Tus anuncios favoritos:')}}</h3>
@@ -26,6 +25,7 @@
                 <h2 class="mb-4">{{ __('No tienes ningún producto añadido a la lista de favoritos')}}</h2>
             </div>
             @endforelse
+
         </div>
     </div>
 </x-layout>

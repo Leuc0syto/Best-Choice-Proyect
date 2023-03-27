@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Ad;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-
 use Illuminate\Http\Request;
 
 class AdController extends Controller
@@ -25,7 +24,8 @@ class AdController extends Controller
     }
 
     public function destroy(Ad $ad){
-        if (Auth::user()->id = $ad->user->id){
+        if (Auth::user()->id = $ad->user->id || Auth::user()->is_admin) {
+        $ad->favoritedBy()->detach();  
         $ad->deleteOrFail();
         return redirect()->route('home')->withMessage(['type'=>'danger', 'text'=>'Anuncio eliminado']);
         } else {
@@ -33,10 +33,15 @@ class AdController extends Controller
         }
     }
 
+    public function adsByUser(User $user)
+    {
+        $ads_user = $user->ads()->where('is_accepted', true)->latest()->paginate(16);
+        return view('ad.by-user', compact('user','ads_user'));
+    } 
+
     public function adsByFavorite(User $user)
     {
         $ads_user = Auth::user()->favoriteAds;
-        
         return view('ad.by-favorite', compact('user','ads_user'));
     }
 

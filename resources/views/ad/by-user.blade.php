@@ -1,35 +1,30 @@
 <x-layout>
-    <x-slot name="title">BestChoice - {{ __('Anuncios por usuario')}}</x-slot>
-
-    <div class="container title-page d-flex justify-content-center align-items-center text-light titulo_barra">
-        <h3 class="m-0">Anuncios de: {{ __($user->name) }}</h3>
-    </div>
-    <div class="container line-title">
-    </div>
-
-    <div class="container">
-        
-        <div class="row mt-5">
+    <x-slot name="title">BestChoice - {{ $user->name }}</x-slot>
+    <div class="container mt-3">
+        <div class="title-ads text-center">
+            <h3>{{ $user->name }}</h3>
+        </div>
+        <div class="row">
             @forelse ($ads_user as $ad)
-            <div class="container col-12 col-md-4 d-flex justify-content-center mb-4">
-                <x-card
-                        img="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : 'https://via.placeholder.com/150'}}"
-                        title="{{ $ad->title }}" price="{{ $ad->price }}" body="" :ad="$ad">
-                </x-card>
+            <div class="col-md-3 col-sm-6 col-6 my-2">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="{{ route('ads.show', $ad) }}" class="add-to-cart">
+                            <img src="{{ !$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150'}}"
+                                class="card-img-top my-card" alt="...">
+                            <div class="price">{{ $ad->price }}{{ __('€') }}</div>
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <p class="card-title">{{ $ad->title }}</p>
+                    </div>
+                </div>
             </div>
             @empty
-            <div class="col-12">
-                <h2>{{ __('No tienes ningún artículo a la venta')}}</h2>
-                <a href="{{ route('ad.create') }}"><button class="btn btn-success">{{ __('Vender un artículo')}}</button></a>
-                <a href="{{ route('home') }}"><button class="btn btn-success">{{ __('Volver a inicio')}}</button></a>
+            <div class="col-12 text-center">
+                <h2>{{ __('No hay ningún artículo a la venta')}}</h2>
             </div>
             @endforelse
         </div>
     </div>
-    <div class="container paginacion">
-        <div>
-            {{$ads_user->links()}}
-        </div>
-    </div>
-
 </x-layout>

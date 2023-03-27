@@ -32,5 +32,4 @@
             {{ $ads->links() }}
         </div>
     </div>
-
 </x-layout>

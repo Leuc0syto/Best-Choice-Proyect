@@ -3,47 +3,54 @@
         <div class="card mx-auto col-l-9 col-md-7">
             <div class="card-header" style="background-color: #F5DEC6">
                 <div class="d-flex">
-                    <img src="{{ asset('assets/img/default-profile-icon.jpg') }}" class="rounded-circle"
-                        style="width: 50px;" alt="Avatar">
-                    <div class="my-auto mx-3">{{ $ad->user->name }}</div>
+                        <img src="{{ asset('assets/img/default-profile-icon.jpg') }}" class="rounded-circle"
+                            style="width: 50px;" alt="Avatar">
+                        <a class="text-decoration-none text-dark my-auto mx-3" href="">{{ $ad->user->name }}</a>
                     {{-- Funciones Favoritos --------------------------------------------------------------------------------------}}
-                @auth
-                @if (Auth::user()->id != $ad->user->id)
-                @forelse (Auth::user()->favoriteAds as $favorite_ad)
-                @if ($favorite_ad->id == $ad->id)
-                <p class="ms-auto my-auto d-flex justify-content-end text-danger"></i>
-                    {{ __('Anuncio marcado como favorito')}}</i></p>
-                <form action="{{ route('favorite.ad.reject', $ad)}}" method="POST" class="d-flex justify-content-end">
-                    @method('PATCH')
-                    @csrf
-                    <button type="submit" class="btn btn-white fs-2"><i class="fa-solid fa-heart" style="color: #ff0000;"></i></button>
-                </form>
-                @break
-                @else
-                @if ($favorite_ad == Auth::user()->favoriteAds[(count(Auth::user()->favoriteAds)-1)])
-                <p class="ms-auto d-flex justify-content-end text-danger">
-                <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST" class="d-flex justify-content-end">
-                    @method('PATCH')
-                    @csrf
-                    <button type="submit" class="ms-auto btn btn-white text-danger rounded fs-2"><i class="fa-regular fa-heart" style="color: #ff0000;"></i>
-                    </button></p>
-                </form>
-                @break
-                @endif
-                @endif
+                    @auth
+                    @if (Auth::user()->id != $ad->user->id)
+                    @forelse (Auth::user()->favoriteAds as $favorite_ad)
+                    @if ($favorite_ad->id == $ad->id)
+                    <p class="ms-auto my-auto d-flex justify-content-end text-danger"></i>
+                        {{ __('Anuncio marcado como favorito')}}</i></p>
+                    <form action="{{ route('favorite.ad.reject', $ad)}}" method="POST"
+                        class="d-flex justify-content-end">
+                        @method('PATCH')
+                        @csrf
+                        <button type="submit" class="btn btn-white fs-2"><i class="fa-solid fa-heart"
+                                style="color: #ff0000;"></i></button>
+                    </form>
+                    @break
+                    @else
+                    @if ($favorite_ad == Auth::user()->favoriteAds[(count(Auth::user()->favoriteAds)-1)])
+                    <p class="ms-auto d-flex justify-content-end text-danger">
+                        <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST"
+                            class="d-flex justify-content-end">
+                            @method('PATCH')
+                            @csrf
+                            <button type="submit" class="ms-auto btn btn-white text-danger rounded fs-2"><i
+                                    class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                            </button>
+                    </p>
+                    </form>
+                    @break
+                    @endif
+                    @endif
 
-                @empty
-                <p class="ms-auto d-flex justify-content-end text-danger">
-                <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST" class="d-flex justify-content-end">
-                    @method('PATCH')
-                    @csrf
-                    <button type="submit" class="btn btn-white text-danger rounded fs-2">
-                        <i class="fa-regular fa-heart" style="color: #ff0000;"></i></button></p>
-                </form>
-                @endforelse
-                @endif
-                @endauth
-                {{-- Acaba funciones Favoritos --------------------------------------------------------------------------------------}}
+                    @empty
+                    <p class="ms-auto d-flex justify-content-end text-danger">
+                        <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST"
+                            class="d-flex justify-content-end">
+                            @method('PATCH')
+                            @csrf
+                            <button type="submit" class="btn btn-white text-danger rounded fs-2">
+                                <i class="fa-regular fa-heart" style="color: #ff0000;"></i></button>
+                    </p>
+                    </form>
+                    @endforelse
+                    @endif
+                    @endauth
+                    {{-- Acaba funciones Favoritos --------------------------------------------------------------------------------------}}
 
                 </div>
 
@@ -90,45 +97,11 @@
                 <form action="{{ route('cart.ad.add', $ad) }}" method="POST">
                     @method('PATCH')
                     @csrf
-                    <button type="submit" class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder" style="width: 7rem">{{ __('Comprar')}}</button>
+                    <button type="submit"
+                        class="btn btn-warning my-btn-call justify-content-center text-dark font-weight-bolder"
+                        style="width: 7rem">{{ __('Comprar')}}</button>
                 </form>
-            @endif
-
-                {{-- Funciones Favoritos --------------------------------------------------------------------------------------}}
-                {{-- @if (Auth::user()->id != $ad->user->id)
-                @forelse (Auth::user()->favoriteAds as $favorite_ad)
-                @if ($favorite_ad->id == $ad->id)
-                <p class="d-flex justify-content-end text-danger"><i class="bi bi-heart-fill me-1"></i>
-                    {{ __('Anuncio marcado como favorito')}} <i class="bi bi-heart-fill ms-1"></i></p>
-                <form action="{{ route('favorite.ad.reject', $ad)}}" method="POST" class="d-flex justify-content-end">
-                    @method('PATCH')
-                    @csrf
-                    <button type="submit" class="btn btn-danger">{{ __('Eliminar de favoritos')}}</button>
-                </form>
-                @break
-                @else
-                @if ($favorite_ad == Auth::user()->favoriteAds[(count(Auth::user()->favoriteAds)-1)])
-                <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST" class="d-flex justify-content-end">
-                    @method('PATCH')
-                    @csrf
-                    <button type="submit" class="btn btn-white text-danger rounded fs-2"><i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                    </button>
-                </form>
-                @break
                 @endif
-                @endif
-
-                @empty
-                <form action="{{ route('favorite.ad.accept', $ad)}}" method="POST" class="d-flex justify-content-end">
-                    @method('PATCH')
-                    @csrf
-                    <button type="submit" class="btn btn-white text-danger border-danger rounded">
-                        <i class="bi bi-heart-fill"></i> {{ __('Marcar como favorito')}} 
-                        <i class="bi bi-heart-fill"></i></button>
-                </form>
-                @endforelse
-                @endif --}}
-                {{-- Acaba funciones Favoritos --------------------------------------------------------------------------------------}}
 
                 @if (Auth::user()->id == $ad->user->id || Auth::user()->is_admin)
                 @if (!Auth::user()->is_admin)
@@ -146,8 +119,8 @@
     </div>
     {{-- <div class="mt-5 related_ads_show p-1 row justify-content-center">
         <h4 class="col-12 text-center my-4">{{ __('Otros articulos de esta categoría:')}}</h4>
-        <div class="mini-card col-12 d-flex">
+    <div class="mini-card col-12 d-flex">
 
-        </div>
+    </div>
     </div> --}}
 </x-layout>
