@@ -23,8 +23,8 @@
                     </div>
                 </div>
                 @empty
-                <div class="col-12">
-                    <h2 class="mb-4">{{ __('No hay artículos revisados')}}</h2>
+                <div class="col-12 text-center">
+                    <h2 class="my-4">{{ __('No hay artículos revisados')}}</h2>
                 </div>
                 @endforelse
             </div>
