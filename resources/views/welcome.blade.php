@@ -61,7 +61,7 @@
     <!-- Finder and categories -->
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <h3 class="mt-5 text-center">{{ __('Compra y vende tu ropa de segunda mano') }}</h3>
+            <h3 class="mt-5 text-center blur-in-expand">{{ __('Compra y vende tu ropa de segunda mano') }}</h3>
             <div class="justify-content-center my-3">
                 {{-- <form class="d-flex input-group" role="search">
                     <input type="text" class="form-control" placeholder="{{ __('Buscar...') }}" aria-label="Search">
