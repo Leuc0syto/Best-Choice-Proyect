@@ -434,7 +434,7 @@ nav, .main-font, footer {
     border-radius: 54px;
     background: navajowhite;
     box-shadow:  15px 15px 20px #ffc107,
-            -41px 0px 24px #ffffff;
+            -0px 0px 24px #ffffff;
     min-width: 300px;
 }
 
@@ -477,4 +477,4 @@ nav, .main-font, footer {
     animation:blur-in-expand 1s linear both
 }
 @keyframes blur-in-expand{
-    0%{transform:scale(0);filter:blur(12px);opacity:0}100%{transform:scale(1);filter:blur(0);opacity:1}}
+    0%{transform:scale(0);filter:blur(12px);opacity:0}100%{transform:scale(1);filter:blur(0);opacity:1}} 

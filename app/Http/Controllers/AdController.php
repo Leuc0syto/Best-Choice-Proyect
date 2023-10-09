@@ -25,7 +25,7 @@ class AdController extends Controller
 
     public function destroy(Ad $ad){
         if (Auth::user()->id = $ad->user->id || Auth::user()->is_admin) {
-        $ad->favoritedBy()->detach();  
+        $ad->favoritedBy()->detach();
         $ad->deleteOrFail();
         return redirect()->route('home')->withMessage(['type'=>'danger', 'text'=>'Anuncio eliminado']);
         } else {
@@ -37,7 +37,7 @@ class AdController extends Controller
     {
         $ads_user = $user->ads()->where('is_accepted', true)->latest()->paginate(16);
         return view('ad.by-user', compact('user','ads_user'));
-    } 
+    }
 
     public function adsByFavorite(User $user)
     {
@@ -48,24 +48,24 @@ class AdController extends Controller
     public function acceptAdFavorite (Ad $ad)
     {
         $user = Auth::user();
-        
+
         $favorite_ads = $user->favoriteAds;
-                
+
         foreach ($favorite_ads as $favorite_ad) {
             if ($favorite_ad->id == $ad->id){
                 return redirect()->back()->withMessage(['type'=>'warning', 'text'=>'El anuncio ya está añadido a favoritos']);
             }
-        }        
-        
+        }
+
         $user->favoriteAds()->attach($ad);
         return redirect()->back()->withMessage(['type'=>'success', 'text'=>'Añadido a favoritos']);
-        
+
     }
 
     public function rejectAdFavorite (Ad $ad)
     {
         $user = Auth::user();
-        
+
         $user->favoriteAds()->detach($ad);
         return redirect()->back()->withMessage(['type'=>'danger', 'text'=>'Eliminado de favoritos']);
     }

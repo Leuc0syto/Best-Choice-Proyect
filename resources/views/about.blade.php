@@ -50,7 +50,7 @@
             {{-- Leudys --}}
             <div class="card col-md-3 col-l-4 about__card my-2 mx-2">
                 <img class="card-img-top rounded-circle about__card_img mx-auto mt-3"
-                    src="{{asset('assets/img/photo-leudys.JPG')}}" alt="Leudys">
+                    src="{{asset('assets/img/90DA45AE-460D-48D5-83C3-7024185E30BF.JPEG')}}" alt="Leudys">
                 <div class="card-body text-center">
                     <h2 class="about__name">Leudys Torres</h2>
                     <hr>
